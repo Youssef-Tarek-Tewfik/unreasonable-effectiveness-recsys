@@ -17,9 +17,9 @@ endif
 
 venv-activate:
 ifeq ($(OS),Windows_NT)
-    @cmd /k "venv\Scripts\activate"
+	@cmd /k "venv\Scripts\activate"
 else
-    @bash -c "source venv/bin/activate; exec bash"
+	@bash -c "source venv/bin/activate; exec bash"
 endif
 
 venv-deactivate:
@@ -34,4 +34,4 @@ install:
 
 # Run
 run:
-	@echo "Run not implemented"
+	@python -m source.run
