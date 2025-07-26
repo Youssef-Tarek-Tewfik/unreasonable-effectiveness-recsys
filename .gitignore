@@ -13,3 +13,8 @@ dist/
 
 # VS Code settings
 .vscode/
+
+# Project specific
+log/
+log_tensorboard/
+recbole/saved/
