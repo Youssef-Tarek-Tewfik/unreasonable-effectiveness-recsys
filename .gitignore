@@ -17,5 +17,6 @@ dist/
 # Project specific
 log/
 log_tensorboard/
-recbole/saved/
+artifacts/
+datasets/
 *desktop.ini*
