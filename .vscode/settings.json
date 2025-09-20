@@ -1,0 +1,20 @@
+{
+    "python.analysis.include": [
+        "${workspaceFolder}/source/**/*.py"
+    ],
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/source"
+    ],
+    "python.analysis.exclude": [
+        "${workspaceFolder}/results/**"
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.indexing": true,
+    "python.analysis.packageIndexDepths": [
+        {
+            "name": "",
+            "depth": 2,
+            "includeAllSymbols": true
+        }
+    ]
+}

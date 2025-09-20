@@ -35,3 +35,28 @@ install:
 # Run
 run:
 	@python -m source.run
+
+run-sbatch-sequential:
+ifeq ($(OS),Windows_NT)
+	@echo "Cannot run bash script 'sequential.sh' on a Windows environment."
+else
+	@sbatch ./scripts/sequential.sh
+endif
+
+run-sbatch-parallel:
+	@python -m scripts.parallel
+
+
+# Clean
+clean:
+	@rm -rf ./log ./log_tensorboard ./output/*
+
+
+# Show sbatch user job queue
+show:
+	@squeue -u $$USER
+
+
+# Aggregate results from parallel (sbatch) execution
+aggregate:
+	@python -m source.results

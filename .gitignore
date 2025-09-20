@@ -11,12 +11,10 @@ build/
 dist/
 *.egg-info/
 
-# VS Code settings
-.vscode/
-
 # Project specific
 log/
 log_tensorboard/
 artifacts/
-datasets/
+# datasets/
 *desktop.ini*
+singularity/**/*.sif
