@@ -1,6 +1,14 @@
 import torch
 import os
+import pandas as pd
+from pathlib import Path
 
+from .constants import DIRECTORY_DATASETS, Dataset
+from .load import load
+
+
+def main():
+    pass
 
 def gpu_check() -> None:
     print("=== GPU Detection ===")
@@ -34,3 +42,31 @@ def gpu_check() -> None:
 
     else:
         print("No CUDA GPUs detected")
+
+def inter_to_csv(name: str, columns: list[int], output="ratings", demo=False) -> None:
+    input_path = DIRECTORY_DATASETS / name / f"{'demo' if demo else name}.inter"
+    output_path = DIRECTORY_DATASETS / name / f"{output}.csv"
+    
+    df = pd.read_csv(input_path, sep='\t', skiprows=1, header=None)
+    
+    df = df.iloc[:, columns]
+    
+    df.to_csv(output_path, index=False, header=False)
+    
+    print(f"Converted\n{input_path}\nto\n{output_path}")
+
+def remove_last_column(input: str | Path, output: str | Path) -> None:
+    df = pd.read_csv(input, header=None)
+    df = df.iloc[:, :-1]
+    df.to_csv(output, index=False, header=False)
+    print(f"Removed last column from\n{input}\nand saved to\n{output}")
+
+def copy_head(input: str | Path, output: str | Path) -> None:
+    with open(input, 'r') as input_file:
+        lines = [input_file.readline() for _ in range(5)]
+    with open(output, 'w') as output_file:
+        output_file.writelines(lines)
+    print(f"Copied first 5 lines from\n{input}\nto\n{output}")
+
+if __name__ == "__main__":
+    main()

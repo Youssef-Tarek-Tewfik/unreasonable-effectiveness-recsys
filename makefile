@@ -49,7 +49,7 @@ run-sbatch-parallel:
 
 # Clean
 clean:
-	@rm -rf ./log ./log_tensorboard ./output/*
+	@rm -rf ./log ./log_tensorboard ./output/* ./artifacts/*
 
 
 # Show sbatch user job queue
@@ -57,6 +57,21 @@ show:
 	@squeue -u $$USER
 
 
+# Cancel all sbatch user jobs
+cancel:
+	@scancel -u $$USER
+
+
 # Aggregate results from parallel (sbatch) execution
 aggregate:
 	@python -m source.results
+
+
+# Run the utilities module
+utilities:
+	@python -m source.utilities
+
+
+# Plot graphs
+plot:
+	@python -m source.plot

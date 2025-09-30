@@ -2,13 +2,14 @@ import yaml
 from typing import Dict, TypeAlias
 from pathlib import Path
 
-from .constants import SIZES, PATH_RESULTS_LATEST, PATH_RESULTS_AGGREGATE, DIRECTORY_RESULTS, Tool, Scorer, Model
-from .load import Dataset
+from .constants import (
+  Tool, Dataset, Scorer, Model, SIZES, PATH_RESULTS_LATEST, PATH_RESULTS_AGGREGATE, DIRECTORY_RESULTS
+)
 
 
 Result: TypeAlias = float | None
-# d[library][algorithm][dataset][size] -> float
-Results: TypeAlias = Dict[str, Dict[str, Dict[str, Dict[str, Result]]]]
+# d[tool][algorithm][dataset][size] -> float
+Results: TypeAlias = Dict[str, Dict[str, Dict[str, Dict[float, Result]]]]
 
 
 def main():
@@ -18,16 +19,15 @@ def main():
 
 def create_results(sizes = SIZES, default: Result = None) -> Results:
   results: Results = {
-    tool.value: {
+    tool.name: {
       algorithm.name: {
         dataset.name: {
-          str(int(size * 100.0)) + '%': default for size in sizes
+          size: default for size in sizes
         } for dataset in Dataset
       } for algorithm in (Scorer if tool == Tool.LENSKIT else Model)
     } for tool in Tool
   }
   return results
-
 
 def load_results(path: str | Path = PATH_RESULTS_LATEST) -> Results:
   results: Results
@@ -35,9 +35,9 @@ def load_results(path: str | Path = PATH_RESULTS_LATEST) -> Results:
     with open(path, 'r') as f:
       results = yaml.safe_load(f) or {}
   except FileNotFoundError:
+    print("File not found: ", path)
     results = create_results()
   return results
-
 
 def save_results(results: Results, tag: str | None = None, path: str | Path = PATH_RESULTS_LATEST) -> None:
   if tag:
@@ -46,13 +46,11 @@ def save_results(results: Results, tag: str | None = None, path: str | Path = PA
   with open(path, 'w') as f:
     yaml.dump(results, f)
 
-
-def setdefault_results(results: dict, keys: list[str], default: Result = None) -> None:
+def setdefault_results(results: dict, keys: list[str | float], default: Result = None) -> None:
   current = results
   for key in keys[:-1]:
     current = current.setdefault(key, {})
   current.setdefault(keys[-1], default)
-
 
 def aggregate_results() -> None:
   paths: list[Path] = list(Path(DIRECTORY_RESULTS).glob("latest*.yaml"))
@@ -69,6 +67,7 @@ def aggregate_results() -> None:
               output[tool][algorithm][dataset][size] = value
 
   save_results(output, None, PATH_RESULTS_AGGREGATE)
+
 
 if __name__ == '__main__':
   main()

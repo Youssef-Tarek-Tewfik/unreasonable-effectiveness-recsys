@@ -1,7 +1,9 @@
+import sys
+import csv
 from argparse import ArgumentParser
 
-from .constants import SIZES, FIGURES, Tool, Scorer, Model
-from .load import Dataset, load
+from .constants import Tool, Dataset, Scorer, Model, SIZES, FIGURES
+from .load import load
 from .results import Result, load_results, save_results, setdefault_results
 from .sample import sample
 from .use_lenskit import use_lenskit
@@ -9,6 +11,8 @@ from .use_recbole import use_recbole
 
 
 def main():
+  csv.field_size_limit(sys.maxsize // 10)
+
   # Command-line args
   parser = ArgumentParser("Unreasonable Effectiveness of Data for RecSys")
   parser.add_argument('--tag', dest='tag', type=str, required=False)
@@ -18,52 +22,58 @@ def main():
   tool, algorithm = (tool.strip(), algorithm.strip()) if tool and algorithm else (None, None)
 
 
-  lenskit, recbole = Tool.LENSKIT.value, Tool.RECBOLE.value
-  sizes = SIZES[:1]
-  excluded = [Dataset.MOVIELENS]
-  # excluded = []
+  lenskit, recbole = Tool.LENSKIT.name, Tool.RECBOLE.name
+  sizes = SIZES
+  # excluded = [Dataset.MOVIELENS, Dataset.NETFLIX, Dataset.GOODREADS]
+  excluded = []
   datasets = [dataset for dataset in Dataset if dataset not in excluded]
   results = load_results()
   result: Result
+  current: str
 
   for dataset in datasets:
     full = load(dataset)
 
     for size in sizes:
       sampled = sample(full, size)
-      percentage = f"{int(size * 100)}%"
 
       # LensKit
       for scorer in Scorer:
         if tag and (tool != Tool.LENSKIT.name or algorithm != scorer.name):
           continue
 
-        setdefault_results(results, [lenskit, scorer.name, dataset.name, percentage])
-        result = results[lenskit][scorer.name][dataset.name][percentage]
+        current = f"[{Tool.LENSKIT.name}][{scorer.name}][{dataset.name}][{size}]"
+        print(f"Checking {current}")
+        setdefault_results(results, [lenskit, scorer.name, dataset.name, size])
+        result = results[lenskit][scorer.name][dataset.name][size]
         if result is None or result < 0.0:
-          result = use_lenskit(sampled, scorer)
-          results[lenskit][scorer.name][dataset.name][percentage] = round(result, FIGURES)
+          print(f"Starting {current}")
+          result = use_lenskit(sampled, dataset, scorer)
+          results[lenskit][scorer.name][dataset.name][size] = round(result, FIGURES)
           save_results(results, tag)
-          print(f"Finished [{Tool.LENSKIT.name}][{scorer.name}][{dataset.name}][{percentage}]")
+          print(f"Finished {current} ({result})")
         else:
-          print(f"Skipping [{Tool.LENSKIT.name}][{scorer.name}][{dataset.name}][{percentage}]")
+          print(f"Skipping {current} ({result})")
 
       # RecBole
       for model in Model:
         if tag and (tool != Tool.RECBOLE.name or algorithm != model.name):
           continue
 
-        setdefault_results(results, [recbole, model.name, dataset.name, percentage])
-        result = results[recbole][model.name][dataset.name][percentage]
+        current = f"[{Tool.RECBOLE.name}][{model.name}][{dataset.name}][{size}]"
+        print(f"Checking {current}")
+        setdefault_results(results, [recbole, model.name, dataset.name, size])
+        result = results[recbole][model.name][dataset.name][size]
         if result is None or result < 0.0:
+          print(f"Starting {current}")
           result = use_recbole(sampled, dataset, model)
-          results[recbole][model.name][dataset.name][percentage] = round(result, FIGURES)
+          results[recbole][model.name][dataset.name][size] = round(result, FIGURES)
           save_results(results, tag)
-          print(f"Finished [{Tool.RECBOLE.name}][{model.name}][{dataset.name}][{percentage}]")
+          print(f"Finished {current} ({result})")
         else:
-          print(f"Skipping [{Tool.RECBOLE.name}][{model.name}][{dataset.name}][{percentage}]")
+          print(f"Skipping {current} ({result})")
 
-  print("Work complete\n\n\n\n\n")
+  print("Work complete\n\n")
   print(results)
 
 
