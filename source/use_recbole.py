@@ -11,26 +11,29 @@ from .constants import (
 FLOAT_COLUMNS = [COLUMN_NAMES["rating"]]
 
 
-def save_as_atomic(df: pd.DataFrame, dataset: Dataset) -> None:
+def save_as_atomic(df: pd.DataFrame, name: str) -> None:
   checkpoints = RECBOLE_DIRECTORY_CHECKPOINTS
-  path = RECBOLE_DIRECTORY_DATASETS / dataset.value / f"{dataset.value}.inter"
+  path = RECBOLE_DIRECTORY_DATASETS / name / f"{name}.inter"
+
   os.makedirs(os.path.dirname(checkpoints), exist_ok=True)
-  os.makedirs(os.path.dirname(path), exist_ok=True)
-  with open(path, "w") as f:
-    features = [f"{name}:float" if name in FLOAT_COLUMNS else f"{name}:token" for name in df.columns]
-    f.write(','.join(features) + '\n')
-  df.to_csv(path, mode="a", index=False, header=False)
 
+  if not os.path.exists(path):
+    os.makedirs(os.path.dirname(path), exist_ok=False)
+    with open(path, 'w') as f:
+      features = [f"{name}:float" if name in FLOAT_COLUMNS else f"{name}:token" for name in df.columns]
+      f.write(','.join(features) + '\n')
+    df.to_csv(path, mode="a", index=False, header=False)
 
-def use_recbole(df: pd.DataFrame, dataset: Dataset, model: Model = Model.ITEM_KNN) -> float:
-  save_as_atomic(df, dataset)
+def use_recbole(df: pd.DataFrame, dataset: Dataset, size: float, model: Model = Model.ITEM_KNN) -> float:
+  name = f"{dataset.value}-{size}"
+  save_as_atomic(df, name)
 
   explicit = DATASET_FEEDBACK_EXPLICIT[dataset]
   config = RECBOLE_CONFIGS[explicit]
   model_config = RECBOLE_MODEL_CONFIGS[model]
   config = {**config, **model_config}
   
-  result = run_recbole(model=model.value, dataset=dataset.value, config_dict=config, saved=False)
+  result = run_recbole(model=model.value, dataset=name, config_dict=config, saved=False)
 
   test_result = result["test_result"]
   for key, value in test_result.items():

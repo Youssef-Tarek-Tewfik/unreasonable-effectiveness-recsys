@@ -2,8 +2,9 @@ import torch
 import os
 import pandas as pd
 from pathlib import Path
+from typing import Callable
 
-from .constants import DIRECTORY_DATASETS, Dataset
+from .constants import ALLOWED_EXCEPTIONS, DIRECTORY_DATASETS, Dataset
 from .load import load
 
 
@@ -67,6 +68,19 @@ def copy_head(input: str | Path, output: str | Path) -> None:
     with open(output, 'w') as output_file:
         output_file.writelines(lines)
     print(f"Copied first 5 lines from\n{input}\nto\n{output}")
+
+def safe_run(function: Callable[[], float]) -> float:
+    try:
+        return function()
+    except Exception as exception:
+        propagate = True
+        for allowed, message in ALLOWED_EXCEPTIONS:
+            if type(exception) == allowed and message in str(exception):
+                propagate = False
+                break
+        if propagate:
+            raise exception
+        return 0.0
 
 if __name__ == "__main__":
     main()

@@ -8,7 +8,7 @@ class Tool(Enum):
   LENSKIT = 0
   RECBOLE = 1
 
-# Datasets
+## Datasets
 class Dataset(Enum):
   MOVIELENS = "movielens"
   NETFLIX = "netflix"
@@ -43,6 +43,12 @@ DATASET_FEEDBACK_EXPLICIT = {
   Dataset.GOODREADS: True,
   Dataset.MUSIC4ALL: True,
 }
+
+## Exception handling
+ALLOWED_EXCEPTIONS: list[tuple[type[Exception], str]] = [
+  (KeyError, "Field \"rating\" does not exist in schema"),
+  (KeyError, "Column rating does not exist in schema"),
+]
 
 
 # Naming

@@ -6,6 +6,7 @@ from .constants import Tool, Dataset, Scorer, Model, SIZES, FIGURES
 from .load import load
 from .results import Result, load_results, save_results, setdefault_results
 from .sample import sample
+from .utilities import safe_run
 from .use_lenskit import use_lenskit
 from .use_recbole import use_recbole
 
@@ -48,7 +49,7 @@ def main():
         result = results[lenskit][scorer.name][dataset.name][size]
         if result is None or result < 0.0:
           print(f"Starting {current}")
-          result = use_lenskit(sampled, dataset, scorer)
+          result = safe_run(lambda: use_lenskit(sampled, dataset, scorer))
           results[lenskit][scorer.name][dataset.name][size] = round(result, FIGURES)
           save_results(results, tag)
           print(f"Finished {current} ({result})")
@@ -66,7 +67,7 @@ def main():
         result = results[recbole][model.name][dataset.name][size]
         if result is None or result < 0.0:
           print(f"Starting {current}")
-          result = use_recbole(sampled, dataset, model)
+          result = safe_run(lambda: use_recbole(sampled, dataset, size, model))
           results[recbole][model.name][dataset.name][size] = round(result, FIGURES)
           save_results(results, tag)
           print(f"Finished {current} ({result})")

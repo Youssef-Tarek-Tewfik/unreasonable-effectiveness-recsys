@@ -1,0 +1,252 @@
+LENSKIT:
+  BIASED_MF:
+    ALIBABA:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.00956
+      0.25: 0.01206
+      0.5: 0.01411
+      0.75: 0.01813
+      1.0: 0.02491
+    NETFLIX:
+      0.1: 0.00422
+      0.25: 0.00666
+      0.5: 0.01245
+      0.75: 0.01868
+      1.0: 0.02638
+  BIASED_SVD:
+    ALIBABA:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.00963
+      0.25: 0.01292
+      0.5: 0.02261
+      0.75: 0.04355
+      1.0: 0.08754
+    NETFLIX:
+      0.1: 0.00434
+      0.25: 0.00791
+      0.5: 0.0171
+      0.75: 0.03309
+      1.0: 0.06567
+  IMPLICIT_MF:
+    ALIBABA:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.02742
+      0.25: 0.06038
+      0.5: 0.10339
+      0.75: 0.15399
+      1.0: 0.22615
+    NETFLIX:
+      0.1: 0.02022
+      0.25: 0.04843
+      0.5: 0.08278
+      0.75: 0.12261
+      1.0: null
+  ITEM_KNN:
+    ALIBABA:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.00032
+      0.25: 0.00171
+      0.5: 0.00309
+      0.75: 0.00335
+      1.0: 0.00309
+    NETFLIX:
+      0.1: 0.00062
+      0.25: 0.00333
+      0.5: 0.00902
+      0.75: null
+      1.0: null
+  POP:
+    ALIBABA:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.02702
+      0.25: 0.04379
+      0.5: 0.06973
+      0.75: 0.10744
+      1.0: 0.167
+    NETFLIX:
+      0.1: 0.02004
+      0.25: 0.03319
+      0.5: 0.05597
+      0.75: 0.08861
+      1.0: 0.14161
+RECBOLE:
+  ASYM_KNN:
+    ALIBABA:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.01958
+      0.25: 0.04237
+      0.5: 0.07347
+      0.75: 0.11971
+      1.0: 0.29643
+    NETFLIX:
+      0.1: 0.01447
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+  BPR:
+    ALIBABA:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.00012
+      0.25: 0.00011
+      0.5: 0.00014
+      0.75: 0.00015
+      1.0: 0.0002
+    NETFLIX:
+      0.1: 0.0003
+      0.25: 0.00044
+      0.5: 0.0007
+      0.75: 0.00096
+      1.0: null
+  ITEM_KNN:
+    ALIBABA:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.02108
+      0.25: 0.04406
+      0.5: 0.07774
+      0.75: 0.1306
+      1.0: 0.2447
+    NETFLIX:
+      0.1: 0.02006
+      0.25: 0.03671
+      0.5: 0.06689
+      0.75: 0.11652
+      1.0: null
+  NEU_MF:
+    ALIBABA:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.01997
+      0.25: 0.03294
+      0.5: 0.04822
+      0.75: null
+      1.0: null
+    NETFLIX:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+  POP:
+    ALIBABA:
+      0.1: 0.00082
+      0.25: 0.00087
+      0.5: null
+      0.75: null
+      1.0: null
+    GOODREADS:
+      0.1: null
+      0.25: null
+      0.5: null
+      0.75: null
+      1.0: null
+    MOVIELENS:
+      0.1: 0.02586
+      0.25: 0.03211
+      0.5: 0.04781
+      0.75: 0.07198
+      1.0: 0.1187
+    NETFLIX:
+      0.1: 0.02054
+      0.25: 0.02696
+      0.5: 0.04269
+      0.75: 0.06688
+      1.0: 0.11392
