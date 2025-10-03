@@ -4,7 +4,7 @@ from argparse import ArgumentParser
 
 from .constants import Tool, Dataset, Scorer, Model, SIZES, FIGURES
 from .load import load
-from .results import Result, load_results, save_results, setdefault_results
+from .results import Result, load_results, save_results, setdefault_nested
 from .sample import sample
 from .utilities import safe_run
 from .use_lenskit import use_lenskit
@@ -25,8 +25,8 @@ def main():
 
   lenskit, recbole = Tool.LENSKIT.name, Tool.RECBOLE.name
   sizes = SIZES
-  # excluded = [Dataset.MOVIELENS, Dataset.NETFLIX, Dataset.GOODREADS]
-  excluded = []
+  excluded = [Dataset.ALIBABA]
+  # excluded = []
   datasets = [dataset for dataset in Dataset if dataset not in excluded]
   results = load_results()
   result: Result
@@ -45,7 +45,7 @@ def main():
 
         current = f"[{Tool.LENSKIT.name}][{scorer.name}][{dataset.name}][{size}]"
         print(f"Checking {current}")
-        setdefault_results(results, [lenskit, scorer.name, dataset.name, size])
+        setdefault_nested(results, [lenskit, scorer.name, dataset.name, size])
         result = results[lenskit][scorer.name][dataset.name][size]
         if result is None or result < 0.0:
           print(f"Starting {current}")
@@ -63,7 +63,7 @@ def main():
 
         current = f"[{Tool.RECBOLE.name}][{model.name}][{dataset.name}][{size}]"
         print(f"Checking {current}")
-        setdefault_results(results, [recbole, model.name, dataset.name, size])
+        setdefault_nested(results, [recbole, model.name, dataset.name, size])
         result = results[recbole][model.name][dataset.name][size]
         if result is None or result < 0.0:
           print(f"Starting {current}")

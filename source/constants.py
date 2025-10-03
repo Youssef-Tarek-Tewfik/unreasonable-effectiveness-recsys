@@ -59,23 +59,23 @@ COLUMN_NAMES = {
   "timestamp": "timestamp",
 }
 DISPLAY_NAMES = {
-  Tool.LENSKIT: "LensKit",
-  Tool.RECBOLE: "RecBole",
-  Dataset.MOVIELENS: "MovieLens-32m",
-  Dataset.NETFLIX: "Netflix-100m",
-  Dataset.ALIBABA: "Alibaba-iFashion-191m",
-  Dataset.GOODREADS: "GoodReads-228m",
-  Dataset.MUSIC4ALL: "Music4All-Onion-252m",
-  Scorer.POP: "Popularity",
-  Scorer.ITEM_KNN: "Item KNN",
-  Scorer.BIASED_MF: "Biased MF (ALS)",
-  Scorer.IMPLICIT_MF: "Implicit MF (ALS)",
-  Scorer.BIASED_SVD: "Biased MF (SVD)",
-  Model.ASYM_KNN: "Asymmetric KNN (User)",
-  Model.POP: "Popularity",
-  Model.ITEM_KNN: "Item KNN",
-  Model.BPR: "Bayesian Personalized Ranking",
-  Model.NEU_MF: "Neural Collaborative Filtering",
+  Tool.LENSKIT.name: "LensKit",
+  Tool.RECBOLE.name: "RecBole",
+  Dataset.MOVIELENS.name: "MovieLens-32m",
+  Dataset.NETFLIX.name: "Netflix-100m",
+  Dataset.ALIBABA.name: "Alibaba-iFashion-191m",
+  Dataset.GOODREADS.name: "GoodReads-228m",
+  Dataset.MUSIC4ALL.name: "Music4All-Onion-252m",
+  Scorer.POP.name: "Popularity",
+  Scorer.ITEM_KNN.name: "Item KNN",
+  Scorer.BIASED_MF.name: "Biased MF (ALS)",
+  Scorer.IMPLICIT_MF.name: "Implicit MF (ALS)",
+  Scorer.BIASED_SVD.name: "Biased MF (SVD)",
+  Model.ASYM_KNN.name: "Asymmetric KNN (User)",
+  Model.POP.name: "Popularity",
+  Model.ITEM_KNN.name: "Item KNN",
+  Model.BPR.name: "Bayesian Personalized Ranking",
+  Model.NEU_MF.name: "Neural Collaborative Filtering",
 }
 FILE_NAME_RATINGS = "ratings.csv"
 FILE_NAME_RESULTS_LATEST = "latest.yaml"
@@ -115,8 +115,8 @@ BATCH_SIZE = 4096
 TRAIN_SIZE = 0.8
 VALID_SIZE = 0.1
 TEST_SIZE = 0.1
-PARTITIONS = 4
-EPOCHS = 16
+PARTITIONS = 2
+EPOCHS = 4
 K = 64 # 128?
 MIN_K = K // 2
 FEATURES = 64

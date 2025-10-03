@@ -46,8 +46,8 @@ def save_results(results: Results, tag: str | None = None, path: str | Path = PA
   with open(path, 'w') as f:
     yaml.dump(results, f)
 
-def setdefault_results(results: dict, keys: list[str | float], default: Result = None) -> None:
-  current = results
+def setdefault_nested(input: dict, keys: list[str | float], default: Result = None) -> None:
+  current = input
   for key in keys[:-1]:
     current = current.setdefault(key, {})
   current.setdefault(keys[-1], default)
@@ -62,7 +62,7 @@ def aggregate_results() -> None:
       for algorithm in results[tool]:
         for dataset in results[tool][algorithm]:
           for size, value in results[tool][algorithm][dataset].items():
-            setdefault_results(output, [tool, algorithm, dataset, size])
+            setdefault_nested(output, [tool, algorithm, dataset, size])
             if value is not None and value >= 0:
               output[tool][algorithm][dataset][size] = value
 
