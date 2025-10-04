@@ -130,16 +130,17 @@ def get_slopes(results: Results, log = True) -> Slopes:
 
                 x = []
                 y = []
+                zeros = True
                 for size, value in results[tool][algorithm][dataset].items():
                     if value is not None:
                         x.append(float(size))
                         y.append(float(value))
 
-                if len(x) < 2:
-                    continue
+                        if value > 0.0:
+                            zeros = False
 
-                print(x)
-                print(y)
+                if zeros or len(x) < 2:
+                    continue
 
                 x = np.array(x)
                 y = np.array(y)

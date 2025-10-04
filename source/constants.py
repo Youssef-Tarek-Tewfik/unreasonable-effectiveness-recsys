@@ -45,7 +45,7 @@ DATASET_FEEDBACK_EXPLICIT = {
 }
 
 ## Exception handling
-ALLOWED_EXCEPTIONS: list[tuple[type[Exception], str]] = [
+ALLOWED_EXCEPTIONS = [
   (KeyError, "Field \"rating\" does not exist in schema"),
   (KeyError, "Column rating does not exist in schema"),
 ]
@@ -59,23 +59,23 @@ COLUMN_NAMES = {
   "timestamp": "timestamp",
 }
 DISPLAY_NAMES = {
-  Tool.LENSKIT.name: "LensKit",
-  Tool.RECBOLE.name: "RecBole",
-  Dataset.MOVIELENS.name: "MovieLens-32m",
-  Dataset.NETFLIX.name: "Netflix-100m",
-  Dataset.ALIBABA.name: "Alibaba-iFashion-191m",
-  Dataset.GOODREADS.name: "GoodReads-228m",
-  Dataset.MUSIC4ALL.name: "Music4All-Onion-252m",
-  Scorer.POP.name: "Popularity",
-  Scorer.ITEM_KNN.name: "Item KNN",
-  Scorer.BIASED_MF.name: "Biased MF (ALS)",
-  Scorer.IMPLICIT_MF.name: "Implicit MF (ALS)",
-  Scorer.BIASED_SVD.name: "Biased MF (SVD)",
-  Model.ASYM_KNN.name: "Asymmetric KNN (User)",
-  Model.POP.name: "Popularity",
-  Model.ITEM_KNN.name: "Item KNN",
-  Model.BPR.name: "Bayesian Personalized Ranking",
-  Model.NEU_MF.name: "Neural Collaborative Filtering",
+  Tool.LENSKIT: "LensKit",
+  Tool.RECBOLE: "RecBole",
+  Dataset.MOVIELENS: "MovieLens-32m",
+  Dataset.NETFLIX: "Netflix-100m",
+  Dataset.ALIBABA: "Alibaba-iFashion-191m",
+  Dataset.GOODREADS: "GoodReads-228m",
+  Dataset.MUSIC4ALL: "Music4All-Onion-252m",
+  Scorer.POP: "Popularity",
+  Scorer.ITEM_KNN: "Item KNN",
+  Scorer.BIASED_MF: "Biased MF (ALS)",
+  Scorer.IMPLICIT_MF: "Implicit MF (ALS)",
+  Scorer.BIASED_SVD: "Biased MF (SVD)",
+  Model.ASYM_KNN: "Asymmetric KNN (User)",
+  Model.POP: "Popularity",
+  Model.ITEM_KNN: "Item KNN",
+  Model.BPR: "Bayesian Personalized Ranking",
+  Model.NEU_MF: "Neural Collaborative Filtering",
 }
 FILE_NAME_RATINGS = "ratings.csv"
 FILE_NAME_RESULTS_LATEST = "latest.yaml"
@@ -105,9 +105,9 @@ FIGURES = 5
 
 
 # Environment related
-GPUS = 2
-WORKERS = 8
-BATCH_SIZE = 4096
+GPUS = 1
+WORKERS = 16
+BATCH_SIZE = 8192
 # SPLIT_TO = 2
 
 
@@ -115,20 +115,20 @@ BATCH_SIZE = 4096
 TRAIN_SIZE = 0.8
 VALID_SIZE = 0.1
 TEST_SIZE = 0.1
-PARTITIONS = 2
-EPOCHS = 4
-K = 64 # 128?
+PARTITIONS = 1
+EPOCHS = 2
+K = 32
 MIN_K = K // 2
 FEATURES = 64
-MF_EMBEDDING_SIZE = 64
-REGULARIZATION = 0.75 # 0.5? 1.0?
-ALPHA = 0.75 # 0.5? 1.0?
+MF_EMBEDDING_SIZE = 32
+REGULARIZATION = 1.0
+ALPHA = 1.0
 BIASED_MF_DAMPING = 16
 CONFIDENCE_WEIGHT = 16
-LEARNING_RATE = 0.025 # 0.5?
+LEARNING_RATE = 0.05
 BETA = 1.0
 SHRINK = 0.0
-SVD_N_ITER = 16
+SVD_N_ITER = 4
 
 
 # Configurations
