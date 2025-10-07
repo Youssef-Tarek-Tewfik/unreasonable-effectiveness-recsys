@@ -59,23 +59,23 @@ COLUMN_NAMES = {
   "timestamp": "timestamp",
 }
 DISPLAY_NAMES = {
-  Tool.LENSKIT: "LensKit",
-  Tool.RECBOLE: "RecBole",
-  Dataset.MOVIELENS: "MovieLens-32m",
-  Dataset.NETFLIX: "Netflix-100m",
-  Dataset.ALIBABA: "Alibaba-iFashion-191m",
-  Dataset.GOODREADS: "GoodReads-228m",
-  Dataset.MUSIC4ALL: "Music4All-Onion-252m",
-  Scorer.POP: "Popularity",
-  Scorer.ITEM_KNN: "Item KNN",
-  Scorer.BIASED_MF: "Biased MF (ALS)",
-  Scorer.IMPLICIT_MF: "Implicit MF (ALS)",
-  Scorer.BIASED_SVD: "Biased MF (SVD)",
-  Model.ASYM_KNN: "Asymmetric KNN (User)",
-  Model.POP: "Popularity",
-  Model.ITEM_KNN: "Item KNN",
-  Model.BPR: "Bayesian Personalized Ranking",
-  Model.NEU_MF: "Neural Collaborative Filtering",
+  Tool.LENSKIT.name: "LensKit",
+  Tool.RECBOLE.name: "RecBole",
+  Dataset.MOVIELENS.name: "MovieLens-32m",
+  Dataset.NETFLIX.name: "Netflix-100m",
+  Dataset.ALIBABA.name: "Alibaba-iFashion-191m",
+  Dataset.GOODREADS.name: "GoodReads-228m",
+  Dataset.MUSIC4ALL.name: "Music4All-Onion-252m",
+  Scorer.POP.name: "Popularity",
+  Scorer.ITEM_KNN.name: "Item KNN",
+  Scorer.BIASED_MF.name: "Biased MF (ALS)",
+  Scorer.IMPLICIT_MF.name: "Implicit MF (ALS)",
+  Scorer.BIASED_SVD.name: "Biased MF (SVD)",
+  Model.ASYM_KNN.name: "Asymmetric KNN (User)",
+  Model.POP.name: "Popularity",
+  Model.ITEM_KNN.name: "Item KNN",
+  Model.BPR.name: "Bayesian Personalized Ranking",
+  Model.NEU_MF.name: "Neural Collaborative Filtering",
 }
 FILE_NAME_RATINGS = "ratings.csv"
 FILE_NAME_RESULTS_LATEST = "latest.yaml"
@@ -105,8 +105,8 @@ FIGURES = 5
 
 
 # Environment related
-GPUS = 1
-WORKERS = 16
+GPUS = 2
+WORKERS = 8
 BATCH_SIZE = 8192
 # SPLIT_TO = 2
 
@@ -201,7 +201,7 @@ RECBOLE_MODEL_CONFIGS = {
   Model.NEU_MF: {
     "mf_embedding_size": MF_EMBEDDING_SIZE, # Default: 64
     "mlp_embedding_size": MF_EMBEDDING_SIZE, # Default: 64
-    "mlp_hidden_size": [512, 256], # Default: [128,64]
+    "mlp_hidden_size": [128,64], # Default: [128,64]
     "dropout_prob": 0.1, # Default: 0.1 
   },
 }
@@ -221,6 +221,8 @@ RECBOLE_CONFIG_COMMON = {
   "USER_ID_FIELD": COLUMN_NAMES["user_id"],
   "ITEM_ID_FIELD": COLUMN_NAMES["item_id"],
   "TIME_FIELD": None,
+  "rm_dup_inter": "first",
+  # "filter_inter_by_user_or_item": False,
 
   ### Training
   "epochs": EPOCHS,

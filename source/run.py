@@ -25,8 +25,8 @@ def main():
 
   lenskit, recbole = Tool.LENSKIT.name, Tool.RECBOLE.name
   sizes = SIZES
-  # excluded = [Dataset.ALIBABA]
-  excluded = []
+  excluded = [Dataset.ALIBABA]
+  # excluded = []
   datasets = [dataset for dataset in Dataset if dataset not in excluded]
   results = load_results()
   result: Result
