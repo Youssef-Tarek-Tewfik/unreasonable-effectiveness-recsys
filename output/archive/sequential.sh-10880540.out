@@ -1,0 +1,17 @@
+[UEDRS] [00:00:02] starting
+[UEDRS] [00:00:02] cpus: 64
+[UEDRS] [00:00:02] memory: 64
+[UEDRS] [00:00:02] env variables:
+[UEDRS] [00:00:02] OMP_NUM_THREADS: 64
+[UEDRS] [00:00:02] MKL_NUM_THREADS: 64
+[UEDRS] [00:00:02] OPENBLAS_NUM_THREADS: 64
+[UEDRS] [00:00:02] NUMBA_NUM_THREADS: 64
+[UEDRS] [00:00:02] LK_NUM_PROCS: 1
+[UEDRS] [00:00:02] LK_NUM_THREADS: 1
+
+
+[UEDRS] [00:00:02] algorithm: ITEM_KNN
+[UEDRS] [00:00:09] MOVIELENS loaded
+[UEDRS] [00:00:07] elapsed
+
+[UEDRS] [00:00:09] starting with {'change': False}

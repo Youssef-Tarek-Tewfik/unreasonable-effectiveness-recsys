@@ -1,0 +1,27 @@
+[UEDRS] [00:00:05] starting
+[UEDRS] [00:00:05] cpus: 64
+[UEDRS] [00:00:05] memory: 128
+[UEDRS] [00:00:05] env variables:
+[UEDRS] [00:00:05] OMP_NUM_THREADS: 64
+[UEDRS] [00:00:05] MKL_NUM_THREADS: 64
+[UEDRS] [00:00:05] OPENBLAS_NUM_THREADS: 64
+[UEDRS] [00:00:05] NUMBA_NUM_THREADS: 64
+[UEDRS] [00:00:05] LK_NUM_PROCS: 32
+[UEDRS] [00:00:05] LK_NUM_THREADS: 2
+
+
+[UEDRS] [00:00:05] dataset: NETFLIX
+[UEDRS] [00:00:35] NETFLIX loaded
+[UEDRS] [00:00:30] elapsed
+[UEDRS] [00:00:35] algorithm: MultiVAE
+[UEDRS] [00:00:35] starting
+[UEDRS] [00:13:46] failed: CUDA out of memory. Tried to allocate 50.53 GiB. GPU 0 has a total capacity of 15.77 GiB of which 15.46 GiB is free. Including non-PyTorch memory, this process has 306.00 MiB memory in use. Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+[UEDRS] [00:13:46] algorithm: MultiDAE
+[UEDRS] [00:13:46] starting
+[UEDRS] [00:26:57] failed: CUDA out of memory. Tried to allocate 50.53 GiB. GPU 0 has a total capacity of 15.77 GiB of which 15.46 GiB is free. Including non-PyTorch memory, this process has 306.00 MiB memory in use. Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+[UEDRS] [00:26:57] algorithm: CDAE
+[UEDRS] [00:26:57] starting
+[UEDRS] [00:40:13] failed: CUDA out of memory. Tried to allocate 50.53 GiB. GPU 0 has a total capacity of 15.77 GiB of which 15.46 GiB is free. Including non-PyTorch memory, this process has 306.00 MiB memory in use. Of the allocated memory 0 bytes is allocated by PyTorch, and 0 bytes is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+

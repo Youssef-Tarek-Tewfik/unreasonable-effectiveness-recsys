@@ -1,0 +1,33 @@
+[UEDRS] [00:00:05] starting
+[UEDRS] [00:00:05] cpus: 32
+[UEDRS] [00:00:05] memory: 128
+[UEDRS] [00:00:05] env variables:
+[UEDRS] [00:00:05] OMP_NUM_THREADS: 1
+[UEDRS] [00:00:05] MKL_NUM_THREADS: 1
+[UEDRS] [00:00:05] OPENBLAS_NUM_THREADS: 1
+[UEDRS] [00:00:05] NUMBA_NUM_THREADS: 1
+
+
+[UEDRS] [00:01:25] NETFLIX loaded
+[UEDRS] [00:01:19] elapsed
+
+[UEDRS] [00:01:25] starting with {'learner': 'adam'}
+[UEDRS] [00:32:51] finished
+[UEDRS] [00:31:26] elapsed
+
+[UEDRS] [00:32:51] starting with {'learner': 'sgd'}
+[UEDRS] [01:04:04] finished
+[UEDRS] [00:31:12] elapsed
+
+[UEDRS] [01:04:04] starting with {'learner': 'adagrad'}
+[UEDRS] [01:36:27] finished
+[UEDRS] [00:32:22] elapsed
+
+[UEDRS] [01:36:27] starting with {'learner': 'rmsprop'}
+[UEDRS] [02:08:59] finished
+[UEDRS] [00:32:32] elapsed
+
+[UEDRS] [02:08:59] starting with {'learner': 'sparse_adam'}
+[UEDRS] [02:41:21] finished
+[UEDRS] [00:32:22] elapsed
+

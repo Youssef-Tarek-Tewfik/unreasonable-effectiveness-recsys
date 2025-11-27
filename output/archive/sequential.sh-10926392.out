@@ -1,0 +1,44 @@
+[UEDRS] [00:00:04] starting
+[UEDRS] [00:00:04] cpus: 64
+[UEDRS] [00:00:04] memory: 128
+[UEDRS] [00:00:04] env variables:
+[UEDRS] [00:00:04] OMP_NUM_THREADS: 64
+[UEDRS] [00:00:04] MKL_NUM_THREADS: 64
+[UEDRS] [00:00:04] OPENBLAS_NUM_THREADS: 64
+[UEDRS] [00:00:04] NUMBA_NUM_THREADS: 64
+[UEDRS] [00:00:04] LK_NUM_PROCS: 32
+[UEDRS] [00:00:04] LK_NUM_THREADS: 2
+
+
+[UEDRS] [00:00:04] Dataset: NETFLIX
+[UEDRS] [00:00:04] Sampling: RANDOM
+[UEDRS] [00:00:38] Loaded and sampled
+[UEDRS] [00:00:34] Elapsed
+[UEDRS] [00:00:38] Starting
+[UEDRS] [00:36:23] Result: 0.03461
+[UEDRS] [00:35:45] Elapsed
+
+[UEDRS] [00:36:23] Dataset: NETFLIX
+[UEDRS] [00:36:23] Sampling: STRATIFIED_USER
+[UEDRS] [00:37:13] Loaded and sampled
+[UEDRS] [00:00:50] Elapsed
+[UEDRS] [00:37:13] Starting
+[UEDRS] [01:12:33] Result: 0.03402
+[UEDRS] [00:35:19] Elapsed
+
+[UEDRS] [01:12:33] Dataset: NETFLIX
+[UEDRS] [01:12:33] Sampling: STRATIFIED_ITEM
+[UEDRS] [01:12:58] Loaded and sampled
+[UEDRS] [00:00:24] Elapsed
+[UEDRS] [01:12:58] Starting
+[UEDRS] [01:48:24] Result: 0.03454
+[UEDRS] [00:35:25] Elapsed
+
+[UEDRS] [01:48:24] Dataset: NETFLIX
+[UEDRS] [01:48:24] Sampling: STRATIFIED_HYBRID
+[UEDRS] [01:49:08] Loaded and sampled
+[UEDRS] [00:00:44] Elapsed
+[UEDRS] [01:49:08] Starting
+[UEDRS] [02:24:07] Result: 0.0335
+[UEDRS] [00:34:58] Elapsed
+

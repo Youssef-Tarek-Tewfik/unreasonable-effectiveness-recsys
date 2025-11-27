@@ -1,0 +1,28 @@
+[UEDRS] [00:00:03] starting
+[UEDRS] [00:00:03] cpus: 64
+[UEDRS] [00:00:03] memory: 192
+[UEDRS] [00:00:03] env variables:
+[UEDRS] [00:00:03] OMP_NUM_THREADS: 64
+[UEDRS] [00:00:03] MKL_NUM_THREADS: 64
+[UEDRS] [00:00:03] OPENBLAS_NUM_THREADS: 64
+[UEDRS] [00:00:03] NUMBA_NUM_THREADS: 64
+[UEDRS] [00:00:03] LK_NUM_PROCS: 16
+[UEDRS] [00:00:03] LK_NUM_THREADS: 2
+
+
+[UEDRS] [00:00:03] algorithm: NEU_MF
+[UEDRS] [00:00:08] MOVIELENS loaded
+[UEDRS] [00:00:04] elapsed
+
+[UEDRS] [00:00:08] starting with {'worker': 4}
+[UEDRS] [00:56:57] finished with result: 0.1171
+[UEDRS] [00:56:49] elapsed
+
+[UEDRS] [00:56:57] starting with {'worker': 8}
+[UEDRS] [01:54:13] finished with result: 0.11772
+[UEDRS] [00:57:16] elapsed
+
+[UEDRS] [01:54:13] starting with {'worker': 16}
+[UEDRS] [02:51:41] finished with result: 0.11653
+[UEDRS] [00:57:28] elapsed
+

@@ -1,0 +1,35 @@
+[UEDRS] [00:00:10] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:10] Tag:  RECBOLE:EASE
+[UEDRS] [00:00:10] Tool: RECBOLE
+[UEDRS] [00:00:10] Algorithm: EASE
+[UEDRS] [00:00:10] Datasets: MOVIELENS, NETFLIX, MUSIC4ALL, GOODREADS, AMAZON, ALIBABA
+[UEDRS] [00:00:10] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:10] Current dataset [MOVIELENS]
+[UEDRS] [00:00:10] Loading full dataset
+[UEDRS] [00:00:19] Loading done
+[UEDRS] [00:00:19] Memory Usage: RSS = 1355.87 MB, VMS = 9594.63 MB
+[UEDRS] [00:00:09] Elapsed
+[UEDRS] [00:00:19] Sampling for [1000000]
+[UEDRS] [00:00:26] Sampling done
+[UEDRS] [00:00:26] Memory Usage: RSS = 716.02 MB, VMS = 8952.70 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:00:26] Checking [RECBOLE][EASE][MOVIELENS][1m]
+[UEDRS] [00:00:26] Starting
+[UEDRS] [00:11:00] Finished (0.00994)
+[UEDRS] [00:11:00] Memory Usage: RSS = 1721.74 MB, VMS = 18796.59 MB
+[UEDRS] [00:10:33] Elapsed
+
+[UEDRS] [00:11:00] Memory Usage: RSS = 1721.74 MB, VMS = 18796.59 MB
+[UEDRS] [00:11:00] Releasing dataframe from memory
+[UEDRS] [00:11:01] Memory Usage: RSS = 1421.55 MB, VMS = 18495.59 MB
+[UEDRS] [00:11:01] Loading full dataset
+[UEDRS] [00:11:12] Loading done
+[UEDRS] [00:11:12] Memory Usage: RSS = 2164.12 MB, VMS = 19238.02 MB
+[UEDRS] [00:00:11] Elapsed
+[UEDRS] [00:11:12] Sampling for [25000000]
+[UEDRS] [00:11:20] Sampling done
+[UEDRS] [00:11:20] Memory Usage: RSS = 2005.04 MB, VMS = 19077.77 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:11:20] Checking [RECBOLE][EASE][MOVIELENS][25m]
+[UEDRS] [00:11:20] Starting

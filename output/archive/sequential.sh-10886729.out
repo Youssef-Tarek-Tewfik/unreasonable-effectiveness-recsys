@@ -1,0 +1,92 @@
+[UEDRS] [00:00:13] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:13] Tag:  none
+[UEDRS] [00:00:13] Tool: LENSKIT
+[UEDRS] [00:00:13] Algorithm: POP
+[UEDRS] [00:00:13] Excluded datasets: ALIBABA
+[UEDRS] [00:00:13] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:32] Checking [LENSKIT][POP][MOVIELENS][1m]
+[UEDRS] [00:00:32] Skipping (0.00858)
+
+[UEDRS] [00:00:39] Checking [LENSKIT][POP][MOVIELENS][25m]
+[UEDRS] [00:00:39] Skipping (0.11333)
+
+[UEDRS] [00:00:47] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:47] Skipping (0.16701)
+
+[UEDRS] [00:00:54] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:54] Skipping (0.16701)
+
+[UEDRS] [00:01:01] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:01:01] Skipping (0.16701)
+
+[UEDRS] [00:02:39] Checking [LENSKIT][POP][NETFLIX][1m]
+[UEDRS] [00:02:39] Skipping (0.00297)
+
+[UEDRS] [00:02:58] Checking [LENSKIT][POP][NETFLIX][25m]
+[UEDRS] [00:02:58] Skipping (0.03352)
+
+[UEDRS] [00:03:17] Checking [LENSKIT][POP][NETFLIX][50m]
+[UEDRS] [00:03:17] Skipping (0.05555)
+
+[UEDRS] [00:03:36] Checking [LENSKIT][POP][NETFLIX][75m]
+[UEDRS] [00:03:36] Skipping (0.08792)
+
+[UEDRS] [00:04:06] Checking [LENSKIT][POP][NETFLIX][100m]
+[UEDRS] [00:04:06] Skipping (0.14026)
+
+[UEDRS] [00:07:44] Checking [LENSKIT][POP][GOODREADS][1m]
+[UEDRS] [00:07:44] Starting
+[UEDRS] [00:20:40] Finished (0.00062)
+[UEDRS] [00:12:56] Elapsed
+
+[UEDRS] [00:21:16] Checking [LENSKIT][POP][GOODREADS][25m]
+[UEDRS] [00:21:16] Starting
+[UEDRS] [01:07:54] Finished (0.01621)
+[UEDRS] [00:46:37] Elapsed
+
+[UEDRS] [01:08:31] Checking [LENSKIT][POP][GOODREADS][50m]
+[UEDRS] [01:08:31] Starting
+[UEDRS] [02:00:35] Finished (0.02329)
+[UEDRS] [00:52:04] Elapsed
+
+[UEDRS] [02:01:21] Checking [LENSKIT][POP][GOODREADS][75m]
+[UEDRS] [02:01:21] Starting
+[UEDRS] [02:59:41] Finished (0.02949)
+[UEDRS] [00:58:19] Elapsed
+
+[UEDRS] [03:00:20] Checking [LENSKIT][POP][GOODREADS][100m]
+[UEDRS] [03:00:20] Starting
+[UEDRS] [03:59:38] Finished (0.03652)
+[UEDRS] [00:59:18] Elapsed
+
+[UEDRS] [04:00:31] Checking [LENSKIT][POP][MUSIC4ALL][1m]
+[UEDRS] [04:00:31] Starting
+[UEDRS] [04:09:24] Finished (0.00204)
+[UEDRS] [00:08:52] Elapsed
+
+[UEDRS] [04:09:32] Checking [LENSKIT][POP][MUSIC4ALL][25m]
+[UEDRS] [04:09:32] Starting
+[UEDRS] [04:19:21] Finished (0.01007)
+[UEDRS] [00:09:48] Elapsed
+
+[UEDRS] [04:19:39] Checking [LENSKIT][POP][MUSIC4ALL][50m]
+[UEDRS] [04:19:39] Starting
+[UEDRS] [04:30:37] Finished (0.01755)
+[UEDRS] [00:10:58] Elapsed
+
+[UEDRS] [04:30:46] Checking [LENSKIT][POP][MUSIC4ALL][50m]
+[UEDRS] [04:30:46] Starting
+[UEDRS] [04:41:04] Finished (0.01763)
+[UEDRS] [00:10:18] Elapsed
+
+[UEDRS] [04:41:13] Checking [LENSKIT][POP][MUSIC4ALL][50m]
+[UEDRS] [04:41:13] Skipping (0.01763)
+
+[UEDRS] [05:44:24] Checking [LENSKIT][POP][AMAZON][0m]
+[UEDRS] [05:44:24] Starting
+[UEDRS] [05:55:51] Finished (0.0)
+[UEDRS] [00:11:26] Elapsed
+
+[UEDRS] [06:30:03] Checking [LENSKIT][POP][AMAZON][19m]
+[UEDRS] [06:30:03] Starting

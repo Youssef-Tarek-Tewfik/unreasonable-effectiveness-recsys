@@ -1,0 +1,32 @@
+[UEDRS] [00:00:04] starting
+[UEDRS] [00:00:04] cpus: 64
+[UEDRS] [00:00:04] memory: 192
+[UEDRS] [00:00:04] env variables:
+[UEDRS] [00:00:04] OMP_NUM_THREADS: 1
+[UEDRS] [00:00:04] MKL_NUM_THREADS: 1
+[UEDRS] [00:00:04] OPENBLAS_NUM_THREADS: 1
+[UEDRS] [00:00:04] NUMBA_NUM_THREADS: 1
+[UEDRS] [00:00:04] LK_NUM_PROCS: 16
+[UEDRS] [00:00:04] LK_NUM_THREADS: 2
+
+
+[UEDRS] [00:00:04] algorithm: ITEM_KNN
+[UEDRS] [00:00:10] MOVIELENS loaded
+[UEDRS] [00:00:06] elapsed
+
+[UEDRS] [00:00:10] starting with {'learning_rate': 0.5}
+[UEDRS] [00:28:10] finished with result: 0.24401
+[UEDRS] [00:28:00] elapsed
+
+[UEDRS] [00:28:10] starting with {'learning_rate': 1.0}
+[UEDRS] [00:56:39] finished with result: 0.24401
+[UEDRS] [00:28:28] elapsed
+
+[UEDRS] [00:56:39] starting with {'learning_rate': 2.5}
+[UEDRS] [01:25:02] finished with result: 0.24401
+[UEDRS] [00:28:22] elapsed
+
+[UEDRS] [01:25:02] starting with {'learning_rate': 5.0}
+[UEDRS] [01:53:23] finished with result: 0.24401
+[UEDRS] [00:28:20] elapsed
+

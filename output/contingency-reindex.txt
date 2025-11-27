@@ -1,0 +1,32 @@
+[UEDRS] [00:00:20] Loading dataset: ALIBABA
+[UEDRS] [00:00:57] Loading done
+[UEDRS] [00:00:36] Elapsed
+[UEDRS] [00:00:57] Reindexing
+[UEDRS] [00:02:17] user_id contiguous 0-based: True
+veness-recsys\datasets\alibaba\reindexed.csv
+[UEDRS] [00:05:22] Done
+[UEDRS] [00:04:24] Elapsed
+[UEDRS] [00:05:22] Creating demo
+Copied first 5 lines from
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\alibaba\reindexed.csv
+to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\alibaba\reindexed-demo.csv
+[UEDRS] [00:05:25] Done
+[UEDRS] [00:00:03] Elapsed
+
+[UEDRS] [00:05:25] Loading dataset: AMAZON
+[UEDRS] [00:17:03] Loading done
+[UEDRS] [00:11:37] Elapsed
+[UEDRS] [00:17:03] Reindexing
+[UEDRS] [00:48:25] user_id contiguous 0-based: True
+[UEDRS] [00:48:25] item_id contiguous 0-based: True
+[UEDRS] [01:03:05] Saved reindexed data to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\amazon\reindexed.csv
+[UEDRS] [01:05:37] Done
+[UEDRS] [00:48:34] Elapsed
+[UEDRS] [01:05:37] Creating demo
+Copied first 5 lines from
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\amazon\reindexed.csv
+to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\amazon\reindexed-demo.csv
+[UEDRS] [01:05:37] Done
+[UEDRS] [00:00:00] Elapsed

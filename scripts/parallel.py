@@ -8,8 +8,12 @@ with open(PATH_SCRIPT_SEQUENTIAL, 'r') as f:
     template = f.read()
 
 tags = [
-    *[f"{Tool.LENSKIT.name}:{scorer.name}" for scorer in Scorer],
-    *[f"{Tool.RECBOLE.name}:{model.name}" for model in Model],
+    # One run per tool-algorithm combination; "[TOOL]:[ALGORITHM]"
+    # *[f"{Tool.LENSKIT.name}:{scorer.name}" for scorer in Scorer], 
+    # *[f"{Tool.RECBOLE.name}:{model.name}" for model in Model],
+
+    # One run per tool; "[TOOL]:"
+    f"{Tool.LENSKIT.name}:", f"{Tool.RECBOLE.name}:"
 ]
 for tag in tags:
     name = f"parallel-{tag.replace(':', '-')}"

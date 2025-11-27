@@ -15,6 +15,19 @@ class Dataset(Enum):
   ALIBABA = "alibaba"
   GOODREADS = "goodreads"
   MUSIC4ALL = "music4all"
+  AMAZON = "amazon"
+
+## Sampling
+### Sizing
+class Sizing(Enum):
+  FRACTIONAL = 0
+  ABSOLUTE = 1
+### Sampling strategies
+class Sampling(Enum):
+  RANDOM = 0
+  STRATIFIED_USER = 1
+  STRATIFIED_ITEM = 2
+  STRATIFIED_HYBRID = 3
 
 ## LensKit algorithms (scorers)
 class Scorer(Enum):
@@ -27,7 +40,8 @@ class Scorer(Enum):
 
 ## RecBole algorithms (models)
 class Model(Enum):
-  ASYM_KNN = "AsymKNN" # Asymmetric KNN
+  NCEPLRec = "NCEPLRec" # NCEPLRec
+  SimpleX = "SimpleX" # SimpleX
   POP = "Pop"  # Popularity
   ITEM_KNN = "ItemKNN"  # Item KNN
   BPR = "BPR"  # Bayesian Personalized Ranking
@@ -42,6 +56,7 @@ DATASET_FEEDBACK_EXPLICIT = {
   Dataset.ALIBABA: False,
   Dataset.GOODREADS: True,
   Dataset.MUSIC4ALL: True,
+  Dataset.AMAZON: True,
 }
 
 ## Exception handling
@@ -63,15 +78,23 @@ DISPLAY_NAMES = {
   Tool.RECBOLE.name: "RecBole",
   Dataset.MOVIELENS.name: "MovieLens-32m",
   Dataset.NETFLIX.name: "Netflix-100m",
-  Dataset.ALIBABA.name: "Alibaba-iFashion-191m",
+  Dataset.ALIBABA.name: "Alibaba-iFashion-191m (implicit)",
   Dataset.GOODREADS.name: "GoodReads-228m",
   Dataset.MUSIC4ALL.name: "Music4All-Onion-252m",
+  Dataset.AMAZON.name: "Amazon-571m",
+  Sizing.FRACTIONAL.name: "Fractional",
+  Sizing.ABSOLUTE.name: "Absolute",
+  Sampling.RANDOM.name: "Random Sampling",
+  Sampling.STRATIFIED_USER.name: "Stratified Sampling (User)",
+  Sampling.STRATIFIED_ITEM.name: "Stratified Sampling (Item)",
+  Sampling.STRATIFIED_HYBRID.name: "Stratified Sampling (Hybrid)",
   Scorer.POP.name: "Popularity",
   Scorer.ITEM_KNN.name: "Item KNN",
   Scorer.BIASED_MF.name: "Biased MF (ALS)",
   Scorer.IMPLICIT_MF.name: "Implicit MF (ALS)",
   Scorer.BIASED_SVD.name: "Biased MF (SVD)",
-  Model.ASYM_KNN.name: "Asymmetric KNN (User)",
+  Model.NCEPLRec.name: "NCEPLRec",
+  Model.SimpleX.name: "SimpleX",
   Model.POP.name: "Popularity",
   Model.ITEM_KNN.name: "Item KNN",
   Model.BPR.name: "Bayesian Personalized Ranking",
@@ -97,18 +120,20 @@ PATH_RESULTS_AGGREGATE = DIRECTORY_RESULTS / FILE_NAME_RESULTS_AGGREGATE
 PATH_SCRIPT_SEQUENTIAL = DIRECTORY_SCRIPTS / FILE_NAME_SCRIPT_SEQUENTIAL
 
 
-# Experiment variables
+# Experiment related
 RECOMMENDATIONS = 10
 SEED = 42
-SIZES = [0.1, 0.25, 0.5, 0.75, 1.0]
 FIGURES = 5
+SIZES_FRACTIONAL = [0.1, 0.25, 0.5, 0.75, 1.0]
+SIZES_ABSOLUTE = [i * 1_000_000 for i in [1, 25, 50, 75, 100]]
+MODE = (Sizing.ABSOLUTE, Sampling.STRATIFIED_USER)
 
 
 # Environment related
-GPUS = 2
-WORKERS = 8
-BATCH_SIZE = 8192
-# SPLIT_TO = 2
+GPUS = 1
+WORKERS = 4
+BATCH_SIZE = 4096 # 2048 4096 8192 16384
+SPLIT_TO = 1
 
 
 # Hyperparameters
@@ -116,25 +141,22 @@ TRAIN_SIZE = 0.8
 VALID_SIZE = 0.1
 TEST_SIZE = 0.1
 PARTITIONS = 1
-EPOCHS = 2
-K = 32
-MIN_K = K // 2
-FEATURES = 64
+EPOCHS = 1
+K = 16
+MIN_K = K
 MF_EMBEDDING_SIZE = 32
 REGULARIZATION = 1.0
-ALPHA = 1.0
 BIASED_MF_DAMPING = 16
 CONFIDENCE_WEIGHT = 16
-LEARNING_RATE = 0.05
-BETA = 1.0
+LEARNING_RATE = 1.0
 SHRINK = 0.0
-SVD_N_ITER = 4
+SVD_N_ITER = 16
 
 
 # Configurations
 ## LensKit
 LENSKIT_CONFIG_POP = {"score": "rank"} # "quantile" | "rank" | "count"
-LENSKIT_CONFIG_ITEM_KNN = {"max_nbrs": K, "min_nbrs": K}
+LENSKIT_CONFIG_ITEM_KNN = {"max_nbrs": K, "min_nbrs": MIN_K}
 LENSKIT_CONFIG_BIASED_MF = {
   "embedding_size": MF_EMBEDDING_SIZE,
   "epochs": EPOCHS,
@@ -178,17 +200,16 @@ LENSKIT_CONFIGS = {
 }
 
 ## RecBole
+RECBOLE_SAVED = False
+
 RECBOLE_DIRECTORY_ROOT = DIRECTORY_ARTIFACTS / "recbole"
 RECBOLE_DIRECTORY_DATASETS = RECBOLE_DIRECTORY_ROOT / "datasets"
 RECBOLE_DIRECTORY_CHECKPOINTS = RECBOLE_DIRECTORY_ROOT / "checkpoints"
 
 RECBOLE_MODEL_CONFIGS = {
-  Model.ASYM_KNN: {
-    "knn_method": "user", # "item" | "user"; Default: "item"
-    "k": K, # Default: 100
-    "alpha": ALPHA, # Default: 0.5
-    "beta": BETA, # Default:  1.0
-    "q": 1, # Default: 1
+  Model.NCEPLRec: {},
+  Model.SimpleX: {
+    "embedding_size": MF_EMBEDDING_SIZE, # Default: 64
   },
   Model.POP: {},
   Model.ITEM_KNN: {
@@ -201,7 +222,7 @@ RECBOLE_MODEL_CONFIGS = {
   Model.NEU_MF: {
     "mf_embedding_size": MF_EMBEDDING_SIZE, # Default: 64
     "mlp_embedding_size": MF_EMBEDDING_SIZE, # Default: 64
-    "mlp_hidden_size": [128,64], # Default: [128,64]
+    "mlp_hidden_size": [128, 64], # Default: [128, 64]
     "dropout_prob": 0.1, # Default: 0.1 
   },
 }
@@ -221,8 +242,7 @@ RECBOLE_CONFIG_COMMON = {
   "USER_ID_FIELD": COLUMN_NAMES["user_id"],
   "ITEM_ID_FIELD": COLUMN_NAMES["item_id"],
   "TIME_FIELD": None,
-  "rm_dup_inter": "first",
-  # "filter_inter_by_user_or_item": False,
+  "load_col": None,
 
   ### Training
   "epochs": EPOCHS,
@@ -231,7 +251,7 @@ RECBOLE_CONFIG_COMMON = {
   "train_batch_size": BATCH_SIZE,
   "stopping_step": 2,
   "eval_step": 4,
-  "enable_amp": True,
+  "enable_amp": False,
   "enable_scaler": False,
 
   ### Evaluation
@@ -245,21 +265,15 @@ RECBOLE_CONFIG_COMMON = {
   "metric_decimal_place": FIGURES,
 
   ### Model
-  # "split_to": SPLIT_TO,
+  "split_to": SPLIT_TO,
 }
 RECBOLE_CONFIG_EXPLICIT = {
   **RECBOLE_CONFIG_COMMON,
   "RATING_FIELD": COLUMN_NAMES["rating"],
-  "load_col": {
-    "inter": [COLUMN_NAMES["user_id"], COLUMN_NAMES["item_id"], COLUMN_NAMES["rating"]]
-  },
 }
 RECBOLE_CONFIG_IMPLICIT = {
   **RECBOLE_CONFIG_COMMON,
   "RATING_FIELD": None,
-  "load_col": {
-    "inter": [COLUMN_NAMES["user_id"], COLUMN_NAMES["item_id"]]
-  },
 }
 RECBOLE_CONFIGS = {
   True: RECBOLE_CONFIG_EXPLICIT,

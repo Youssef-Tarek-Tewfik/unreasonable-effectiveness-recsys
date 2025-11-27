@@ -1,0 +1,21 @@
+Best env cofiguration:
+    LensKit:
+        export LK_NUM_PROCS=[N / 2]
+        export LK_NUM_THREADS=2
+
+        export OMP_NUM_THREADS=1
+        export MKL_NUM_THREADS=1
+        export OPENBLAS_NUM_THREADS=1
+        export NUMBA_NUM_THREADS=1
+
+    RecBole:
+        export OMP_NUM_THREADS=N
+        export MKL_NUM_THREADS=N
+        export OPENBLAS_NUM_THREADS=N
+        export NUMBA_NUM_THREADS=N
+
+        WORKERS = 4 (or 2 sometimes as good)
+
+    with N=64 on the OMNI Cluster
+
+

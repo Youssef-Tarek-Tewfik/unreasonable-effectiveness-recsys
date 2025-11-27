@@ -1,0 +1,34 @@
+[UEDRS] [00:00:03] starting
+[UEDRS] [00:00:03] cpus: 32
+[UEDRS] [00:00:03] memory: 64
+[UEDRS] [00:00:03] env variables:
+[UEDRS] [00:00:03] OMP_NUM_THREADS: 1
+[UEDRS] [00:00:03] MKL_NUM_THREADS: 1
+[UEDRS] [00:00:03] OPENBLAS_NUM_THREADS: 1
+[UEDRS] [00:00:03] NUMBA_NUM_THREADS: 1
+
+
+[UEDRS] [00:00:10] MOVIELENS loaded
+[UEDRS] [00:00:07] elapsed
+
+[UEDRS] [00:00:10] starting with {}
+[UEDRS] [00:33:47] finished with result: 0.24669
+[UEDRS] [00:33:37] elapsed
+
+[UEDRS] [00:33:47] starting with {'k': 8}
+[UEDRS] [00:59:25] finished with result: 0.23391
+[UEDRS] [00:25:37] elapsed
+
+[UEDRS] [00:59:25] starting with {'show_progress': True}
+[UEDRS] [01:33:57] finished with result: 0.24669
+[UEDRS] [00:34:32] elapsed
+
+[UEDRS] [01:33:57] starting with {'learning_rate': 0.1}
+[UEDRS] [02:05:43] finished with result: 0.24669
+[UEDRS] [00:31:45] elapsed
+
+[UEDRS] [02:05:43] starting with {'enable_amp': False}
+[UEDRS] [02:36:29] finished with result: 0.24669
+[UEDRS] [00:30:45] elapsed
+
+[UEDRS] [02:36:29] starting with {'enable_scaler': True}

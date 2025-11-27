@@ -17,12 +17,12 @@ def load(dataset: Dataset = Dataset.MOVIELENS) -> pd.DataFrame:
   names = NAMES_EXPLICIT if explicit else NAMES_IMPLICIT
 
   df = pd.read_csv(path, sep=SEP, usecols=usecols, names=names)
-  df = clean(df, explicit)
-  df = df.reset_index(drop=True)
+  # df = deduplicate(df, explicit)
+  # df = df.reset_index(drop=True)
   return df
 
 
-def clean(df: pd.DataFrame, explicit: bool) -> pd.DataFrame:
+def deduplicate(df: pd.DataFrame, explicit: bool) -> pd.DataFrame:
   user_id, item_id = COLUMN_NAMES["user_id"], COLUMN_NAMES["item_id"]
   
   if explicit:

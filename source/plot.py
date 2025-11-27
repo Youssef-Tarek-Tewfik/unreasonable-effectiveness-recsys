@@ -1,31 +1,36 @@
+import enum
 import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
 from typing import TypeAlias
 from scipy import stats
+from matplotlib.ticker import FuncFormatter
 
-from .constants import DISPLAY_NAMES, RECOMMENDATIONS, DIRECTORY_RESULTS
+from .constants import Sizing, DISPLAY_NAMES, RECOMMENDATIONS, DIRECTORY_RESULTS, SIZES_FRACTIONAL, SIZES_ABSOLUTE
 from .results import Results, load_results, setdefault_nested
+from .logger import log
 
 
 MARKERS = ['o', '^', '2', 's', 'P', '*', 'X', 'D', '|']
-COLORS = ["tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple",
-          "tab:brown", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"]
-# d[tool][algorithm][dataset] -> float
+COLORS = [
+    "tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"
+] # "tab:brown" removed its so bad
 Slopes: TypeAlias = dict[str, dict[str, dict[str, float]]]
 
 
 def main():
     results = load_results()
     plot_results(results)
-    print("Line graph created")
-
-    slopes = get_slopes(results)
-    plot_slopes(slopes)
-    print("Bar graph created")
+    log("Line graph created")
 
 
-def plot_results(results: Results, output: str = "line") -> None:
+def plot_results(results: Results, *, output: str = "line", title: str = "") -> None:
+    mode = results["META"]["MODE"]
+    sizing, sampling = DISPLAY_NAMES[mode["SIZING"]], DISPLAY_NAMES[mode["SAMPLING"]]
+    prefix = f"{title} - " if title else ""
+    title = prefix + f"{sizing} {sampling}"
+
+    results = results["OUTPUT"] # type: ignore
     tools = list(results.keys())
     datasets = sorted(
         {dataset for tool in tools for algorithm in results[tool] for dataset in results[tool][algorithm].keys()}
@@ -42,6 +47,9 @@ def plot_results(results: Results, output: str = "line") -> None:
     # Create figure with one row per tool
     fig, axes_grid = plt.subplots(len(tools), max(plots_per_row.values()), 
                                 figsize=(4 * max(plots_per_row.values()), 6 * len(tools)))
+    
+    # Add title at the top right in the middle
+    fig.suptitle(title, fontsize=16, fontweight="bold", ha="center")
     
     # Make sure axes_grid is always 2D
     if len(tools) == 1:
@@ -67,9 +75,15 @@ def plot_results(results: Results, output: str = "line") -> None:
                 
                 sizes = list(sorted_data.keys())
                 values = list(sorted_data.values())
-                
                 # Handle None values - but keep zeros as zeros
-                values = [value if value is not None else 0.0 for value in values]
+                sizes_filtered = []
+                values_filtered = []
+                for i, value in enumerate(values):
+                    if value is not None:
+                        sizes_filtered.append(sizes[i])
+                        values_filtered.append(value)
+                sizes = sizes_filtered
+                values = values_filtered
                 
                 # Plot the dataset if we have ANY data points, even if all are zeros
                 if sizes:
@@ -89,6 +103,18 @@ def plot_results(results: Results, output: str = "line") -> None:
                         label=DISPLAY_NAMES[dataset],
                         alpha=0.8
                     )
+
+                    # Highlight the last data point with a distinct marker
+                    if values:
+                        ax.scatter(
+                            [sizes[-1]], [values[-1]],
+                            color=color,
+                            marker='s',
+                            s=90,
+                            edgecolors="white",
+                            linewidths=0.8,
+                            zorder=3
+                        )
             
             # Customize subplot
             title = f"{DISPLAY_NAMES[tool]} - {DISPLAY_NAMES[algorithm]}"
@@ -103,6 +129,10 @@ def plot_results(results: Results, output: str = "line") -> None:
             # Rotate x-axis labels for better readability
             ax.tick_params(axis='x', rotation=45, labelsize=8)
             ax.tick_params(axis='y', labelsize=8)
+
+            # Set x-axis limits based on sizing type
+            sizes = SIZES_FRACTIONAL if sizing == Sizing.FRACTIONAL.name else SIZES_ABSOLUTE
+            ax.set_xlim(sizes[0], sizes[-1])
             
             # Set y-axis limits from 0 to local maximum with small padding
             if max_value > 0:

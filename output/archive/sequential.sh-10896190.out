@@ -1,0 +1,59 @@
+[UEDRS] [00:00:11] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:11] Tag:  none
+[UEDRS] [00:00:11] Tool: LENSKIT
+[UEDRS] [00:00:11] Algorithm: POP
+[UEDRS] [00:00:11] Excluded datasets: none
+[UEDRS] [00:00:11] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:11] Loading dataset [MOVIELENS]
+[UEDRS] [00:00:19] Sampling for [1000000]
+[UEDRS] [00:00:26] Checking [LENSKIT][POP][MOVIELENS][1m]
+[UEDRS] [00:00:26] Skipping (0.00858)
+[UEDRS] [00:00:26] Releasing sampled dataframe from memory
+[UEDRS] [00:00:26] Sampling for [25000000]
+[UEDRS] [00:00:33] Checking [LENSKIT][POP][MOVIELENS][25m]
+[UEDRS] [00:00:33] Skipping (0.11333)
+[UEDRS] [00:00:33] Releasing sampled dataframe from memory
+[UEDRS] [00:00:33] Sampling for [50000000]
+[UEDRS] [00:00:41] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:41] Skipping (0.16701)
+[UEDRS] [00:00:41] Releasing sampled dataframe from memory
+[UEDRS] [00:00:41] Sampling for [75000000]
+[UEDRS] [00:00:49] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:49] Skipping (0.16701)
+[UEDRS] [00:00:49] Releasing sampled dataframe from memory
+[UEDRS] [00:00:49] Sampling for [100000000]
+[UEDRS] [00:00:56] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:56] Skipping (0.16701)
+[UEDRS] [00:00:56] Releasing sampled dataframe from memory
+[UEDRS] [00:00:56] Releasing full dataframe from memory
+[UEDRS] [00:00:56] Loading dataset [NETFLIX]
+[UEDRS] [00:02:22] Sampling for [1000000]
+[UEDRS] [00:02:40] Checking [LENSKIT][POP][NETFLIX][1m]
+[UEDRS] [00:02:40] Skipping (0.00297)
+[UEDRS] [00:02:40] Releasing sampled dataframe from memory
+[UEDRS] [00:02:40] Sampling for [25000000]
+[UEDRS] [00:02:59] Checking [LENSKIT][POP][NETFLIX][25m]
+[UEDRS] [00:02:59] Skipping (0.03352)
+[UEDRS] [00:02:59] Releasing sampled dataframe from memory
+[UEDRS] [00:02:59] Sampling for [50000000]
+[UEDRS] [00:03:18] Checking [LENSKIT][POP][NETFLIX][50m]
+[UEDRS] [00:03:18] Skipping (0.05555)
+[UEDRS] [00:03:18] Releasing sampled dataframe from memory
+[UEDRS] [00:03:18] Sampling for [75000000]
+[UEDRS] [00:03:38] Checking [LENSKIT][POP][NETFLIX][75m]
+[UEDRS] [00:03:38] Skipping (0.08792)
+[UEDRS] [00:03:38] Releasing sampled dataframe from memory
+[UEDRS] [00:03:38] Sampling for [100000000]
+[UEDRS] [00:04:07] Checking [LENSKIT][POP][NETFLIX][100m]
+[UEDRS] [00:04:07] Skipping (0.14026)
+[UEDRS] [00:04:07] Releasing sampled dataframe from memory
+[UEDRS] [00:04:07] Releasing full dataframe from memory
+[UEDRS] [00:04:08] Loading dataset [ALIBABA]
+[UEDRS] [00:06:15] Sampling for [1000000]
+[UEDRS] [00:07:59] Checking [LENSKIT][POP][ALIBABA][0m]
+[UEDRS] [00:07:59] Skipping (0.0)
+[UEDRS] [00:07:59] Releasing sampled dataframe from memory
+[UEDRS] [00:07:59] Sampling for [25000000]
+[UEDRS] [00:09:45] Checking [LENSKIT][POP][ALIBABA][25m]
+[UEDRS] [00:09:45] Starting

@@ -1,0 +1,52 @@
+[UEDRS] [00:00:08] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:08] Tag:  RECBOLE:POP
+[UEDRS] [00:00:08] Tool: RECBOLE
+[UEDRS] [00:00:08] Algorithm: POP
+[UEDRS] [00:00:08] Datasets: AMAZON, ALIBABA
+[UEDRS] [00:00:08] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:08] Current dataset [AMAZON]
+[UEDRS] [00:00:08] Loading full dataset
+[UEDRS] [00:11:10] Loading done
+[UEDRS] [00:11:10] Memory Usage: RSS = 52652.05 MB, VMS = 56431.82 MB
+[UEDRS] [00:11:02] Elapsed
+[UEDRS] [00:11:10] Sampling for [1000000]
+[UEDRS] [00:45:42] Sampling done
+[UEDRS] [00:45:42] Memory Usage: RSS = 32247.41 MB, VMS = 35714.21 MB
+[UEDRS] [00:34:31] Elapsed
+[UEDRS] [00:45:42] Checking [RECBOLE][POP][AMAZON][0m]
+[UEDRS] [00:45:42] Starting
+[UEDRS] [00:46:02] Finished (0.0)
+[UEDRS] [00:46:02] Memory Usage: RSS = 32255.75 MB, VMS = 59328.85 MB
+[UEDRS] [00:00:19] Elapsed
+
+[UEDRS] [00:46:02] Memory Usage: RSS = 32255.75 MB, VMS = 59328.85 MB
+[UEDRS] [00:46:02] Releasing dataframe from memory
+[UEDRS] [00:46:03] Memory Usage: RSS = 16413.21 MB, VMS = 43234.85 MB
+[UEDRS] [00:46:03] Loading full dataset
+[UEDRS] [00:56:33] Loading done
+[UEDRS] [00:56:33] Memory Usage: RSS = 56353.84 MB, VMS = 83684.95 MB
+[UEDRS] [00:10:29] Elapsed
+[UEDRS] [00:56:33] Sampling for [25000000]
+[UEDRS] [01:30:26] Sampling done
+[UEDRS] [01:30:26] Memory Usage: RSS = 52318.87 MB, VMS = 79656.34 MB
+[UEDRS] [00:33:53] Elapsed
+[UEDRS] [01:30:26] Checking [RECBOLE][POP][AMAZON][19m]
+[UEDRS] [01:30:26] Starting
+[UEDRS] [04:59:32] Finished (0.00123)
+[UEDRS] [04:59:32] Memory Usage: RSS = 64645.78 MB, VMS = 110535.36 MB
+[UEDRS] [03:29:06] Elapsed
+
+[UEDRS] [04:59:32] Memory Usage: RSS = 64645.78 MB, VMS = 110535.36 MB
+[UEDRS] [04:59:32] Releasing dataframe from memory
+[UEDRS] [05:00:09] Memory Usage: RSS = 16750.88 MB, VMS = 61936.36 MB
+[UEDRS] [05:00:09] Loading full dataset
+[UEDRS] [05:10:46] Loading done
+[UEDRS] [05:10:46] Memory Usage: RSS = 60856.20 MB, VMS = 106549.57 MB
+[UEDRS] [00:10:36] Elapsed
+[UEDRS] [05:10:46] Sampling for [50000000]
+[UEDRS] [05:44:08] Sampling done
+[UEDRS] [05:44:08] Memory Usage: RSS = 52244.67 MB, VMS = 97937.36 MB
+[UEDRS] [00:33:22] Elapsed
+[UEDRS] [05:44:08] Checking [RECBOLE][POP][AMAZON][46m]
+[UEDRS] [05:44:08] Starting

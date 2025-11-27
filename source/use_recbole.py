@@ -4,7 +4,7 @@ from recbole.quick_start import run_recbole
 
 from .constants import (
   Dataset, Model, DATASET_FEEDBACK_EXPLICIT, RECBOLE_DIRECTORY_CHECKPOINTS, RECBOLE_DIRECTORY_DATASETS,
-  COLUMN_NAMES, RECBOLE_MODEL_CONFIGS, RECBOLE_CONFIGS
+  COLUMN_NAMES, RECBOLE_MODEL_CONFIGS, RECBOLE_CONFIGS, RECBOLE_SAVED
 )
 
 
@@ -24,7 +24,7 @@ def save_as_atomic(df: pd.DataFrame, name: str) -> None:
       f.write(','.join(features) + '\n')
     df.to_csv(path, mode="a", index=False, header=False)
 
-def use_recbole(df: pd.DataFrame, dataset: Dataset, size: float, model: Model = Model.ITEM_KNN) -> float:
+def use_recbole(df: pd.DataFrame, dataset: Dataset, size: str, model: Model = Model.ITEM_KNN) -> float:
   name = f"{dataset.value}-{size}"
   save_as_atomic(df, name)
 
@@ -33,7 +33,7 @@ def use_recbole(df: pd.DataFrame, dataset: Dataset, size: float, model: Model = 
   model_config = RECBOLE_MODEL_CONFIGS[model]
   config = {**config, **model_config}
   
-  result = run_recbole(model=model.value, dataset=name, config_dict=config, saved=False)
+  result = run_recbole(model=model.value, dataset=name, config_dict=config, saved=RECBOLE_SAVED)
 
   test_result = result["test_result"]
   for key, value in test_result.items():

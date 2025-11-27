@@ -1,0 +1,35 @@
+[UEDRS] [00:00:07] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:07] Tag:  none
+[UEDRS] [00:00:07] Tool: LENSKIT
+[UEDRS] [00:00:07] Algorithm: POP
+[UEDRS] [00:00:07] Datasets: none
+[UEDRS] [00:00:07] Excluded datasets: none
+[UEDRS] [00:00:07] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:07] Current dataset [ALIBABA]
+[UEDRS] [00:00:07] Memory Usage: RSS = 609.73 MB, VMS = 3819.60 MB
+[UEDRS] [00:00:07] Loading full dataset
+[UEDRS] [00:00:33] Loading done
+[UEDRS] [00:00:33] Memory Usage: RSS = 3533.96 MB, VMS = 6743.45 MB
+[UEDRS] [00:00:26] Elapsed
+[UEDRS] [00:00:33] Sampling for [1000000]
+[UEDRS] [00:02:15] Sampling done
+[UEDRS] [00:02:15] Memory Usage: RSS = 1039.15 MB, VMS = 4246.22 MB
+[UEDRS] [00:01:42] Elapsed
+[UEDRS] [00:02:15] Checking [LENSKIT][POP][ALIBABA][0m]
+[UEDRS] [00:02:15] Skipping (0.0)
+[UEDRS] [00:02:15] Memory Usage: RSS = 1039.15 MB, VMS = 4246.22 MB
+[UEDRS] [00:02:15] Releasing dataframe from memory
+[UEDRS] [00:02:15] Memory Usage: RSS = 1038.16 MB, VMS = 4245.22 MB
+[UEDRS] [00:02:15] Memory Usage: RSS = 1038.16 MB, VMS = 4245.22 MB
+[UEDRS] [00:02:15] Loading full dataset
+[UEDRS] [00:02:42] Loading done
+[UEDRS] [00:02:42] Memory Usage: RSS = 3949.00 MB, VMS = 7155.95 MB
+[UEDRS] [00:00:26] Elapsed
+[UEDRS] [00:02:42] Sampling for [25000000]
+[UEDRS] [00:04:24] Sampling done
+[UEDRS] [00:04:24] Memory Usage: RSS = 1593.77 MB, VMS = 4802.71 MB
+[UEDRS] [00:01:42] Elapsed
+[UEDRS] [00:04:24] Checking [LENSKIT][POP][ALIBABA][25m]
+[UEDRS] [00:04:24] Starting
+2025-11-16 18:54:33 [warning  ] loaded pipeline does not match hash

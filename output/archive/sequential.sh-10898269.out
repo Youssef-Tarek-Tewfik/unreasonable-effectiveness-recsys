@@ -1,0 +1,336 @@
+[UEDRS] [00:00:10] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:10] Tag:  LENSKIT:POP
+[UEDRS] [00:00:10] Tool: LENSKIT
+[UEDRS] [00:00:10] Algorithm: POP
+[UEDRS] [00:00:10] Datasets: MOVIELENS, NETFLIX, GOODREADS, MUSIC4ALL
+[UEDRS] [00:00:10] Excluded datasets: ALIBABA, AMAZON
+[UEDRS] [00:00:10] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:10] Current dataset [MOVIELENS]
+[UEDRS] [00:00:10] Memory Usage: RSS = 611.06 MB, VMS = 3819.59 MB
+[UEDRS] [00:00:10] Loading full dataset
+[UEDRS] [00:00:14] Loading done
+[UEDRS] [00:00:14] Memory Usage: RSS = 1354.59 MB, VMS = 4562.41 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:14] Sampling for [1000000]
+[UEDRS] [00:00:21] Sampling done
+[UEDRS] [00:00:21] Memory Usage: RSS = 714.00 MB, VMS = 3919.76 MB
+[UEDRS] [00:00:06] Elapsed
+[UEDRS] [00:00:21] Collecting garbage
+[UEDRS] [00:00:21] Memory Usage: RSS = 714.00 MB, VMS = 3919.76 MB
+[UEDRS] [00:00:21] Checking [LENSKIT][POP][MOVIELENS][1m]
+[UEDRS] [00:00:21] Skipping (0.00858)
+[UEDRS] [00:00:21] Memory Usage: RSS = 714.00 MB, VMS = 3919.76 MB
+[UEDRS] [00:00:21] Releasing dataframe from memory
+[UEDRS] [00:00:21] Memory Usage: RSS = 652.96 MB, VMS = 3858.59 MB
+[UEDRS] [00:00:21] Memory Usage: RSS = 652.96 MB, VMS = 3858.59 MB
+[UEDRS] [00:00:21] Loading full dataset
+[UEDRS] [00:00:26] Loading done
+[UEDRS] [00:00:26] Memory Usage: RSS = 1475.39 MB, VMS = 4691.02 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:26] Sampling for [25000000]
+[UEDRS] [00:00:34] Sampling done
+[UEDRS] [00:00:34] Memory Usage: RSS = 1410.32 MB, VMS = 4616.07 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:00:34] Collecting garbage
+[UEDRS] [00:00:34] Memory Usage: RSS = 1410.32 MB, VMS = 4616.07 MB
+[UEDRS] [00:00:34] Checking [LENSKIT][POP][MOVIELENS][25m]
+[UEDRS] [00:00:34] Skipping (0.11333)
+[UEDRS] [00:00:34] Memory Usage: RSS = 1410.32 MB, VMS = 4616.07 MB
+[UEDRS] [00:00:34] Releasing dataframe from memory
+[UEDRS] [00:00:34] Memory Usage: RSS = 838.14 MB, VMS = 4043.89 MB
+[UEDRS] [00:00:34] Memory Usage: RSS = 838.14 MB, VMS = 4043.89 MB
+[UEDRS] [00:00:34] Loading full dataset
+[UEDRS] [00:00:38] Loading done
+[UEDRS] [00:00:38] Memory Usage: RSS = 1613.63 MB, VMS = 4819.25 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:38] Sampling for [50000000]
+[UEDRS] [00:00:46] Sampling done
+[UEDRS] [00:00:46] Memory Usage: RSS = 1651.46 MB, VMS = 4857.21 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:00:46] Collecting garbage
+[UEDRS] [00:00:46] Memory Usage: RSS = 1651.46 MB, VMS = 4857.21 MB
+[UEDRS] [00:00:46] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:46] Skipping (0.16701)
+[UEDRS] [00:00:46] Memory Usage: RSS = 1651.46 MB, VMS = 4857.21 MB
+[UEDRS] [00:00:46] Releasing dataframe from memory
+[UEDRS] [00:00:46] Memory Usage: RSS = 919.03 MB, VMS = 4124.79 MB
+[UEDRS] [00:00:46] Memory Usage: RSS = 919.03 MB, VMS = 4124.79 MB
+[UEDRS] [00:00:46] Loading full dataset
+[UEDRS] [00:00:51] Loading done
+[UEDRS] [00:00:51] Memory Usage: RSS = 1671.06 MB, VMS = 4876.69 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:51] Sampling for [75000000]
+[UEDRS] [00:00:58] Sampling done
+[UEDRS] [00:00:58] Memory Usage: RSS = 1651.46 MB, VMS = 4857.21 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:00:58] Collecting garbage
+[UEDRS] [00:00:58] Memory Usage: RSS = 1651.46 MB, VMS = 4857.21 MB
+[UEDRS] [00:00:58] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:58] Skipping (0.16701)
+[UEDRS] [00:00:58] Memory Usage: RSS = 1651.46 MB, VMS = 4857.21 MB
+[UEDRS] [00:00:58] Releasing dataframe from memory
+[UEDRS] [00:00:58] Memory Usage: RSS = 919.03 MB, VMS = 4124.79 MB
+[UEDRS] [00:00:58] Memory Usage: RSS = 919.03 MB, VMS = 4124.79 MB
+[UEDRS] [00:00:58] Loading full dataset
+[UEDRS] [00:01:03] Loading done
+[UEDRS] [00:01:03] Memory Usage: RSS = 1669.07 MB, VMS = 4874.70 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:01:03] Sampling for [100000000]
+[UEDRS] [00:01:11] Sampling done
+[UEDRS] [00:01:11] Memory Usage: RSS = 1651.46 MB, VMS = 4857.21 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:01:11] Collecting garbage
+[UEDRS] [00:01:11] Memory Usage: RSS = 1651.46 MB, VMS = 4857.21 MB
+[UEDRS] [00:01:11] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:01:11] Skipping (0.16701)
+[UEDRS] [00:01:11] Memory Usage: RSS = 1651.46 MB, VMS = 4857.21 MB
+[UEDRS] [00:01:11] Releasing dataframe from memory
+[UEDRS] [00:01:11] Memory Usage: RSS = 919.03 MB, VMS = 4124.78 MB
+[UEDRS] [00:01:11] Current dataset [NETFLIX]
+[UEDRS] [00:01:11] Memory Usage: RSS = 919.03 MB, VMS = 4124.78 MB
+[UEDRS] [00:01:11] Loading full dataset
+[UEDRS] [00:01:39] Loading done
+[UEDRS] [00:01:39] Memory Usage: RSS = 3226.45 MB, VMS = 6432.08 MB
+[UEDRS] [00:00:28] Elapsed
+[UEDRS] [00:01:39] Sampling for [1000000]
+[UEDRS] [00:02:11] Sampling done
+[UEDRS] [00:02:11] Memory Usage: RSS = 926.64 MB, VMS = 4132.27 MB
+[UEDRS] [00:00:32] Elapsed
+[UEDRS] [00:02:11] Collecting garbage
+[UEDRS] [00:02:11] Memory Usage: RSS = 926.64 MB, VMS = 4132.27 MB
+[UEDRS] [00:02:11] Checking [LENSKIT][POP][NETFLIX][1m]
+[UEDRS] [00:02:11] Skipping (0.00297)
+[UEDRS] [00:02:11] Memory Usage: RSS = 926.64 MB, VMS = 4132.27 MB
+[UEDRS] [00:02:11] Releasing dataframe from memory
+[UEDRS] [00:02:12] Memory Usage: RSS = 926.64 MB, VMS = 4132.27 MB
+[UEDRS] [00:02:12] Memory Usage: RSS = 926.64 MB, VMS = 4132.27 MB
+[UEDRS] [00:02:12] Loading full dataset
+[UEDRS] [00:02:42] Loading done
+[UEDRS] [00:02:42] Memory Usage: RSS = 3220.46 MB, VMS = 6426.08 MB
+[UEDRS] [00:00:30] Elapsed
+[UEDRS] [00:02:42] Sampling for [25000000]
+[UEDRS] [00:03:11] Sampling done
+[UEDRS] [00:03:11] Memory Usage: RSS = 1492.48 MB, VMS = 4698.10 MB
+[UEDRS] [00:00:28] Elapsed
+[UEDRS] [00:03:11] Collecting garbage
+[UEDRS] [00:03:11] Memory Usage: RSS = 1492.48 MB, VMS = 4698.10 MB
+[UEDRS] [00:03:11] Checking [LENSKIT][POP][NETFLIX][25m]
+[UEDRS] [00:03:11] Skipping (0.03352)
+[UEDRS] [00:03:11] Memory Usage: RSS = 1492.48 MB, VMS = 4698.10 MB
+[UEDRS] [00:03:11] Releasing dataframe from memory
+[UEDRS] [00:03:11] Memory Usage: RSS = 920.64 MB, VMS = 4126.27 MB
+[UEDRS] [00:03:11] Memory Usage: RSS = 920.64 MB, VMS = 4126.27 MB
+[UEDRS] [00:03:11] Loading full dataset
+[UEDRS] [00:03:39] Loading done
+[UEDRS] [00:03:39] Memory Usage: RSS = 3226.45 MB, VMS = 6432.07 MB
+[UEDRS] [00:00:27] Elapsed
+[UEDRS] [00:03:39] Sampling for [50000000]
+[UEDRS] [00:04:09] Sampling done
+[UEDRS] [00:04:09] Memory Usage: RSS = 2217.91 MB, VMS = 5423.95 MB
+[UEDRS] [00:00:29] Elapsed
+[UEDRS] [00:04:09] Collecting garbage
+[UEDRS] [00:04:09] Memory Usage: RSS = 2217.91 MB, VMS = 5423.95 MB
+[UEDRS] [00:04:09] Checking [LENSKIT][POP][NETFLIX][50m]
+[UEDRS] [00:04:09] Skipping (0.05555)
+[UEDRS] [00:04:09] Memory Usage: RSS = 2217.91 MB, VMS = 5423.95 MB
+[UEDRS] [00:04:09] Releasing dataframe from memory
+[UEDRS] [00:04:09] Memory Usage: RSS = 1074.21 MB, VMS = 4280.25 MB
+[UEDRS] [00:04:09] Memory Usage: RSS = 1074.21 MB, VMS = 4280.25 MB
+[UEDRS] [00:04:09] Loading full dataset
+[UEDRS] [00:04:37] Loading done
+[UEDRS] [00:04:37] Memory Usage: RSS = 3427.12 MB, VMS = 6632.73 MB
+[UEDRS] [00:00:28] Elapsed
+[UEDRS] [00:04:37] Sampling for [75000000]
+[UEDRS] [00:05:06] Sampling done
+[UEDRS] [00:05:06] Memory Usage: RSS = 2981.78 MB, VMS = 6187.82 MB
+[UEDRS] [00:00:28] Elapsed
+[UEDRS] [00:05:06] Collecting garbage
+[UEDRS] [00:05:06] Memory Usage: RSS = 2981.78 MB, VMS = 6187.82 MB
+[UEDRS] [00:05:06] Checking [LENSKIT][POP][NETFLIX][75m]
+[UEDRS] [00:05:06] Skipping (0.08792)
+[UEDRS] [00:05:06] Memory Usage: RSS = 2981.78 MB, VMS = 6187.82 MB
+[UEDRS] [00:05:06] Releasing dataframe from memory
+[UEDRS] [00:05:06] Memory Usage: RSS = 1265.24 MB, VMS = 4471.28 MB
+[UEDRS] [00:05:06] Memory Usage: RSS = 1265.24 MB, VMS = 4471.28 MB
+[UEDRS] [00:05:06] Loading full dataset
+[UEDRS] [00:05:27] Loading done
+[UEDRS] [00:05:27] Memory Usage: RSS = 3562.14 MB, VMS = 6767.76 MB
+[UEDRS] [00:00:20] Elapsed
+[UEDRS] [00:05:27] Sampling for [100000000]
+[UEDRS] [00:06:06] Sampling done
+[UEDRS] [00:06:06] Memory Usage: RSS = 3745.13 MB, VMS = 6951.18 MB
+[UEDRS] [00:00:39] Elapsed
+[UEDRS] [00:06:06] Collecting garbage
+[UEDRS] [00:06:06] Memory Usage: RSS = 3745.13 MB, VMS = 6951.18 MB
+[UEDRS] [00:06:06] Checking [LENSKIT][POP][NETFLIX][100m]
+[UEDRS] [00:06:06] Skipping (0.14026)
+[UEDRS] [00:06:06] Memory Usage: RSS = 3745.13 MB, VMS = 6951.18 MB
+[UEDRS] [00:06:06] Releasing dataframe from memory
+[UEDRS] [00:06:07] Memory Usage: RSS = 1456.31 MB, VMS = 4662.36 MB
+[UEDRS] [00:06:07] Current dataset [GOODREADS]
+[UEDRS] [00:06:07] Memory Usage: RSS = 1456.31 MB, VMS = 4662.36 MB
+[UEDRS] [00:06:07] Loading full dataset
+[UEDRS] [00:07:13] Loading done
+[UEDRS] [00:07:13] Memory Usage: RSS = 6726.75 MB, VMS = 9932.36 MB
+[UEDRS] [00:01:06] Elapsed
+[UEDRS] [00:07:13] Sampling for [1000000]
+[UEDRS] [00:07:58] Sampling done
+[UEDRS] [00:07:58] Memory Usage: RSS = 1493.41 MB, VMS = 4699.01 MB
+[UEDRS] [00:00:44] Elapsed
+[UEDRS] [00:07:58] Collecting garbage
+[UEDRS] [00:07:58] Memory Usage: RSS = 1493.41 MB, VMS = 4699.01 MB
+[UEDRS] [00:07:58] Checking [LENSKIT][POP][GOODREADS][1m]
+[UEDRS] [00:07:58] Skipping (0.00062)
+[UEDRS] [00:07:58] Memory Usage: RSS = 1493.41 MB, VMS = 4699.01 MB
+[UEDRS] [00:07:58] Releasing dataframe from memory
+[UEDRS] [00:07:58] Memory Usage: RSS = 1493.41 MB, VMS = 4699.01 MB
+[UEDRS] [00:07:58] Memory Usage: RSS = 1493.41 MB, VMS = 4699.01 MB
+[UEDRS] [00:07:58] Loading full dataset
+[UEDRS] [00:09:04] Loading done
+[UEDRS] [00:09:04] Memory Usage: RSS = 6726.75 MB, VMS = 9932.36 MB
+[UEDRS] [00:01:06] Elapsed
+[UEDRS] [00:09:04] Sampling for [25000000]
+[UEDRS] [00:09:43] Sampling done
+[UEDRS] [00:09:43] Memory Usage: RSS = 2065.41 MB, VMS = 5271.02 MB
+[UEDRS] [00:00:38] Elapsed
+[UEDRS] [00:09:43] Collecting garbage
+[UEDRS] [00:09:43] Memory Usage: RSS = 2065.41 MB, VMS = 5271.02 MB
+[UEDRS] [00:09:43] Checking [LENSKIT][POP][GOODREADS][25m]
+[UEDRS] [00:09:43] Skipping (0.01621)
+[UEDRS] [00:09:43] Memory Usage: RSS = 2065.41 MB, VMS = 5271.02 MB
+[UEDRS] [00:09:43] Releasing dataframe from memory
+[UEDRS] [00:09:43] Memory Usage: RSS = 1493.40 MB, VMS = 4699.01 MB
+[UEDRS] [00:09:43] Memory Usage: RSS = 1493.40 MB, VMS = 4699.01 MB
+[UEDRS] [00:09:43] Loading full dataset
+[UEDRS] [00:10:45] Loading done
+[UEDRS] [00:10:45] Memory Usage: RSS = 6679.67 MB, VMS = 9885.27 MB
+[UEDRS] [00:01:02] Elapsed
+[UEDRS] [00:10:45] Sampling for [50000000]
+[UEDRS] [00:11:25] Sampling done
+[UEDRS] [00:11:25] Memory Usage: RSS = 2590.46 MB, VMS = 5796.06 MB
+[UEDRS] [00:00:39] Elapsed
+[UEDRS] [00:11:25] Collecting garbage
+[UEDRS] [00:11:25] Memory Usage: RSS = 2590.46 MB, VMS = 5796.06 MB
+[UEDRS] [00:11:25] Checking [LENSKIT][POP][GOODREADS][50m]
+[UEDRS] [00:11:25] Skipping (0.02329)
+[UEDRS] [00:11:25] Memory Usage: RSS = 2590.46 MB, VMS = 5796.06 MB
+[UEDRS] [00:11:25] Releasing dataframe from memory
+[UEDRS] [00:11:25] Memory Usage: RSS = 1446.32 MB, VMS = 4651.93 MB
+[UEDRS] [00:11:25] Memory Usage: RSS = 1446.32 MB, VMS = 4651.93 MB
+[UEDRS] [00:11:25] Loading full dataset
+[UEDRS] [00:12:25] Loading done
+[UEDRS] [00:12:25] Memory Usage: RSS = 6681.17 MB, VMS = 9886.78 MB
+[UEDRS] [00:01:00] Elapsed
+[UEDRS] [00:12:25] Sampling for [75000000]
+[UEDRS] [00:13:12] Sampling done
+[UEDRS] [00:13:12] Memory Usage: RSS = 3164.44 MB, VMS = 6370.05 MB
+[UEDRS] [00:00:46] Elapsed
+[UEDRS] [00:13:12] Collecting garbage
+[UEDRS] [00:13:12] Memory Usage: RSS = 3164.44 MB, VMS = 6370.05 MB
+[UEDRS] [00:13:12] Checking [LENSKIT][POP][GOODREADS][75m]
+[UEDRS] [00:13:12] Skipping (0.02949)
+[UEDRS] [00:13:12] Memory Usage: RSS = 3164.44 MB, VMS = 6370.05 MB
+[UEDRS] [00:13:12] Releasing dataframe from memory
+[UEDRS] [00:13:12] Memory Usage: RSS = 1447.82 MB, VMS = 4653.43 MB
+[UEDRS] [00:13:12] Memory Usage: RSS = 1447.82 MB, VMS = 4653.43 MB
+[UEDRS] [00:13:12] Loading full dataset
+[UEDRS] [00:14:12] Loading done
+[UEDRS] [00:14:12] Memory Usage: RSS = 6545.66 MB, VMS = 9751.26 MB
+[UEDRS] [00:01:00] Elapsed
+[UEDRS] [00:14:12] Sampling for [100000000]
+[UEDRS] [00:14:53] Sampling done
+[UEDRS] [00:14:53] Memory Usage: RSS = 3815.15 MB, VMS = 7021.36 MB
+[UEDRS] [00:00:40] Elapsed
+[UEDRS] [00:14:53] Collecting garbage
+[UEDRS] [00:14:53] Memory Usage: RSS = 3815.15 MB, VMS = 7021.36 MB
+[UEDRS] [00:14:53] Checking [LENSKIT][POP][GOODREADS][100m]
+[UEDRS] [00:14:53] Skipping (0.03652)
+[UEDRS] [00:14:53] Memory Usage: RSS = 3815.15 MB, VMS = 7021.36 MB
+[UEDRS] [00:14:53] Releasing dataframe from memory
+[UEDRS] [00:14:53] Memory Usage: RSS = 1526.82 MB, VMS = 4733.03 MB
+[UEDRS] [00:14:53] Current dataset [MUSIC4ALL]
+[UEDRS] [00:14:53] Memory Usage: RSS = 1526.82 MB, VMS = 4733.03 MB
+[UEDRS] [00:14:53] Loading full dataset
+[UEDRS] [00:15:06] Loading done
+[UEDRS] [00:15:06] Memory Usage: RSS = 3270.48 MB, VMS = 6486.43 MB
+[UEDRS] [00:00:13] Elapsed
+[UEDRS] [00:15:06] Sampling for [1000000]
+[UEDRS] [00:15:14] Sampling done
+[UEDRS] [00:15:14] Memory Usage: RSS = 2126.91 MB, VMS = 5342.65 MB
+[UEDRS] [00:00:08] Elapsed
+[UEDRS] [00:15:14] Collecting garbage
+[UEDRS] [00:15:14] Memory Usage: RSS = 2126.91 MB, VMS = 5342.65 MB
+[UEDRS] [00:15:14] Checking [LENSKIT][POP][MUSIC4ALL][1m]
+[UEDRS] [00:15:14] Skipping (0.00204)
+[UEDRS] [00:15:14] Memory Usage: RSS = 2126.91 MB, VMS = 5342.65 MB
+[UEDRS] [00:15:14] Releasing dataframe from memory
+[UEDRS] [00:15:15] Memory Usage: RSS = 1514.62 MB, VMS = 4720.65 MB
+[UEDRS] [00:15:15] Memory Usage: RSS = 1514.62 MB, VMS = 4720.65 MB
+[UEDRS] [00:15:15] Loading full dataset
+[UEDRS] [00:15:28] Loading done
+[UEDRS] [00:15:28] Memory Usage: RSS = 3330.69 MB, VMS = 6546.41 MB
+[UEDRS] [00:00:13] Elapsed
+[UEDRS] [00:15:28] Sampling for [25000000]
+[UEDRS] [00:15:38] Sampling done
+[UEDRS] [00:15:38] Memory Usage: RSS = 2377.92 MB, VMS = 5593.19 MB
+[UEDRS] [00:00:10] Elapsed
+[UEDRS] [00:15:38] Collecting garbage
+[UEDRS] [00:15:38] Memory Usage: RSS = 2377.92 MB, VMS = 5593.19 MB
+[UEDRS] [00:15:38] Checking [LENSKIT][POP][MUSIC4ALL][25m]
+[UEDRS] [00:15:38] Skipping (0.01007)
+[UEDRS] [00:15:38] Memory Usage: RSS = 2377.92 MB, VMS = 5593.19 MB
+[UEDRS] [00:15:38] Releasing dataframe from memory
+[UEDRS] [00:15:39] Memory Usage: RSS = 1575.07 MB, VMS = 4780.62 MB
+[UEDRS] [00:15:39] Memory Usage: RSS = 1575.07 MB, VMS = 4780.62 MB
+[UEDRS] [00:15:39] Loading full dataset
+[UEDRS] [00:15:52] Loading done
+[UEDRS] [00:15:52] Memory Usage: RSS = 3189.81 MB, VMS = 6405.24 MB
+[UEDRS] [00:00:13] Elapsed
+[UEDRS] [00:15:52] Sampling for [50000000]
+[UEDRS] [00:16:13] Sampling done
+[UEDRS] [00:16:13] Memory Usage: RSS = 2809.13 MB, VMS = 6024.40 MB
+[UEDRS] [00:00:21] Elapsed
+[UEDRS] [00:16:13] Collecting garbage
+[UEDRS] [00:16:13] Memory Usage: RSS = 2809.13 MB, VMS = 6024.40 MB
+[UEDRS] [00:16:13] Checking [LENSKIT][POP][MUSIC4ALL][50m]
+[UEDRS] [00:16:13] Skipping (0.01755)
+[UEDRS] [00:16:13] Memory Usage: RSS = 2809.13 MB, VMS = 6024.40 MB
+[UEDRS] [00:16:13] Releasing dataframe from memory
+[UEDRS] [00:16:14] Memory Usage: RSS = 1433.91 MB, VMS = 4639.46 MB
+[UEDRS] [00:16:14] Memory Usage: RSS = 1433.91 MB, VMS = 4639.46 MB
+[UEDRS] [00:16:14] Loading full dataset
+[UEDRS] [00:16:28] Loading done
+[UEDRS] [00:16:28] Memory Usage: RSS = 3235.81 MB, VMS = 6451.24 MB
+[UEDRS] [00:00:13] Elapsed
+[UEDRS] [00:16:28] Sampling for [75000000]
+[UEDRS] [00:16:40] Sampling done
+[UEDRS] [00:16:40] Memory Usage: RSS = 2855.38 MB, VMS = 6070.64 MB
+[UEDRS] [00:00:11] Elapsed
+[UEDRS] [00:16:40] Collecting garbage
+[UEDRS] [00:16:40] Memory Usage: RSS = 2855.38 MB, VMS = 6070.64 MB
+[UEDRS] [00:16:40] Checking [LENSKIT][POP][MUSIC4ALL][50m]
+[UEDRS] [00:16:40] Skipping (0.01763)
+[UEDRS] [00:16:40] Memory Usage: RSS = 2855.38 MB, VMS = 6070.64 MB
+[UEDRS] [00:16:40] Releasing dataframe from memory
+[UEDRS] [00:16:41] Memory Usage: RSS = 1479.91 MB, VMS = 4685.46 MB
+[UEDRS] [00:16:41] Memory Usage: RSS = 1479.91 MB, VMS = 4685.46 MB
+[UEDRS] [00:16:41] Loading full dataset
+[UEDRS] [00:16:54] Loading done
+[UEDRS] [00:16:54] Memory Usage: RSS = 3235.81 MB, VMS = 6451.24 MB
+[UEDRS] [00:00:13] Elapsed
+[UEDRS] [00:16:54] Sampling for [100000000]
+[UEDRS] [00:17:06] Sampling done
+[UEDRS] [00:17:06] Memory Usage: RSS = 2855.38 MB, VMS = 6070.64 MB
+[UEDRS] [00:00:11] Elapsed
+[UEDRS] [00:17:06] Collecting garbage
+[UEDRS] [00:17:06] Memory Usage: RSS = 2855.38 MB, VMS = 6070.64 MB
+[UEDRS] [00:17:06] Checking [LENSKIT][POP][MUSIC4ALL][50m]
+[UEDRS] [00:17:06] Skipping (0.01763)
+[UEDRS] [00:17:06] Memory Usage: RSS = 2855.38 MB, VMS = 6070.64 MB
+[UEDRS] [00:17:06] Releasing dataframe from memory
+[UEDRS] [00:17:07] Memory Usage: RSS = 1479.91 MB, VMS = 4685.46 MB
+[UEDRS] [00:17:07] Work complete
+
+
+[UEDRS] [00:17:07] {'META': {'MODE': {'SAMPLING': 'STRATIFIED_USER', 'SIZING': 'ABSOLUTE'}}, 'OUTPUT': {'LENSKIT': {'BIASED_MF': {'ALIBABA': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MOVIELENS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'NETFLIX': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}}, 'BIASED_SVD': {'ALIBABA': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MOVIELENS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'NETFLIX': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}}, 'IMPLICIT_MF': {'ALIBABA': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MOVIELENS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'NETFLIX': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}}, 'ITEM_KNN': {'ALIBABA': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MOVIELENS': {1000000: 0.0, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'NETFLIX': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}}, 'POP': {'ALIBABA': {392337: 0.0, 1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {57590: 0.0, 1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {950048: 0.00062, 1000000: None, 24991351: 0.01621, 25000000: None, 49987954: 0.02329, 50000000: None, 75000000: 0.02949, 99978423: 0.03652, 100000000: None}, 'MOVIELENS': {1000000: 0.00858, 24998693: 0.11333, 25000000: None, 32000204: 0.16701, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {997623: 0.00204, 1000000: None, 24977606: 0.01007, 25000000: None, 50000000: 0.01755, 50016042: 0.01763, 75000000: None, 100000000: None}, 'NETFLIX': {978576: 0.00297, 1000000: None, 24983702: 0.03352, 25000000: None, 49968810: 0.05555, 50000000: None, 74996742: 0.08792, 75000000: None, 100000000: 0.14026}}}, 'RECBOLE': {'ASYM_KNN': {'ALIBABA': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MOVIELENS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'NETFLIX': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}}, 'BPR': {'ALIBABA': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MOVIELENS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'NETFLIX': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}}, 'ITEM_KNN': {'ALIBABA': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MOVIELENS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'NETFLIX': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}}, 'NEU_MF': {'ALIBABA': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MOVIELENS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'NETFLIX': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}}, 'POP': {'ALIBABA': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'AMAZON': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'GOODREADS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MOVIELENS': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'MUSIC4ALL': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}, 'NETFLIX': {1000000: None, 25000000: None, 50000000: None, 75000000: None, 100000000: None}}}}}

@@ -1,0 +1,29 @@
+[UEDRS] [00:00:04] starting
+[UEDRS] [00:00:04] cpus: 32
+[UEDRS] [00:00:04] memory: 128
+[UEDRS] [00:00:04] env variables:
+[UEDRS] [00:00:04] OMP_NUM_THREADS: 1
+[UEDRS] [00:00:04] MKL_NUM_THREADS: 1
+[UEDRS] [00:00:04] OPENBLAS_NUM_THREADS: 1
+[UEDRS] [00:00:04] NUMBA_NUM_THREADS: 1
+
+
+[UEDRS] [00:00:15] MOVIELENS loaded
+[UEDRS] [00:00:11] elapsed
+
+[UEDRS] [00:00:15] starting with {'max_nbrs': 16, 'min_nbrs': 16}
+[UEDRS] [00:30:59] finished
+[UEDRS] [00:30:43] elapsed
+
+[UEDRS] [00:30:59] starting with {'train_batch_size': 2048}
+[UEDRS] [01:01:31] finished
+[UEDRS] [00:30:31] elapsed
+
+[UEDRS] [01:01:31] starting with {'eval_batch_size': 2048}
+[UEDRS] [01:32:38] finished
+[UEDRS] [00:31:07] elapsed
+
+[UEDRS] [01:32:38] starting with {'split_to': 4}
+[UEDRS] [02:03:09] finished
+[UEDRS] [00:30:31] elapsed
+

@@ -1,15 +1,23 @@
 import torch
 import os
+import time
+import psutil
+import numpy as np
 import pandas as pd
 from pathlib import Path
 from typing import Callable
 
-from .constants import ALLOWED_EXCEPTIONS, DIRECTORY_DATASETS, Dataset
-from .load import load
+from .constants import ALLOWED_EXCEPTIONS, DIRECTORY_DATASETS, COLUMN_NAMES, Dataset, Model, Scorer, Sizing, Sampling
+# from .load import load
+# from .sample import sample
+from .logger import log
+# from .use_recbole import use_recbole
+# from .use_lenskit import use_lenskit
 
 
 def main():
     pass
+
 
 def gpu_check() -> None:
     print("=== GPU Detection ===")
@@ -56,8 +64,8 @@ def inter_to_csv(name: str, columns: list[int], output="ratings", demo=False) ->
     
     print(f"Converted\n{input_path}\nto\n{output_path}")
 
-def remove_last_column(input: str | Path, output: str | Path) -> None:
-    df = pd.read_csv(input, header=None)
+def remove_last_column(input: str | Path, output: str | Path, *, header = None) -> None:
+    df = pd.read_csv(input, header=header)
     df = df.iloc[:, :-1]
     df.to_csv(output, index=False, header=False)
     print(f"Removed last column from\n{input}\nand saved to\n{output}")
@@ -80,7 +88,112 @@ def safe_run(function: Callable[[], float]) -> float:
                 break
         if propagate:
             raise exception
+        log("Exception handled:", exception, sep='\n')
         return 0.0
+
+def test_run_time():
+    log("starting")
+    log("cpus: 64")
+    log("memory: 128")
+    log("env variables:")
+    
+    variables = [
+        "OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS", "NUMBA_NUM_THREADS",
+        "LK_NUM_PROCS", "LK_NUM_THREADS",
+    ]
+    
+    for variable in variables:
+        log(f"{variable}:", os.environ.get(variable, "Not set"))
+    print('\n')
+    
+    algorithms = [
+        # "LINE",
+
+        "NCEPLRec",
+        "SimpleX",
+        "NCL",
+        "Random",
+        "DiffRec",
+        "LDiffRec",
+    ]
+
+    # for dataset in [Dataset.NETFLIX]:
+    #     for sampling in Sampling:
+    #         log("Dataset:", dataset.name)
+    #         log("Sampling:", sampling.name)
+    #         start = time.time()
+    #         df, _ = sample(load(dataset), 25_000_000, (Sizing.ABSOLUTE, sampling))
+    #         log("Loaded and sampled")
+    #         log("Elapsed", start=start)
+    #         log("Starting")
+    #         start = time.time()
+    #         result = use_recbole(df, dataset, f"25m-{sampling.name}")
+    #         log("Result:", result)
+    #         log("Elapsed", start=start, end="\n\n")
+
+def show_memory():
+    process = psutil.Process(os.getpid())
+    mem_info = process.memory_info()
+    rss_in_mb = mem_info.rss / (1024 ** 2)
+    vms_in_mb = mem_info.vms / (1024 ** 2)
+    log(f"Memory Usage: RSS = {rss_in_mb:.2f} MB, VMS = {vms_in_mb:.2f} MB")
+
+def is_contiguous(series: pd.Series) -> bool:
+    """
+    Return True if the integer values in series are exactly [0, 1, ..., n-1] with no gaps.
+    """
+    s = series.dropna()
+    if s.empty:
+        return False
+
+    numeric = pd.to_numeric(s, errors="coerce")
+    if numeric.isna().any():
+        return False
+
+    s_int = numeric.astype(int)
+    unique_vals = np.sort(s_int.unique())
+    return unique_vals[0] == 0 and np.array_equal(unique_vals, np.arange(len(unique_vals)))
+
+def check_contiguous(df: pd.DataFrame) -> tuple[bool, bool]:
+    """
+    Check if user and item columns are 0-based contiguous.
+    Returns (user_ok, item_ok).
+    """
+    user_ok = is_contiguous(df[COLUMN_NAMES["user_id"]])
+    item_ok = is_contiguous(df[COLUMN_NAMES["item_id"]])
+    log(f"user_id contiguous 0-based: {user_ok}")
+    log(f"item_id contiguous 0-based: {item_ok}")
+    return user_ok, item_ok
+
+def reindex(df: pd.DataFrame, output: str | Path) -> None:
+    """
+    Remap user_id and item_id to 0-based contiguous indices and save as CSV
+    with no header, columns in the same order as input df.
+    """
+    user_col = COLUMN_NAMES["user_id"]
+    item_col = COLUMN_NAMES["item_id"]
+
+    # Create mappings based on sorted unique IDs, so order is deterministic
+    user_ids = pd.Index(sorted(df[user_col].unique()))
+    item_ids = pd.Index(sorted(df[item_col].unique()))
+
+    user_map = {old: new for new, old in enumerate(user_ids)}
+    item_map = {old: new for new, old in enumerate(item_ids)}
+
+    df_reindexed = df.copy()
+    df_reindexed[user_col] = df_reindexed[user_col].map(user_map)
+    df_reindexed[item_col] = df_reindexed[item_col].map(item_map)
+
+    # Sanity checks
+    user_ok, item_ok = check_contiguous(df_reindexed)
+    if not (user_ok and item_ok):
+        log("Warning: reindexed IDs are not contiguous 0-based as expected.")
+
+    # Save with no header, same column order, comma-separated
+    output = Path(output)
+    df_reindexed.to_csv(output, index=False, header=False)
+    log(f"Saved reindexed data to: {output}")
+
 
 if __name__ == "__main__":
     main()
