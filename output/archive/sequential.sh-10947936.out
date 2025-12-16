@@ -1,0 +1,325 @@
+[UEDRS] [00:00:08] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:08] Tag:  LENSKIT:IMPLICIT_MF
+[UEDRS] [00:00:08] Tool: LENSKIT
+[UEDRS] [00:00:08] Algorithm: IMPLICIT_MF
+[UEDRS] [00:00:08] Datasets: MYANIMELIST, TMALL, MOVIELENS, MUSIC4ALL, NETFLIX, YAHOO, GOODREADS, LASTFM
+[UEDRS] [00:00:08] Sizes: [100000, 250000, 500000, 750000, 1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:08] Current dataset [MYANIMELIST]
+[UEDRS] [00:00:08] Loading full dataset
+[UEDRS] [00:00:08] Loading done
+[UEDRS] [00:00:08] Memory Usage: RSS = 1020.84 MB, VMS = 6197.96 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [00:00:08] Sampling for [100000]
+[UEDRS] [00:00:10] Sampling done
+[UEDRS] [00:00:10] Memory Usage: RSS = 1057.86 MB, VMS = 6232.61 MB
+[UEDRS] [00:00:02] Elapsed
+[UEDRS] [00:00:10] Checking [LENSKIT][IMPLICIT_MF][MYANIMELIST][0m]
+[UEDRS] [00:00:10] Starting
+2025-12-03 11:33:01 [warning  ] loaded pipeline does not match hash
+2025-12-03 11:34:24 [error    ] failed to run node             [lenskit.pipeline.runner] node=scorer pid=17973 pname=LensKitProcess-2
+2025-12-03 11:34:24 [error    ] failed to run node             [lenskit.pipeline.runner] node=ranker pid=17973 pname=LensKitProcess-2
+2025-12-03 11:34:58 [error    ] failed to run node             [lenskit.pipeline.runner] node=scorer pid=19052 pname=LensKitProcess-11
+2025-12-03 11:34:58 [error    ] failed to run node             [lenskit.pipeline.runner] node=ranker pid=19052 pname=LensKitProcess-11
+2025-12-03 11:35:38 [error    ] failed to run node             [lenskit.pipeline.runner] node=scorer pid=18512 pname=LensKitProcess-8
+2025-12-03 11:35:38 [error    ] failed to run node             [lenskit.pipeline.runner] node=ranker pid=18512 pname=LensKitProcess-8
+2025-12-03 11:35:53 [error    ] failed to run node             [lenskit.pipeline.runner] node=scorer pid=19934 pname=LensKitProcess-20
+2025-12-03 11:35:53 [error    ] failed to run node             [lenskit.pipeline.runner] node=ranker pid=19934 pname=LensKitProcess-20
+2025-12-03 11:36:17 [error    ] failed to run node             [lenskit.pipeline.runner] node=scorer pid=17994 pname=LensKitProcess-3
+2025-12-03 11:36:17 [error    ] failed to run node             [lenskit.pipeline.runner] node=ranker pid=17994 pname=LensKitProcess-3
+2025-12-03 11:36:43 [error    ] failed to run node             [lenskit.pipeline.runner] node=scorer pid=17973 pname=LensKitProcess-2
+2025-12-03 11:36:43 [error    ] failed to run node             [lenskit.pipeline.runner] node=ranker pid=17973 pname=LensKitProcess-2
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 144, in _run_component
+    ival = self.run(snode, required=ireq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 75, in run
+    raise e
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 144, in _run_component
+    ival = self.run(snode, required=ireq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 75, in run
+    raise e
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 144, in _run_component
+    ival = self.run(snode, required=ireq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 75, in run
+    raise e
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 144, in _run_component
+    ival = self.run(snode, required=ireq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 75, in run
+    raise e
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 144, in _run_component
+    ival = self.run(snode, required=ireq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 75, in run
+    raise e
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+Traceback (most recent call last):
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 144, in _run_component
+    ival = self.run(snode, required=ireq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 75, in run
+    raise e
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed

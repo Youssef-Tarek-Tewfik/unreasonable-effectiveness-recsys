@@ -1,0 +1,19 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:16] Loaded
+[UEDRS] [00:00:16] Starting
+[UEDRS] [00:00:19] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:25] Saved unique data to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\myanimelist\fixed-ratings.csv
+[UEDRS] [00:00:25] Done
+[UEDRS] [00:00:08] Elapsed
+
+[UEDRS] [00:00:25] Loading dataset: IPINYOU
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\source\load.py:19: DtypeWarning: Columns (1) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path, sep=SEP, usecols=usecols, names=names)
+[UEDRS] [00:00:44] Loaded
+[UEDRS] [00:00:44] Starting
+[UEDRS] [00:02:07] (user_id, item_id) pairs unique: True
+[UEDRS] [00:02:55] Saved unique data to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\ipinyou\fixed-ratings.csv
+[UEDRS] [00:02:55] Done
+[UEDRS] [00:02:11] Elapsed

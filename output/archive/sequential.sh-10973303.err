@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/source/utilities.py", line 324, in <module>
+    main()
+  File "/mnt/source/utilities.py", line 26, in main
+    log("Length:", f"{len(df) / 1_000_000:.2f}m")
+                          ^^
+UnboundLocalError: cannot access local variable 'df' where it is not associated with a value

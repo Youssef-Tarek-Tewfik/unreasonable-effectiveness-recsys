@@ -1,0 +1,18 @@
+[UEDRS] [00:00:00] Loading dataset: IPINYOU
+[UEDRS] [00:00:00] Done
+[UEDRS] [00:00:00] Checking if unique
+[UEDRS] [00:00:03] (user_id, item_id) pairs unique: False
+[UEDRS] [00:00:03] Done
+[UEDRS] [00:00:03] Result: False
+[UEDRS] [00:00:03] Making unique
+[UEDRS] [00:00:14] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:31] Saved unique data to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\ipinyou\ratings.csv
+[UEDRS] [00:00:31] Done
+[UEDRS] [00:00:31] Checking if unique again
+[UEDRS] [00:00:34] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:34] Done
+[UEDRS] [00:00:34] Result: True
+[UEDRS] [00:00:34] Saving parquet
+[UEDRS] [00:00:35] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\ipinyou\ratings.parquet
+[UEDRS] [00:00:35] Done

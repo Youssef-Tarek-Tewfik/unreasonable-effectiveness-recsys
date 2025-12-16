@@ -8,7 +8,7 @@ from .constants import Tool, Dataset, Sizing, Scorer, Model, MODE, SIZES_FRACTIO
 from .load import load
 from .results import OUTPUT_KEY, SizeValue as Result, load_results, save_results, setdefault_nested
 from .sample import sample
-from .utilities import safe_run, show_memory
+from .utilities import safe_run, show_memory, round_significant
 from .use_lenskit import use_lenskit
 from .use_recbole import use_recbole
 from .logger import log
@@ -20,9 +20,19 @@ def main():
   # Run options
   parallel = True
   default = (Tool.RECBOLE.name, Model.ITEM_KNN.name)
-  # excluded = [Dataset.ALIBABA, Dataset.AMAZON]
-  # datasets = [dataset for dataset in Dataset if dataset not in excluded]
-  datasets = [Dataset.MOVIELENS, Dataset.NETFLIX, Dataset.MUSIC4ALL, Dataset.GOODREADS, Dataset.AMAZON, Dataset.ALIBABA]
+  datasets = [
+    Dataset.MYANIMELIST,
+    Dataset.IPINYOU,
+    Dataset.TMALL,
+    Dataset.MOVIELENS,
+    Dataset.MUSIC4ALL,
+    Dataset.NETFLIX,
+    Dataset.YAHOO,
+    Dataset.ALIBABA,
+    Dataset.GOODREADS,
+    Dataset.LASTFM,
+    Dataset.AMAZON,
+  ]
 
   # Command-line args
   parser = ArgumentParser("Unreasonable Effectiveness of Data for RecSys")
@@ -60,14 +70,15 @@ def main():
 
       log(f"Sampling for [{size}]")
       stopwatch = time.time()
-      dataframe, size = sample(dataframe, size)
-      log("Sampling done")
+      dataframe = sample(dataset, dataframe, size)
+      size = len(dataframe)
+      log("Sampling done, obtained size:", size)
       show_memory()
       log("Elapsed", start=stopwatch)
       if sizing == Sizing.FRACTIONAL:
         size_formatted = f"{int(size * 100)}%"
       elif sizing == Sizing.ABSOLUTE:
-        size_formatted = f"{round(size / 1_000_000)}m"
+        size_formatted = f"{round(size / 1_000_000)}m" if size >= 1_000_000 else f"{round(size / 1_000)}k"
 
       # LensKit
       for scorer in Scorer:
@@ -83,7 +94,7 @@ def main():
           stopwatch = time.time()
 
           result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
-          result = round(result, FIGURES)
+          result = round_significant(result)
           results[OUTPUT_KEY][lenskit][scorer.name][dataset.name][size] = result
           save_results(results, tag)
 
@@ -107,7 +118,7 @@ def main():
           stopwatch = time.time()
 
           result = safe_run(lambda: use_recbole(dataframe, dataset, f"{size_formatted}-{sampling.name}", model))
-          result = round(result, FIGURES)
+          result = round_significant(result)
           results[OUTPUT_KEY][recbole][model.name][dataset.name][size] = result
           save_results(results, tag)
 

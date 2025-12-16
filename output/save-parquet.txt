@@ -1,0 +1,157 @@
+[UEDRS] [00:00:00] === Creating Parquet Files ===
+[UEDRS] [00:00:00] Dataset: MYANIMELIST
+[UEDRS] [00:00:00] Loading
+[UEDRS] [00:00:01] Done
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:00:01] Saving Parquet
+[UEDRS] [00:00:02] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\myanimelist\ratings.parquet
+[UEDRS] [00:00:02] Done
+[UEDRS] [00:00:00] Elapsed
+
+[UEDRS] [00:00:02] Dataset: IPINYOU
+[UEDRS] [00:00:02] Loading
+[UEDRS] [00:00:07] Done
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:07] Saving Parquet
+[UEDRS] [00:00:08] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\ipinyou\ratings.parquet
+[UEDRS] [00:00:08] Done
+[UEDRS] [00:00:01] Elapsed
+
+[UEDRS] [00:00:08] Dataset: MOVIELENS
+[UEDRS] [00:00:08] Loading
+[UEDRS] [00:01:30] Done
+[UEDRS] [00:01:21] Elapsed
+[UEDRS] [00:01:30] Saving Parquet
+[UEDRS] [00:01:32] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\movielens\ratings.parquet
+[UEDRS] [00:01:32] Done
+[UEDRS] [00:00:02] Elapsed
+
+[UEDRS] [00:01:32] Dataset: TMALL
+[UEDRS] [00:01:32] Loading
+[UEDRS] [00:01:38] Done
+[UEDRS] [00:00:05] Elapsed
+[UEDRS] [00:01:38] Saving Parquet
+[UEDRS] [00:01:41] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\tmall\ratings.parquet
+[UEDRS] [00:01:41] Done
+[UEDRS] [00:00:02] Elapsed
+
+[UEDRS] [00:01:41] Dataset: NETFLIX
+[UEDRS] [00:01:41] Loading
+[UEDRS] [00:06:21] Done
+[UEDRS] [00:04:39] Elapsed
+[UEDRS] [00:06:21] Saving Parquet
+[UEDRS] [00:06:30] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\netflix\ratings.parquet
+[UEDRS] [00:06:30] Done
+[UEDRS] [00:00:09] Elapsed
+
+[UEDRS] [00:06:30] Dataset: YAHOO
+[UEDRS] [00:06:30] Loading
+[UEDRS] [00:07:00] Done
+[UEDRS] [00:00:29] Elapsed
+[UEDRS] [00:07:00] Saving Parquet
+[UEDRS] [00:07:08] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\yahoo\ratings.parquet
+[UEDRS] [00:07:08] Done
+[UEDRS] [00:00:08] Elapsed
+
+[UEDRS] [00:07:08] Dataset: ALIBABA
+[UEDRS] [00:07:08] Loading
+[UEDRS] [00:07:50] Done
+[UEDRS] [00:00:42] Elapsed
+[UEDRS] [00:07:50] Saving Parquet
+[UEDRS] [00:08:05] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\alibaba\ratings.parquet
+[UEDRS] [00:08:05] Done
+[UEDRS] [00:00:14] Elapsed
+
+[UEDRS] [00:08:05] Dataset: GOODREADS
+[UEDRS] [00:08:05] Loading
+[UEDRS] [00:19:55] Done
+[UEDRS] [00:11:50] Elapsed
+[UEDRS] [00:19:55] Saving Parquet
+[UEDRS] [00:20:15] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\goodreads\ratings.parquet
+[UEDRS] [00:20:15] Done
+[UEDRS] [00:00:20] Elapsed
+
+[UEDRS] [00:20:15] Dataset: MUSIC4ALL
+[UEDRS] [00:20:15] Loading
+[UEDRS] [00:25:16] Done
+[UEDRS] [00:05:00] Elapsed
+[UEDRS] [00:25:16] Saving Parquet
+[UEDRS] [00:25:27] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\music4all\ratings.parquet
+[UEDRS] [00:25:27] Done
+[UEDRS] [00:00:11] Elapsed
+
+[UEDRS] [00:25:27] Dataset: AMAZON
+[UEDRS] [00:25:27] Loading
+[UEDRS] [01:03:35] Done
+[UEDRS] [00:38:07] Elapsed
+[UEDRS] [01:03:35] Saving Parquet
+[UEDRS] [01:04:54] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\amazon\ratings.parquet
+[UEDRS] [01:04:54] Done
+[UEDRS] [00:01:19] Elapsed
+
+[UEDRS] [01:04:54] Dataset: LASTFM
+[UEDRS] [01:04:54] Loading
+[UEDRS] [01:20:44] Done
+[UEDRS] [00:15:50] Elapsed
+[UEDRS] [01:20:44] Saving Parquet
+[UEDRS] [01:21:14] Saved parquet to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\lastfm\ratings.parquet
+[UEDRS] [01:21:14] Done
+[UEDRS] [00:00:29] Elapsed
+
+
+
+[UEDRS] [01:21:14] === Checking Parquet Files ===
+[UEDRS] [01:21:14] Dataset: MYANIMELIST
+[UEDRS] [01:21:14] Loading
+[UEDRS] [01:21:25] Done
+[UEDRS] [00:00:10] Elapsed
+
+[UEDRS] [01:21:25] Dataset: IPINYOU
+[UEDRS] [01:21:25] Loading
+[UEDRS] [01:21:25] Done
+[UEDRS] [00:00:00] Elapsed
+
+[UEDRS] [01:21:25] Dataset: MOVIELENS
+[UEDRS] [01:21:25] Loading
+[UEDRS] [01:21:26] Done
+[UEDRS] [00:00:00] Elapsed
+
+[UEDRS] [01:21:26] Dataset: TMALL
+[UEDRS] [01:21:26] Loading
+[UEDRS] [01:21:26] Done
+[UEDRS] [00:00:00] Elapsed
+
+[UEDRS] [01:21:26] Dataset: NETFLIX
+[UEDRS] [01:21:26] Loading
+[UEDRS] [01:21:28] Done
+[UEDRS] [00:00:01] Elapsed
+
+[UEDRS] [01:21:28] Dataset: YAHOO
+[UEDRS] [01:21:28] Loading
+[UEDRS] [01:21:29] Done
+[UEDRS] [00:00:01] Elapsed
+
+[UEDRS] [01:21:29] Dataset: ALIBABA
+[UEDRS] [01:21:29] Loading
+[UEDRS] [01:21:32] Done
+[UEDRS] [00:00:03] Elapsed
+
+[UEDRS] [01:21:32] Dataset: GOODREADS
+[UEDRS] [01:21:32] Loading
+[UEDRS] [01:21:36] Done
+[UEDRS] [00:00:03] Elapsed
+
+[UEDRS] [01:21:36] Dataset: MUSIC4ALL
+[UEDRS] [01:21:36] Loading
+[UEDRS] [01:21:43] Done
+[UEDRS] [00:00:07] Elapsed
+
+[UEDRS] [01:21:43] Dataset: AMAZON
+[UEDRS] [01:21:43] Loading
+[UEDRS] [01:22:00] Done
+[UEDRS] [00:00:16] Elapsed
+
+[UEDRS] [01:22:00] Dataset: LASTFM
+[UEDRS] [01:22:00] Loading
+[UEDRS] [01:22:07] Done
+[UEDRS] [00:00:07] Elapsed

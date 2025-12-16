@@ -23,7 +23,6 @@ SizeKey: TypeAlias = float | int # Fractional or absolute size
 DatasetKey: TypeAlias = str
 AlgorithmKey: TypeAlias = str
 ToolKey: TypeAlias = str
-
 ResultsDataset: TypeAlias = dict[SizeKey, SizeValue]
 ResultsAlgorithm: TypeAlias = dict[DatasetKey, ResultsDataset]
 ResultsTool: TypeAlias = dict[AlgorithmKey, ResultsAlgorithm]
@@ -31,6 +30,11 @@ ResultsOutput: TypeAlias = dict[ToolKey, ResultsTool]
 
 SizingValue: TypeAlias = str
 SamplingValue: TypeAlias = str
+
+MaximumValue: TypeAlias = float
+MaximaAlgorithm: TypeAlias = dict[DatasetKey, MaximumValue]
+MaximaTool: TypeAlias = dict[AlgorithmKey, MaximaAlgorithm]
+Maxima: TypeAlias = dict[ToolKey, MaximaTool]
 
 ## Classes
 class ResultsMetaMode(TypedDict):
@@ -41,7 +45,6 @@ class ResultsMeta(TypedDict):
 class Results(TypedDict):
   META: ResultsMeta
   OUTPUT: ResultsOutput
-
 # d["OUTPUT"][tool][algorithm][dataset][size] -> NDCG
 # d["META"]["MODE"] -> (sizing, sampling)
 

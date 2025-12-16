@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/source/utilities.py", line 271, in <module>
+    main()
+  File "/mnt/source/utilities.py", line 32, in main
+    save_parquet(df, path)
+  File "/mnt/source/utilities.py", line 258, in save_parquet
+    df.to_parquet(output, index=False)
+  File "/home/g064474/.local/lib/python3.11/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/pandas/core/frame.py", line 3118, in to_parquet
+    return to_parquet(
+           ^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/pandas/io/parquet.py", line 482, in to_parquet
+    impl.write(
+  File "/home/g064474/.local/lib/python3.11/site-packages/pandas/io/parquet.py", line 199, in write
+    path_or_handle, handles, filesystem = _get_path_or_handle(
+                                          ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/pandas/io/parquet.py", line 141, in _get_path_or_handle
+    handles = get_handle(
+              ^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/pandas/io/common.py", line 749, in get_handle
+    check_parent_directory(str(handle))
+  File "/home/g064474/.local/lib/python3.11/site-packages/pandas/io/common.py", line 616, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: '/mnt/datasets/MYANIMELIST'

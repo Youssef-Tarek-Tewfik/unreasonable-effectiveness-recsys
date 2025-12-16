@@ -1,0 +1,132 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:00] Done
+[UEDRS] [00:00:00] Checking if unique
+[UEDRS] [00:00:01] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:01] Done
+[UEDRS] [00:00:01] Result: True
+[UEDRS] [00:00:01] Checking if contiguous
+[UEDRS] [00:00:01] user_id contiguous 0-based: True
+[UEDRS] [00:00:01] item_id contiguous 0-based: True
+[UEDRS] [00:00:01] Done
+[UEDRS] [00:00:01] Result: (True, True)
+
+[UEDRS] [00:00:01] Loading dataset: IPINYOU
+[UEDRS] [00:00:01] Done
+[UEDRS] [00:00:01] Checking if unique
+[UEDRS] [00:00:05] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:05] Done
+[UEDRS] [00:00:05] Result: True
+[UEDRS] [00:00:05] Checking if contiguous
+[UEDRS] [00:00:06] user_id contiguous 0-based: True
+[UEDRS] [00:00:06] item_id contiguous 0-based: True
+[UEDRS] [00:00:06] Done
+[UEDRS] [00:00:06] Result: (True, True)
+
+[UEDRS] [00:00:06] Loading dataset: TMALL
+[UEDRS] [00:00:07] Done
+[UEDRS] [00:00:07] Checking if unique
+[UEDRS] [00:00:10] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:10] Done
+[UEDRS] [00:00:10] Result: True
+[UEDRS] [00:00:10] Checking if contiguous
+[UEDRS] [00:00:10] user_id contiguous 0-based: True
+[UEDRS] [00:00:10] item_id contiguous 0-based: True
+[UEDRS] [00:00:10] Done
+[UEDRS] [00:00:10] Result: (True, True)
+
+[UEDRS] [00:00:10] Loading dataset: MOVIELENS
+[UEDRS] [00:00:11] Done
+[UEDRS] [00:00:11] Checking if unique
+[UEDRS] [00:00:15] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:15] Done
+[UEDRS] [00:00:15] Result: True
+[UEDRS] [00:00:15] Checking if contiguous
+[UEDRS] [00:00:16] user_id contiguous 0-based: False
+[UEDRS] [00:00:16] item_id contiguous 0-based: False
+[UEDRS] [00:00:16] Done
+[UEDRS] [00:00:16] Result: (False, False)
+
+[UEDRS] [00:00:16] Loading dataset: MUSIC4ALL
+[UEDRS] [00:00:19] Done
+[UEDRS] [00:00:19] Checking if unique
+[UEDRS] [00:00:28] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:28] Done
+[UEDRS] [00:00:28] Result: True
+[UEDRS] [00:00:28] Checking if contiguous
+[UEDRS] [00:01:01] user_id contiguous 0-based: False
+[UEDRS] [00:01:01] item_id contiguous 0-based: False
+[UEDRS] [00:01:01] Done
+[UEDRS] [00:01:01] Result: (False, False)
+
+[UEDRS] [00:01:01] Loading dataset: NETFLIX
+[UEDRS] [00:01:03] Done
+[UEDRS] [00:01:03] Checking if unique
+[UEDRS] [00:01:19] (user_id, item_id) pairs unique: True
+[UEDRS] [00:01:19] Done
+[UEDRS] [00:01:19] Result: True
+[UEDRS] [00:01:19] Checking if contiguous
+[UEDRS] [00:01:21] user_id contiguous 0-based: False
+[UEDRS] [00:01:21] item_id contiguous 0-based: False
+[UEDRS] [00:01:21] Done
+[UEDRS] [00:01:21] Result: (False, False)
+
+[UEDRS] [00:01:21] Loading dataset: YAHOO
+[UEDRS] [00:01:22] Done
+[UEDRS] [00:01:22] Checking if unique
+[UEDRS] [00:01:45] (user_id, item_id) pairs unique: True
+[UEDRS] [00:01:45] Done
+[UEDRS] [00:01:45] Result: True
+[UEDRS] [00:01:45] Checking if contiguous
+[UEDRS] [00:01:46] user_id contiguous 0-based: True
+[UEDRS] [00:01:46] item_id contiguous 0-based: True
+[UEDRS] [00:01:46] Done
+[UEDRS] [00:01:46] Result: (True, True)
+
+[UEDRS] [00:01:46] Loading dataset: ALIBABA
+[UEDRS] [00:01:50] Done
+[UEDRS] [00:01:50] Checking if unique
+[UEDRS] [00:02:28] (user_id, item_id) pairs unique: True
+[UEDRS] [00:02:28] Done
+[UEDRS] [00:02:28] Result: True
+[UEDRS] [00:02:28] Checking if contiguous
+[UEDRS] [00:02:36] user_id contiguous 0-based: True
+[UEDRS] [00:02:36] item_id contiguous 0-based: True
+[UEDRS] [00:02:36] Done
+[UEDRS] [00:02:36] Result: (True, True)
+
+[UEDRS] [00:02:36] Loading dataset: GOODREADS
+[UEDRS] [00:02:50] Done
+[UEDRS] [00:02:50] Checking if unique
+[UEDRS] [00:03:43] (user_id, item_id) pairs unique: True
+[UEDRS] [00:03:43] Done
+[UEDRS] [00:03:43] Result: True
+[UEDRS] [00:03:43] Checking if contiguous
+[UEDRS] [00:03:47] user_id contiguous 0-based: True
+[UEDRS] [00:03:47] item_id contiguous 0-based: True
+[UEDRS] [00:03:47] Done
+[UEDRS] [00:03:47] Result: (True, True)
+
+[UEDRS] [00:03:47] Loading dataset: LASTFM
+[UEDRS] [00:04:10] Done
+[UEDRS] [00:04:10] Checking if unique
+[UEDRS] [00:05:24] (user_id, item_id) pairs unique: True
+[UEDRS] [00:05:24] Done
+[UEDRS] [00:05:24] Result: True
+[UEDRS] [00:05:24] Checking if contiguous
+[UEDRS] [00:05:37] user_id contiguous 0-based: True
+[UEDRS] [00:05:37] item_id contiguous 0-based: True
+[UEDRS] [00:05:37] Done
+[UEDRS] [00:05:37] Result: (True, True)
+
+[UEDRS] [00:05:37] Loading dataset: AMAZON
+[UEDRS] [00:06:46] Done
+[UEDRS] [00:06:46] Checking if unique
+[UEDRS] [00:10:42] (user_id, item_id) pairs unique: True
+[UEDRS] [00:10:42] Done
+[UEDRS] [00:10:42] Result: True
+[UEDRS] [00:10:42] Checking if contiguous
+[UEDRS] [00:11:38] user_id contiguous 0-based: True
+[UEDRS] [00:11:38] item_id contiguous 0-based: True
+[UEDRS] [00:11:38] Done
+[UEDRS] [00:11:38] Result: (True, True)
+

@@ -1,40 +1,59 @@
-import enum
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.colors as mcolors
+import matplotlib.patheffects as pe
 from pathlib import Path
 from typing import TypeAlias
 from scipy import stats
 from matplotlib.ticker import FuncFormatter
 
-from .constants import Sizing, DISPLAY_NAMES, RECOMMENDATIONS, DIRECTORY_RESULTS, SIZES_FRACTIONAL, SIZES_ABSOLUTE
-from .results import Results, load_results, setdefault_nested
+from .constants import (
+    Sizing, Dataset, DISPLAY_NAMES, RECOMMENDATIONS, DIRECTORY_RESULTS, SIZES_FRACTIONAL, SIZES_ABSOLUTE, SEED
+)
+from .results import (
+    Results, Maxima, OUTPUT_KEY, META_KEY, MODE_KEY, SIZING_KEY, SAMPLING_KEY, load_results, setdefault_nested
+)
 from .logger import log
 
 
+MAXIMA_MIN_COUNT = 4
+TITLE_PREFIX = "Dataset-Size Effectiveness via"
 MARKERS = ['o', '^', '2', 's', 'P', '*', 'X', 'D', '|']
-COLORS = [
-    "tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple", "tab:pink", "tab:gray", "tab:olive", "tab:cyan"
-] # "tab:brown" removed its so bad
+# COLORS = [
+#     "tab:blue", "tab:orange", "tab:green", "tab:red", "tab:purple",
+#     "tab:pink", "tab:gray", "tab:olive", "tab:cyan", "tab:brown",
+# ]
+COLORS = list(mcolors.CSS4_COLORS.keys())
 Slopes: TypeAlias = dict[str, dict[str, dict[str, float]]]
 
 
 def main():
+    np.random.seed(SEED)
+    np.random.shuffle(COLORS)
+
+    log("Loading latest results")
     results = load_results()
-    plot_results(results)
-    log("Line graph created")
+    log("Done")
+
+    mode = results[META_KEY][MODE_KEY]
+    sizing, sampling = mode[SIZING_KEY], mode[SAMPLING_KEY]
+    title = f"{TITLE_PREFIX} {DISPLAY_NAMES[sizing]} {DISPLAY_NAMES[sampling]}"
+
+    log("Plotting lines")
+    plot_results(results, title)
+    log("Done")
+
+    log("Plotting maxima")
+    maxima = get_maxima(results)
+    plot_maxima(maxima, title)
+    log("Done\n")
 
 
-def plot_results(results: Results, *, output: str = "line", title: str = "") -> None:
-    mode = results["META"]["MODE"]
-    sizing, sampling = DISPLAY_NAMES[mode["SIZING"]], DISPLAY_NAMES[mode["SAMPLING"]]
-    prefix = f"{title} - " if title else ""
-    title = prefix + f"{sizing} {sampling}"
-
-    results = results["OUTPUT"] # type: ignore
+def plot_results(results: Results, title: str = "Results", output: str = "line") -> None:
+    sizing = results[META_KEY][MODE_KEY][SIZING_KEY]
+    results = results[OUTPUT_KEY] # type: ignore
     tools = list(results.keys())
-    datasets = sorted(
-        {dataset for tool in tools for algorithm in results[tool] for dataset in results[tool][algorithm].keys()}
-    )
+    datasets = [d.name for d in Dataset]
     
     # Create a mapping of datasets to colors for consistency
     dataset_colors = {dataset: COLORS[i % len(COLORS)] for i, dataset in enumerate(datasets)}
@@ -79,7 +98,7 @@ def plot_results(results: Results, *, output: str = "line", title: str = "") -> 
                 sizes_filtered = []
                 values_filtered = []
                 for i, value in enumerate(values):
-                    if value is not None:
+                    if value is not None and value >= 0.0 and value <= 1.0:
                         sizes_filtered.append(sizes[i])
                         values_filtered.append(value)
                 sizes = sizes_filtered
@@ -101,7 +120,8 @@ def plot_results(results: Results, *, output: str = "line", title: str = "") -> 
                         linewidth=2,
                         markersize=6,
                         label=DISPLAY_NAMES[dataset],
-                        alpha=0.8
+                        alpha=0.8,
+                        path_effects=[pe.Stroke(linewidth=2, foreground="black"), pe.Normal()]
                     )
 
                     # Highlight the last data point with a distinct marker
@@ -113,7 +133,8 @@ def plot_results(results: Results, *, output: str = "line", title: str = "") -> 
                             s=90,
                             edgecolors="white",
                             linewidths=0.8,
-                            zorder=3
+                            zorder=3,
+                            path_effects=[pe.Stroke(linewidth=2, foreground="black"), pe.Normal()]
                         )
             
             # Customize subplot
@@ -248,6 +269,142 @@ def plot_slopes(slopes: Slopes, output: str = "bar") -> None:
     # Save the plot
     output_path = DIRECTORY_RESULTS / f"{output}.png"
     plt.savefig(output_path, dpi=300, bbox_inches="tight")
+
+def get_maxima(results: Results) -> Maxima:
+    maxima: Maxima = {}
+
+    for tool in results[OUTPUT_KEY]:
+        maxima[tool] = {}
+        for algorithm in results[OUTPUT_KEY][tool]:
+            maxima[tool][algorithm] = {}
+            for dataset in results[OUTPUT_KEY][tool][algorithm]:
+                max_value_size: float | int = -1
+                max_value: float = -1.0
+                max_size: float | int = -1
+                count: int = 0
+
+                for size, value in results[OUTPUT_KEY][tool][algorithm][dataset].items():
+                    if value is not None and value >= 0 and value <= 1.0:
+                        count += 1
+                        if value > max_value:
+                            max_value = value
+                            max_value_size = size
+                        if size > max_size:
+                            max_size = size
+
+                if count >= MAXIMA_MIN_COUNT:
+                    maxima[tool][algorithm][dataset] = round(max_value_size / max_size, 4)
+
+    return maxima
+
+def plot_maxima(maxima: Maxima, title: str = "Maxima", output: str = "maxima") -> None:
+    subtitle = f"Maximum NDCG@{RECOMMENDATIONS} value reached at x% of maximum size used, n >= {MAXIMA_MIN_COUNT}"
+
+    tools = list(maxima.keys())
+    datasets = [d.name for d in Dataset]
+    
+    # Build column headers: Tool-Algorithm combinations
+    columns = []
+    tool_boundaries = []  # Track where each tool's columns end for vertical separators
+    tool_spans = []  # Track (start_col, end_col, tool_name) for merged headers
+    for tool in tools:
+        tool_start = len(columns)
+        for algorithm in maxima[tool]:
+            columns.append((tool, algorithm))
+        tool_spans.append((tool_start, len(columns), tool))
+        tool_boundaries.append(len(columns))
+    
+    # Build the data matrix: rows = datasets, cols = tool-algorithm combos
+    n_rows = len(datasets)
+    n_cols = len(columns)
+    
+    # Create figure with extra height for two header rows
+    header_height = 1.5  # Height for tool header + algorithm header
+    fig, ax = plt.subplots(figsize=(1.8 * n_cols + 2, 0.5 * n_rows + header_height + 2))
+    ax.set_xlim(0, n_cols)
+    ax.set_ylim(0, n_rows + 2)  # +2 for two header rows
+    ax.axis('off')
+    
+    # Define colors for cells
+    color_100 = '#c8e6c9'      # Light green for 100%
+    color_50_plus = '#fff9c4'  # Light yellow for >= 50%
+    color_less_50 = '#ffcdd2'  # Light red for < 50%
+    color_missing = '#e0e0e0'  # Light grey for missing
+    
+    # Draw tool header row (merged headers spanning algorithm columns)
+    for start_col, end_col, tool in tool_spans:
+        span = end_col - start_col
+        # Tool header cell background (white)
+        rect = plt.Rectangle((start_col, n_rows + 1), span, 1, facecolor='white', edgecolor='black', linewidth=0.5)  # type: ignore
+        ax.add_patch(rect)
+        ax.text(start_col + span / 2, n_rows + 1.5, DISPLAY_NAMES[tool], ha='center', va='center', fontsize=14, fontweight='bold')
+    
+    # Draw algorithm header row
+    for col_idx, (tool, algorithm) in enumerate(columns):
+        # Algorithm header cell background
+        rect = plt.Rectangle((col_idx, n_rows), 1, 1, facecolor='#f5f5f5', edgecolor='black', linewidth=0.5)  # type: ignore
+        ax.add_patch(rect)
+        # Split algorithm name into two lines for better fit
+        algo_name = DISPLAY_NAMES[algorithm]
+        # Split at space if possible, otherwise just use as is
+        words = algo_name.split(' ')
+        if len(words) >= 2:
+            mid = len(words) // 2
+            algo_name = ' '.join(words[:mid]) + '\n' + ' '.join(words[mid:])
+        ax.text(col_idx + 0.5, n_rows + 0.5, algo_name, ha='center', va='center', fontsize=8, fontweight='bold')
+    
+    # Draw data cells
+    for row_idx, dataset in enumerate(datasets):
+        # Row position (inverted so first dataset is at top)
+        y_pos = n_rows - 1 - row_idx
+        
+        for col_idx, (tool, algorithm) in enumerate(columns):
+            value = maxima[tool][algorithm].get(dataset, None)
+            
+            # Determine cell color and text
+            if value is None:
+                cell_color = color_missing
+                cell_text = "-"
+            else:
+                percentage = value * 100
+                # Round to 1 decimal place for consistent color/text behavior
+                rounded_percentage = round(percentage, 1)
+                if rounded_percentage >= 100:
+                    cell_color = color_100
+                elif rounded_percentage >= 50:
+                    cell_color = color_50_plus
+                else:
+                    cell_color = color_less_50
+                # Handle very small values that round to 0
+                if percentage > 0 and percentage < 1.0:
+                    cell_text = "<1.0%"
+                else:
+                    cell_text = f"{rounded_percentage:.1f}%"
+            
+            # Draw cell
+            rect = plt.Rectangle((col_idx, y_pos), 1, 1, facecolor=cell_color, edgecolor='black', linewidth=0.5)  # type: ignore
+            ax.add_patch(rect)
+            ax.text(col_idx + 0.5, y_pos + 0.5, cell_text, ha='center', va='center', fontsize=12)
+    
+    # Draw vertical separators between different tools (thicker lines)
+    for boundary in tool_boundaries[:-1]:  # Skip the last boundary (right edge)
+        ax.axvline(x=boundary, color='black', linewidth=2, ymin=0, ymax=(n_rows + 2) / (n_rows + 2))
+    
+    # Add dataset labels on the left
+    for row_idx, dataset in enumerate(datasets):
+        y_pos = n_rows - 1 - row_idx
+        ax.text(-0.1, y_pos + 0.5, DISPLAY_NAMES[dataset], ha='right', va='center', fontsize=9, fontweight='bold')
+    
+    # Add title and subtitle
+    fig.suptitle(title, fontsize=20, fontweight="bold", x=0.55, y=0.98)
+    fig.text(0.55, 0.92, subtitle, ha='center', va='top', fontsize=14, fontstyle='italic')
+    
+    plt.tight_layout(rect=[0.15, 0, 1, 0.88])  # type: ignore # Leave room for row labels and title
+
+    # Save the plot
+    output_path = DIRECTORY_RESULTS / f"{output}.png"
+    plt.savefig(output_path, dpi=300, bbox_inches="tight")
+
 
 if __name__ == "__main__":
     main()

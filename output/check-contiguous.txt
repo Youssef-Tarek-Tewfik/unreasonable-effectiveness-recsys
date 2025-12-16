@@ -1,0 +1,53 @@
+[UEDRS] [00:00:14] Loading dataset: MOVIELENS
+[UEDRS] [00:00:19] Loading done
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:19] Checking
+[UEDRS] [00:00:19] user_id contiguous 0-based: False
+[UEDRS] [00:00:19] item_id contiguous 0-based: False
+[UEDRS] [00:00:19] Result: (False, False)
+[UEDRS] [00:00:00] Elapsed
+
+[UEDRS] [00:00:19] Loading dataset: NETFLIX
+[UEDRS] [00:00:34] Loading done
+[UEDRS] [00:00:14] Elapsed
+[UEDRS] [00:00:34] Checking
+[UEDRS] [00:00:36] user_id contiguous 0-based: False
+[UEDRS] [00:00:36] item_id contiguous 0-based: False
+[UEDRS] [00:00:36] Result: (False, False)
+[UEDRS] [00:00:02] Elapsed
+
+[UEDRS] [00:00:36] Loading dataset: ALIBABA
+[UEDRS] [00:01:02] Loading done
+[UEDRS] [00:00:25] Elapsed
+[UEDRS] [00:01:02] Checking
+[UEDRS] [00:01:10] user_id contiguous 0-based: True
+[UEDRS] [00:01:10] item_id contiguous 0-based: False
+[UEDRS] [00:01:10] Result: (True, False)
+[UEDRS] [00:00:07] Elapsed
+
+[UEDRS] [00:01:10] Loading dataset: GOODREADS
+[UEDRS] [00:01:43] Loading done
+[UEDRS] [00:00:33] Elapsed
+[UEDRS] [00:01:43] Checking
+[UEDRS] [00:01:47] user_id contiguous 0-based: True
+[UEDRS] [00:01:47] item_id contiguous 0-based: True
+[UEDRS] [00:01:47] Result: (True, True)
+[UEDRS] [00:00:03] Elapsed
+
+[UEDRS] [00:01:47] Loading dataset: MUSIC4ALL
+[UEDRS] [00:02:01] Loading done
+[UEDRS] [00:00:13] Elapsed
+[UEDRS] [00:02:01] Checking
+[UEDRS] [00:02:22] user_id contiguous 0-based: False
+[UEDRS] [00:02:22] item_id contiguous 0-based: False
+[UEDRS] [00:02:22] Result: (False, False)
+[UEDRS] [00:00:21] Elapsed
+
+[UEDRS] [00:02:22] Loading dataset: AMAZON
+[UEDRS] [00:13:21] Loading done
+[UEDRS] [00:10:58] Elapsed
+[UEDRS] [00:13:21] Checking
+[UEDRS] [00:24:32] user_id contiguous 0-based: False
+[UEDRS] [00:24:32] item_id contiguous 0-based: False
+[UEDRS] [00:24:32] Result: (False, False)
+[UEDRS] [00:11:11] Elapsed

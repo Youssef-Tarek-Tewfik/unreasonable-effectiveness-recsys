@@ -2,7 +2,7 @@
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=64
 #SBATCH --time=16:00:00
-#SBATCH --mem=192G
+#SBATCH --mem=64G
 #SBATCH --output=./output/%x-%j.out
 #SBATCH --mail-type=END
 #SBATCH --mail-user=youssef.abdou@student.uni-siegen.de
@@ -20,7 +20,7 @@ module load ohpc-compat/2.0
 module load singularity/3.7.1
 
 
-# Environment Variables (Note: for LensKit set LK_* variables to NCPUs and others to 1, otherwise to NCPUs)
+# Environment Variables (Note: for LensKit set non LK_* variables to 1 otherwise NCPUs)
 export LK_NUM_PROCS=32
 export LK_NUM_THREADS=2
 
@@ -28,8 +28,6 @@ export OMP_NUM_THREADS=64
 export MKL_NUM_THREADS=64
 export OPENBLAS_NUM_THREADS=64
 export NUMBA_NUM_THREADS=64
-
-export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 
 # Run

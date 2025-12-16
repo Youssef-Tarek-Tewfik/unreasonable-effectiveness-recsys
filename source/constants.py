@@ -10,11 +10,16 @@ class Tool(Enum):
 
 ## Datasets
 class Dataset(Enum):
+  MYANIMELIST = "myanimelist"
+  IPINYOU = "ipinyou"
+  TMALL = "tmall"
   MOVIELENS = "movielens"
+  MUSIC4ALL = "music4all"
   NETFLIX = "netflix"
+  YAHOO = "yahoo"
   ALIBABA = "alibaba"
   GOODREADS = "goodreads"
-  MUSIC4ALL = "music4all"
+  LASTFM = "lastfm"
   AMAZON = "amazon"
 
 ## Sampling
@@ -40,7 +45,6 @@ class Scorer(Enum):
 
 ## RecBole algorithms (models)
 class Model(Enum):
-  NCEPLRec = "NCEPLRec" # NCEPLRec
   SimpleX = "SimpleX" # SimpleX
   POP = "Pop"  # Popularity
   ITEM_KNN = "ItemKNN"  # Item KNN
@@ -51,11 +55,16 @@ class Model(Enum):
 # Meta
 ## Datasets
 DATASET_FEEDBACK_EXPLICIT = {
+  Dataset.MYANIMELIST: True,
+  Dataset.IPINYOU: True,
+  Dataset.TMALL: True,
   Dataset.MOVIELENS: True,
+  Dataset.MUSIC4ALL: True,
   Dataset.NETFLIX: True,
+  Dataset.YAHOO: True,
   Dataset.ALIBABA: False,
   Dataset.GOODREADS: True,
-  Dataset.MUSIC4ALL: True,
+  Dataset.LASTFM: True,
   Dataset.AMAZON: True,
 }
 
@@ -63,6 +72,10 @@ DATASET_FEEDBACK_EXPLICIT = {
 ALLOWED_EXCEPTIONS = [
   (KeyError, "Field \"rating\" does not exist in schema"),
   (KeyError, "Column rating does not exist in schema"),
+  (RuntimeError, "cholesky solve failed"),
+  (ValueError, "Some feat is empty"),
+  (AssertionError, ""),
+  (AttributeError, "'NoneType' object has no attribute 'items'"),
 ]
 
 
@@ -76,12 +89,17 @@ COLUMN_NAMES = {
 DISPLAY_NAMES = {
   Tool.LENSKIT.name: "LensKit",
   Tool.RECBOLE.name: "RecBole",
+  Dataset.MYANIMELIST.name: "MyAnimeList-7m",
+  Dataset.IPINYOU.name: "iPinYou-22m",
+  Dataset.TMALL.name: "TMall-24m",
   Dataset.MOVIELENS.name: "MovieLens-32m",
+  Dataset.MUSIC4ALL.name: "Music4All Onion-50m",
   Dataset.NETFLIX.name: "Netflix-100m",
-  Dataset.ALIBABA.name: "Alibaba-iFashion-191m (implicit)",
-  Dataset.GOODREADS.name: "GoodReads-228m",
-  Dataset.MUSIC4ALL.name: "Music4All-Onion-252m",
-  Dataset.AMAZON.name: "Amazon-571m",
+  Dataset.YAHOO.name: "Yahoo Music-115m",
+  Dataset.ALIBABA.name: "Alibaba iFashion-191m",
+  Dataset.GOODREADS.name: "Goodreads-228m",
+  Dataset.LASTFM.name: "last.fm-319m",
+  Dataset.AMAZON.name: "Amazon-564m",
   Sizing.FRACTIONAL.name: "Fractional",
   Sizing.ABSOLUTE.name: "Absolute",
   Sampling.RANDOM.name: "Random Sampling",
@@ -93,7 +111,6 @@ DISPLAY_NAMES = {
   Scorer.BIASED_MF.name: "Biased MF (ALS)",
   Scorer.IMPLICIT_MF.name: "Implicit MF (ALS)",
   Scorer.BIASED_SVD.name: "Biased MF (SVD)",
-  Model.NCEPLRec.name: "NCEPLRec",
   Model.SimpleX.name: "SimpleX",
   Model.POP.name: "Popularity",
   Model.ITEM_KNN.name: "Item KNN",
@@ -101,9 +118,11 @@ DISPLAY_NAMES = {
   Model.NEU_MF.name: "Neural Collaborative Filtering",
 }
 FILE_NAME_RATINGS = "ratings.csv"
+FILE_NAME_RATINGS_PARQUET = "ratings.parquet"
 FILE_NAME_RESULTS_LATEST = "latest.yaml"
 FILE_NAME_RESULTS_AGGREGATE = "aggregate.yaml"
 FILE_NAME_SCRIPT_SEQUENTIAL = "sequential.sh"
+FILE_NAME_SAMPLING_FACTORS = "factors.yaml"
 
 
 # Directories
@@ -118,14 +137,19 @@ DIRECTORY_SCRIPTS = DIRECTORY_ROOT / "scripts"
 PATH_RESULTS_LATEST = DIRECTORY_RESULTS / FILE_NAME_RESULTS_LATEST
 PATH_RESULTS_AGGREGATE = DIRECTORY_RESULTS / FILE_NAME_RESULTS_AGGREGATE
 PATH_SCRIPT_SEQUENTIAL = DIRECTORY_SCRIPTS / FILE_NAME_SCRIPT_SEQUENTIAL
+PATH_SAMPLING_FACTORS = DIRECTORY_DATASETS / FILE_NAME_SAMPLING_FACTORS
 
 
 # Experiment related
 RECOMMENDATIONS = 10
 SEED = 42
-FIGURES = 5
+FIGURES = 10
+SIGNIFICANT_FIGURES = 3
 SIZES_FRACTIONAL = [0.1, 0.25, 0.5, 0.75, 1.0]
-SIZES_ABSOLUTE = [i * 1_000_000 for i in [1, 25, 50, 75, 100]]
+SIZES_ABSOLUTE = [
+  *[i * 1_000 for i in [100, 250, 500, 750]],
+  *[i * 1_000_000 for i in [1, 25, 50, 75, 100]],
+]
 MODE = (Sizing.ABSOLUTE, Sampling.STRATIFIED_USER)
 
 
@@ -144,12 +168,11 @@ PARTITIONS = 1
 EPOCHS = 1
 K = 16
 MIN_K = K
-MF_EMBEDDING_SIZE = 32
+EMBEDDING_SIZE = 32
 REGULARIZATION = 1.0
 BIASED_MF_DAMPING = 16
 CONFIDENCE_WEIGHT = 16
 LEARNING_RATE = 1.0
-SHRINK = 0.0
 SVD_N_ITER = 16
 
 
@@ -158,19 +181,19 @@ SVD_N_ITER = 16
 LENSKIT_CONFIG_POP = {"score": "rank"} # "quantile" | "rank" | "count"
 LENSKIT_CONFIG_ITEM_KNN = {"max_nbrs": K, "min_nbrs": MIN_K}
 LENSKIT_CONFIG_BIASED_MF = {
-  "embedding_size": MF_EMBEDDING_SIZE,
+  "embedding_size": EMBEDDING_SIZE,
   "epochs": EPOCHS,
   "regularization": REGULARIZATION,
   "damping": BIASED_MF_DAMPING,
 }
 LENSKIT_CONFIG_IMPLICIT_MF = {
-  "embedding_size": MF_EMBEDDING_SIZE,
+  "embedding_size": EMBEDDING_SIZE,
   "epochs": EPOCHS,
   "regularization": REGULARIZATION,
   "weight": CONFIDENCE_WEIGHT,
 }
 LENSKIT_CONFIG_BIASED_SVD = {
-  "embedding_size": MF_EMBEDDING_SIZE,
+  "embedding_size": EMBEDDING_SIZE,
   "damping": BIASED_MF_DAMPING,
   "algorithm": "randomized", # "arpack" | "randomized"
   "n_iter": SVD_N_ITER,
@@ -207,23 +230,19 @@ RECBOLE_DIRECTORY_DATASETS = RECBOLE_DIRECTORY_ROOT / "datasets"
 RECBOLE_DIRECTORY_CHECKPOINTS = RECBOLE_DIRECTORY_ROOT / "checkpoints"
 
 RECBOLE_MODEL_CONFIGS = {
-  Model.NCEPLRec: {},
   Model.SimpleX: {
-    "embedding_size": MF_EMBEDDING_SIZE, # Default: 64
+    "embedding_size": EMBEDDING_SIZE, # Default: 64
   },
   Model.POP: {},
   Model.ITEM_KNN: {
     "k": K, # Default: 100
-    "shrink": SHRINK, # Default: 0.0
   },
   Model.BPR: {
-    "embedding_size": MF_EMBEDDING_SIZE, # Default: 64
+    "embedding_size": EMBEDDING_SIZE, # Default: 64
   },
   Model.NEU_MF: {
-    "mf_embedding_size": MF_EMBEDDING_SIZE, # Default: 64
-    "mlp_embedding_size": MF_EMBEDDING_SIZE, # Default: 64
-    "mlp_hidden_size": [128, 64], # Default: [128, 64]
-    "dropout_prob": 0.1, # Default: 0.1 
+    "mf_embedding_size": EMBEDDING_SIZE, # Default: 64
+    "mlp_embedding_size": EMBEDDING_SIZE, # Default: 64
   },
 }
 
@@ -265,7 +284,6 @@ RECBOLE_CONFIG_COMMON = {
   "metric_decimal_place": FIGURES,
 
   ### Model
-  "split_to": SPLIT_TO,
 }
 RECBOLE_CONFIG_EXPLICIT = {
   **RECBOLE_CONFIG_COMMON,

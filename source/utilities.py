@@ -2,23 +2,40 @@ import torch
 import os
 import time
 import psutil
+import math
 import numpy as np
 import pandas as pd
 from pathlib import Path
-from typing import Callable
+from typing import Callable, Literal
 
-from .constants import ALLOWED_EXCEPTIONS, DIRECTORY_DATASETS, COLUMN_NAMES, Dataset, Model, Scorer, Sizing, Sampling
-# from .load import load
-# from .sample import sample
+from .constants import (
+    ALLOWED_EXCEPTIONS, DIRECTORY_DATASETS, COLUMN_NAMES, FIGURES, SIGNIFICANT_FIGURES, SIZES_ABSOLUTE,
+    Dataset, Model, Scorer, Sizing, Sampling
+)
+from .load import load
+from .sample import sample
 from .logger import log
 # from .use_recbole import use_recbole
 # from .use_lenskit import use_lenskit
 
 
 def main():
-    pass
+    excluded = [Dataset.IPINYOU]
+    excluded = []
+    for dataset in [d for d in Dataset if d not in excluded]:
+        log(f"Loading dataset: {dataset.name}")
+        full = load(dataset)
+        log("Length:", f"{len(full) / 1_000_000:.2f}m")
+        for size in reversed(SIZES_ABSOLUTE):
+            if size < len(full):
+                log("Size:", size)
+                log("Sampling")
+                sampled = sample(dataset, full, size)
+                log("Result:", len(sampled))
+                log("Matches:", len(sampled) == size)
+        print('\n')
 
-
+    
 def gpu_check() -> None:
     print("=== GPU Detection ===")
     print("CUDA available:", torch.cuda.is_available())
@@ -52,8 +69,8 @@ def gpu_check() -> None:
     else:
         print("No CUDA GPUs detected")
 
-def inter_to_csv(name: str, columns: list[int], output="ratings", demo=False) -> None:
-    input_path = DIRECTORY_DATASETS / name / f"{'demo' if demo else name}.inter"
+def inter_to_csv(name: str, columns: list[int], output="ratings", input="raw") -> None:
+    input_path = DIRECTORY_DATASETS / name / f"{input}.inter"
     output_path = DIRECTORY_DATASETS / name / f"{output}.csv"
     
     df = pd.read_csv(input_path, sep='\t', skiprows=1, header=None)
@@ -62,7 +79,7 @@ def inter_to_csv(name: str, columns: list[int], output="ratings", demo=False) ->
     
     df.to_csv(output_path, index=False, header=False)
     
-    print(f"Converted\n{input_path}\nto\n{output_path}")
+    log(f"Converted\n{input_path}\nto\n{output_path}")
 
 def remove_last_column(input: str | Path, output: str | Path, *, header = None) -> None:
     df = pd.read_csv(input, header=header)
@@ -75,7 +92,7 @@ def copy_head(input: str | Path, output: str | Path) -> None:
         lines = [input_file.readline() for _ in range(5)]
     with open(output, 'w') as output_file:
         output_file.writelines(lines)
-    print(f"Copied first 5 lines from\n{input}\nto\n{output}")
+    log(f"Copied first 5 lines from\n{input}\nto\n{output}")
 
 def safe_run(function: Callable[[], float]) -> float:
     try:
@@ -89,7 +106,7 @@ def safe_run(function: Callable[[], float]) -> float:
         if propagate:
             raise exception
         log("Exception handled:", exception, sep='\n')
-        return 0.0
+        return -1.0
 
 def test_run_time():
     log("starting")
@@ -165,7 +182,7 @@ def check_contiguous(df: pd.DataFrame) -> tuple[bool, bool]:
     log(f"item_id contiguous 0-based: {item_ok}")
     return user_ok, item_ok
 
-def reindex(df: pd.DataFrame, output: str | Path) -> None:
+def make_contiguous(df: pd.DataFrame, output: str | Path) -> None:
     """
     Remap user_id and item_id to 0-based contiguous indices and save as CSV
     with no header, columns in the same order as input df.
@@ -193,6 +210,113 @@ def reindex(df: pd.DataFrame, output: str | Path) -> None:
     output = Path(output)
     df_reindexed.to_csv(output, index=False, header=False)
     log(f"Saved reindexed data to: {output}")
+
+def check_unique(df: pd.DataFrame) -> bool:
+    """
+    Return True if every (user_id, item_id) pair appears at most once.
+    """
+    user_col = COLUMN_NAMES["user_id"]
+    item_col = COLUMN_NAMES["item_id"]
+    has_dupes = df.duplicated(subset=[user_col, item_col]).any()
+    log(f"(user_id, item_id) pairs unique: {not has_dupes}")
+    return not has_dupes
+
+def make_unique(
+    df: pd.DataFrame,
+    output: str | Path,
+    keep: Literal["last", "first"] | None = None,
+    aggregate: str | None = None
+) -> pd.DataFrame:
+    """
+    Remove duplicate (user_id, item_id) pairs, keeping the last occurrence,
+    and save as CSV with no header, columns in the same order as input df.
+    """
+    user_col = COLUMN_NAMES["user_id"]
+    item_col = COLUMN_NAMES["item_id"]
+    rating_col = COLUMN_NAMES["rating"]
+
+    if aggregate is not None:
+        df_unique = df.groupby([user_col, item_col], as_index=False).agg({rating_col: aggregate})
+    elif keep is not None:
+        df_unique = df.drop_duplicates(subset=[user_col, item_col], keep=keep)
+    else:
+        df_unique = df
+
+    # Sanity check
+    if not check_unique(df_unique):
+        log("Warning: duplicates still present after make_unique")
+
+    # Save with no header, same column order, comma-separated
+    output = Path(output)
+    df_unique.to_csv(output, index=False, header=False)
+    log(f"Saved unique data to\n{output}")
+
+    return df_unique
+
+def save_parquet(df: pd.DataFrame, output: str | Path) -> None:
+    """
+    Save a DataFrame to a parquet file without the pandas index.
+    """
+    output = Path(output)
+    df.to_parquet(output, index=False)
+    log(f"Saved parquet to: {output}")
+
+def downcast_dtypes(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Downcast numeric columns to more memory-efficient types.
+    """
+    for col in df.select_dtypes(include=["int", "float"]).columns:
+        df[col] = pd.to_numeric(df[col], downcast="unsigned")
+    return df
+
+def check_sparsity(df: pd.DataFrame) -> dict[str, float]:
+    """
+    Calculate sparsity metrics for a user-item interaction dataset.
+    Returns a dict with sparsity, density, and other statistics.
+    """
+    user_col = COLUMN_NAMES["user_id"]
+    item_col = COLUMN_NAMES["item_id"]
+    
+    n_users = df[user_col].nunique()
+    n_items = df[item_col].nunique()
+    n_interactions = len(df)
+    
+    # Total possible interactions
+    total_possible = n_users * n_items
+    
+    # Sparsity = 1 - (actual / possible)
+    density = n_interactions / total_possible
+    sparsity = 1 - density
+    
+    stats = {
+        "n_users": n_users,
+        "n_items": n_items,
+        "n_interactions": n_interactions,
+        "total_possible": total_possible,
+        "density": density,
+        "sparsity": sparsity,
+        "sparsity_pct": sparsity * 100,
+    }
+    
+    log(f"Users: {n_users:,}")
+    log(f"Items: {n_items:,}")
+    log(f"Interactions: {n_interactions:,}")
+    log(f"Density: {density:.6f} ({density*100:.4f}%)")
+    log(f"Sparsity: {sparsity:.6f} ({sparsity*100:.4f}%)")
+    
+    return stats
+
+def round_significant(x: float, figures: int = SIGNIFICANT_FIGURES) -> float:
+  if x == 0:
+    return 0
+  return round(x, figures - 1 - int(math.floor(math.log10(abs(x)))))
+
+def ceil_significant(x: float, figures: int = SIGNIFICANT_FIGURES) -> float:
+  if x == 0:
+    return 1
+  digits = figures - 1 - int(math.floor(math.log10(abs(x))))
+  multiplier = 10 ** digits
+  return math.ceil(x * multiplier) / multiplier
 
 
 if __name__ == "__main__":

@@ -15,6 +15,7 @@ dist/
 log/
 log_tensorboard/
 artifacts/
-datasets/
+datasets/**/*ratings.*
+datasets/**/raw.inter
 *desktop.ini*
 singularity/**/*.sif

@@ -1,0 +1,7 @@
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/relationships.py:378: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(
+slurmstepd: error: *** JOB 10958261 ON gpu-node006 CANCELLED AT 2025-12-08T12:43:32 DUE TO TIME LIMIT ***
