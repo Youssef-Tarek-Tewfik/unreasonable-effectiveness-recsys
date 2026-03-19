@@ -1,0 +1,34 @@
+[UEDRS] [00:00:09] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:09] Tag:  RECBOLE:ITEM_KNN
+[UEDRS] [00:00:09] Tool: RECBOLE
+[UEDRS] [00:00:09] Algorithm: ITEM_KNN
+[UEDRS] [00:00:09] Datasets: GOODREADS
+[UEDRS] [00:00:09] Sizes: [25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:09] Desired size: 25000000
+[UEDRS] [00:00:09] Dataset: GOODREADS
+[UEDRS] [00:00:09] Loading
+[UEDRS] [00:00:19] Loading done
+[UEDRS] [00:00:19] Memory Usage: RSS = 5049.04 MB, VMS = 14899.99 MB
+[UEDRS] [00:00:09] Elapsed
+[UEDRS] [00:00:19] Sampling
+[UEDRS] [00:01:06] Sampling done, obtained size: 25000000
+[UEDRS] [00:01:06] Memory Usage: RSS = 5555.84 MB, VMS = 15404.32 MB
+[UEDRS] [00:00:47] Elapsed
+[UEDRS] [00:01:06] Checking [RECBOLE][ITEM_KNN][GOODREADS][25m]
+[UEDRS] [00:01:06] Skipping (0.0068)
+[UEDRS] [00:01:06] Memory Usage: RSS = 5555.84 MB, VMS = 15404.32 MB
+[UEDRS] [00:01:06] Releasing dataframe from memory
+[UEDRS] [00:01:06] Memory Usage: RSS = 5364.12 MB, VMS = 15212.58 MB
+[UEDRS] [00:01:06] Desired size: 50000000
+[UEDRS] [00:01:06] Dataset: GOODREADS
+[UEDRS] [00:01:06] Loading
+[UEDRS] [00:01:17] Loading done
+[UEDRS] [00:01:17] Memory Usage: RSS = 6422.62 MB, VMS = 17132.58 MB
+[UEDRS] [00:00:10] Elapsed
+[UEDRS] [00:01:17] Sampling
+[UEDRS] [00:02:02] Sampling done, obtained size: 50000000
+[UEDRS] [00:02:02] Memory Usage: RSS = 7043.30 MB, VMS = 17753.26 MB
+[UEDRS] [00:00:45] Elapsed
+[UEDRS] [00:02:02] Checking [RECBOLE][ITEM_KNN][GOODREADS][50m]
+[UEDRS] [00:02:02] Starting

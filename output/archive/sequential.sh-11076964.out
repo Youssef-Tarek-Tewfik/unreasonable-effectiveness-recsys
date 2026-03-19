@@ -1,0 +1,53 @@
+[UEDRS] [00:00:25] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:25] Tag:  LENSKIT:BIASED_MF
+[UEDRS] [00:00:25] Tool: LENSKIT
+[UEDRS] [00:00:25] Algorithm: BIASED_MF
+[UEDRS] [00:00:25] Datasets: IPINYOU, AMAZON
+[UEDRS] [00:00:25] Sizes: [500000, 750000, 1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:25] Desired size: 500000
+[UEDRS] [00:00:25] Dataset: IPINYOU
+[UEDRS] [00:00:25] Loading
+[UEDRS] [00:00:36] Loading done
+[UEDRS] [00:00:36] Memory Usage: RSS = 3801.83 MB, VMS = 10902.82 MB
+[UEDRS] [00:00:10] Elapsed
+[UEDRS] [00:00:36] Sampling
+[UEDRS] [00:09:12] Sampling done, obtained size: 500000
+[UEDRS] [00:09:12] Memory Usage: RSS = 5315.27 MB, VMS = 12414.32 MB
+[UEDRS] [00:08:36] Elapsed
+[UEDRS] [00:09:12] Checking [LENSKIT][BIASED_MF][IPINYOU][500k]
+[UEDRS] [00:09:12] Skipping (0)
+[UEDRS] [00:09:12] Memory Usage: RSS = 5315.27 MB, VMS = 12414.32 MB
+[UEDRS] [00:09:12] Releasing dataframe from memory
+[UEDRS] [00:09:12] Memory Usage: RSS = 3904.81 MB, VMS = 10985.32 MB
+[UEDRS] [00:09:12] Dataset: AMAZON
+[UEDRS] [00:09:12] Loading
+[UEDRS] [00:58:52] Loading done
+[UEDRS] [00:58:52] Memory Usage: RSS = 65989.16 MB, VMS = 100210.57 MB
+[UEDRS] [00:49:40] Elapsed
+[UEDRS] [00:58:52] Sampling
+[UEDRS] [01:34:36] Sampling done, obtained size: 500000
+[UEDRS] [01:34:36] Memory Usage: RSS = 58319.27 MB, VMS = 92506.23 MB
+[UEDRS] [00:35:43] Elapsed
+[UEDRS] [01:34:36] Checking [LENSKIT][BIASED_MF][AMAZON][500k]
+[UEDRS] [01:34:36] Starting
+2026-02-05 19:49:11 [warning  ] loaded pipeline does not match hash
+[UEDRS] [11:42:46] Finished (4.3e-06)
+[UEDRS] [11:42:46] Memory Usage: RSS = 48000.30 MB, VMS = 93682.36 MB
+[UEDRS] [10:08:09] Elapsed
+
+[UEDRS] [11:42:46] Memory Usage: RSS = 48000.30 MB, VMS = 93682.36 MB
+[UEDRS] [11:42:46] Releasing dataframe from memory
+[UEDRS] [11:42:46] Memory Usage: RSS = 43542.93 MB, VMS = 89218.36 MB
+[UEDRS] [11:42:46] Desired size: 750000
+[UEDRS] [11:42:46] Dataset: IPINYOU
+[UEDRS] [11:42:46] Loading
+[UEDRS] [11:45:17] Loading done
+[UEDRS] [11:45:17] Memory Usage: RSS = 50462.85 MB, VMS = 90913.17 MB
+[UEDRS] [00:02:30] Elapsed
+[UEDRS] [11:45:17] Sampling
+[UEDRS] [11:53:47] Sampling done, obtained size: 750000
+[UEDRS] [11:53:47] Memory Usage: RSS = 50126.75 MB, VMS = 90576.36 MB
+[UEDRS] [00:08:29] Elapsed
+[UEDRS] [11:53:47] Checking [LENSKIT][BIASED_MF][IPINYOU][750k]
+[UEDRS] [11:53:47] Starting

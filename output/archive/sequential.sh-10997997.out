@@ -1,0 +1,91 @@
+[UEDRS] [00:00:24] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:24] Tag:  RECBOLE:POP
+[UEDRS] [00:00:24] Tool: RECBOLE
+[UEDRS] [00:00:24] Algorithm: POP
+[UEDRS] [00:00:24] Datasets: NETFLIX, YAHOO, ALIBABA, GOODREADS, LASTFM
+[UEDRS] [00:00:24] Sizes: [100000000]
+
+[UEDRS] [00:00:24] Desired size: 100000000
+[UEDRS] [00:00:24] Dataset: NETFLIX
+[UEDRS] [00:00:24] Loading
+[UEDRS] [00:00:30] Loading done
+[UEDRS] [00:00:30] Memory Usage: RSS = 2982.20 MB, VMS = 16082.39 MB
+[UEDRS] [00:00:05] Elapsed
+[UEDRS] [00:00:30] Sampling
+[UEDRS] [00:01:18] Sampling done, obtained size: 100000000
+[UEDRS] [00:01:18] Memory Usage: RSS = 3823.54 MB, VMS = 16921.80 MB
+[UEDRS] [00:00:48] Elapsed
+[UEDRS] [00:01:18] Checking [RECBOLE][POP][NETFLIX][100m]
+[UEDRS] [00:01:18] Skipping (0.11)
+[UEDRS] [00:01:18] Memory Usage: RSS = 3823.54 MB, VMS = 16921.80 MB
+[UEDRS] [00:01:18] Releasing dataframe from memory
+[UEDRS] [00:01:18] Memory Usage: RSS = 3058.63 MB, VMS = 16156.86 MB
+[UEDRS] [00:01:18] Dataset: YAHOO
+[UEDRS] [00:01:18] Loading
+[UEDRS] [00:01:22] Loading done
+[UEDRS] [00:01:22] Memory Usage: RSS = 4098.69 MB, VMS = 18780.89 MB
+[UEDRS] [00:00:03] Elapsed
+[UEDRS] [00:01:22] Sampling
+[UEDRS] [00:02:34] Sampling done, obtained size: 100000000
+[UEDRS] [00:02:34] Memory Usage: RSS = 5107.36 MB, VMS = 19789.26 MB
+[UEDRS] [00:01:12] Elapsed
+[UEDRS] [00:02:34] Checking [RECBOLE][POP][YAHOO][100m]
+[UEDRS] [00:02:34] Skipping (0.084)
+[UEDRS] [00:02:34] Memory Usage: RSS = 5107.36 MB, VMS = 19789.26 MB
+[UEDRS] [00:02:34] Releasing dataframe from memory
+[UEDRS] [00:02:34] Memory Usage: RSS = 4342.45 MB, VMS = 19024.32 MB
+[UEDRS] [00:02:34] Dataset: ALIBABA
+[UEDRS] [00:02:34] Loading
+[UEDRS] [00:02:44] Loading done
+[UEDRS] [00:02:44] Memory Usage: RSS = 5086.89 MB, VMS = 19376.32 MB
+[UEDRS] [00:00:09] Elapsed
+[UEDRS] [00:02:44] Sampling
+[UEDRS] [00:04:46] Sampling done, obtained size: 100000000
+[UEDRS] [00:04:46] Memory Usage: RSS = 6071.91 MB, VMS = 20362.28 MB
+[UEDRS] [00:02:02] Elapsed
+[UEDRS] [00:04:46] Checking [RECBOLE][POP][ALIBABA][100m]
+[UEDRS] [00:04:46] Starting
+[UEDRS] [04:36:31] Finished (0.001)
+[UEDRS] [04:36:31] Memory Usage: RSS = 40055.32 MB, VMS = 78712.13 MB
+[UEDRS] [04:31:45] Elapsed
+
+[UEDRS] [04:36:31] Memory Usage: RSS = 40055.32 MB, VMS = 78712.13 MB
+[UEDRS] [04:36:31] Releasing dataframe from memory
+[UEDRS] [04:37:53] Memory Usage: RSS = 24809.18 MB, VMS = 63454.96 MB
+[UEDRS] [04:37:53] Dataset: GOODREADS
+[UEDRS] [04:37:53] Loading
+[UEDRS] [04:38:03] Loading done
+[UEDRS] [04:38:03] Memory Usage: RSS = 25919.22 MB, VMS = 65282.96 MB
+[UEDRS] [00:00:09] Elapsed
+[UEDRS] [04:38:03] Sampling
+[UEDRS] [04:39:04] Sampling done, obtained size: 100000000
+[UEDRS] [04:39:04] Memory Usage: RSS = 25921.03 MB, VMS = 65282.96 MB
+[UEDRS] [00:01:01] Elapsed
+[UEDRS] [04:39:04] Checking [RECBOLE][POP][GOODREADS][100m]
+[UEDRS] [04:39:04] Starting
+[UEDRS] [05:47:47] Finished (0.027)
+[UEDRS] [05:47:47] Memory Usage: RSS = 33048.57 MB, VMS = 72482.52 MB
+[UEDRS] [01:08:43] Elapsed
+
+[UEDRS] [05:47:47] Memory Usage: RSS = 33048.57 MB, VMS = 72482.52 MB
+[UEDRS] [05:47:47] Releasing dataframe from memory
+[UEDRS] [05:48:21] Memory Usage: RSS = 25992.31 MB, VMS = 65420.29 MB
+[UEDRS] [05:48:21] Dataset: LASTFM
+[UEDRS] [05:48:21] Loading
+[UEDRS] [05:48:39] Loading done
+[UEDRS] [05:48:39] Memory Usage: RSS = 29579.74 MB, VMS = 68864.29 MB
+[UEDRS] [00:00:17] Elapsed
+[UEDRS] [05:48:39] Sampling
+[UEDRS] [05:49:20] Sampling done, obtained size: 100000000
+[UEDRS] [05:49:20] Memory Usage: RSS = 29579.75 MB, VMS = 68864.29 MB
+[UEDRS] [00:00:41] Elapsed
+[UEDRS] [05:49:20] Checking [RECBOLE][POP][LASTFM][100m]
+[UEDRS] [05:49:20] Starting
+[UEDRS] [06:22:57] Finished (0.005)
+[UEDRS] [06:22:57] Memory Usage: RSS = 44845.41 MB, VMS = 84225.01 MB
+[UEDRS] [00:33:37] Elapsed
+
+[UEDRS] [06:22:57] Memory Usage: RSS = 44845.41 MB, VMS = 84225.01 MB
+[UEDRS] [06:22:57] Releasing dataframe from memory
+[UEDRS] [06:23:21] Memory Usage: RSS = 29630.23 MB, VMS = 68985.01 MB
+[UEDRS] [06:23:21] Work complete

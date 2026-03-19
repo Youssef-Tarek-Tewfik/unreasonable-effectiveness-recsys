@@ -1,0 +1,27 @@
+[UEDRS] [00:00:10] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:10] Tag:  LENSKIT:BIASED_MF
+[UEDRS] [00:00:10] Tool: LENSKIT
+[UEDRS] [00:00:10] Algorithm: BIASED_MF
+[UEDRS] [00:00:10] Datasets: LASTFM
+[UEDRS] [00:00:10] Sizes: [100000000]
+
+[UEDRS] [00:00:10] Desired size: 100000000
+[UEDRS] [00:00:10] Dataset: LASTFM
+[UEDRS] [00:00:10] Loading
+[UEDRS] [00:00:28] Loading done
+[UEDRS] [00:00:28] Memory Usage: RSS = 8598.74 MB, VMS = 12755.11 MB
+[UEDRS] [00:00:17] Elapsed
+[UEDRS] [00:00:28] Sampling
+[UEDRS] [00:01:01] Sampling done, obtained size: 100000000
+[UEDRS] [00:01:01] Memory Usage: RSS = 10528.81 MB, VMS = 14681.59 MB
+[UEDRS] [00:00:33] Elapsed
+[UEDRS] [00:01:01] Checking [LENSKIT][BIASED_MF][LASTFM][100m]
+[UEDRS] [00:01:01] Starting
+[UEDRS] [11:57:30] Finished (1.5e-06)
+[UEDRS] [11:57:30] Memory Usage: RSS = 631.69 MB, VMS = 25251.56 MB
+[UEDRS] [11:56:29] Elapsed
+
+[UEDRS] [11:57:30] Memory Usage: RSS = 631.84 MB, VMS = 25251.56 MB
+[UEDRS] [11:57:30] Releasing dataframe from memory
+[UEDRS] [11:58:02] Memory Usage: RSS = 741.86 MB, VMS = 24067.15 MB
+[UEDRS] [11:58:02] Work complete

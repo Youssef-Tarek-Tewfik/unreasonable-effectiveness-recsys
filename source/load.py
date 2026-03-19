@@ -10,7 +10,14 @@ USECOLS_EXPLICIT = [0, 1, 2]
 USECOLS_IMPLICIT = [0, 1]
 NAMES_EXPLICIT = [COLUMN_NAMES["user_id"], COLUMN_NAMES["item_id"], COLUMN_NAMES["rating"]]
 NAMES_IMPLICIT = [COLUMN_NAMES["user_id"], COLUMN_NAMES["item_id"]]
+UPCAST_DICT = {"uint16": "int32", "uint32": "int32", "uint64": "int64"}
 
+
+def upcast(df: pd.DataFrame) -> pd.DataFrame:
+  for current, desired in UPCAST_DICT.items():
+    for column in df.select_dtypes(include=[current]).columns: # type: ignore
+      df[column] = df[column].astype(desired)
+  return df
 
 def load(dataset: Dataset = Dataset.MOVIELENS, parquet: bool = True) -> pd.DataFrame:
   explicit = DATASET_FEEDBACK_EXPLICIT[dataset]
@@ -24,4 +31,4 @@ def load(dataset: Dataset = Dataset.MOVIELENS, parquet: bool = True) -> pd.DataF
     usecols = USECOLS_EXPLICIT if explicit else USECOLS_IMPLICIT
     df = pd.read_csv(path, sep=SEP, usecols=usecols, names=names)
 
-  return df
+  return upcast(df)

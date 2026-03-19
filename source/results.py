@@ -1,5 +1,4 @@
 import yaml
-from typing import TypeAlias, TypedDict
 from pathlib import Path
 
 from .constants import (
@@ -7,46 +6,7 @@ from .constants import (
   SIZES_FRACTIONAL, SIZES_ABSOLUTE
 )
 from .logger import log
-
-
-# Definitions
-## Constants
-OUTPUT_KEY = "OUTPUT"
-META_KEY = "META"
-MODE_KEY = "MODE"
-SIZING_KEY = "SIZING"
-SAMPLING_KEY = "SAMPLING"
-
-## Types
-SizeValue: TypeAlias = float | None # NDCG
-SizeKey: TypeAlias = float | int # Fractional or absolute size
-DatasetKey: TypeAlias = str
-AlgorithmKey: TypeAlias = str
-ToolKey: TypeAlias = str
-ResultsDataset: TypeAlias = dict[SizeKey, SizeValue]
-ResultsAlgorithm: TypeAlias = dict[DatasetKey, ResultsDataset]
-ResultsTool: TypeAlias = dict[AlgorithmKey, ResultsAlgorithm]
-ResultsOutput: TypeAlias = dict[ToolKey, ResultsTool]
-
-SizingValue: TypeAlias = str
-SamplingValue: TypeAlias = str
-
-MaximumValue: TypeAlias = float
-MaximaAlgorithm: TypeAlias = dict[DatasetKey, MaximumValue]
-MaximaTool: TypeAlias = dict[AlgorithmKey, MaximaAlgorithm]
-Maxima: TypeAlias = dict[ToolKey, MaximaTool]
-
-## Classes
-class ResultsMetaMode(TypedDict):
-  SIZING: SizingValue
-  SAMPLING: SamplingValue
-class ResultsMeta(TypedDict):
-  MODE: ResultsMetaMode
-class Results(TypedDict):
-  META: ResultsMeta
-  OUTPUT: ResultsOutput
-# d["OUTPUT"][tool][algorithm][dataset][size] -> NDCG
-# d["META"]["MODE"] -> (sizing, sampling)
+from .types import Results, ResultsSizeValue as Result, OUTPUT_KEY, META_KEY, MODE_KEY, SIZING_KEY, SAMPLING_KEY
 
 
 def main():
@@ -54,7 +14,7 @@ def main():
   log("Results files aggregation done")
 
 
-def create_results(*, default: SizeValue = None, empty: bool = False) -> Results:
+def create_results(*, default: Result = None, empty: bool = False) -> Results:
   sizing, sampling = MODE
   sizes = SIZES_FRACTIONAL if sizing == Sizing.FRACTIONAL else SIZES_ABSOLUTE if sizing == Sizing.ABSOLUTE else []
 
@@ -94,7 +54,7 @@ def save_results(results: Results, tag: str | None = None, path: str | Path = PA
   with open(path, 'w') as f:
     yaml.dump(results, f)
 
-def setdefault_nested(input: dict | Results, keys: list[str | int | float], default: SizeValue = None) -> None:
+def setdefault_nested(input: dict | Results, keys: list[str | int | float], default: Result = None) -> None:
   current: dict = input # type: ignore
   for key in keys[:-1]:
     current = current.setdefault(key, {})

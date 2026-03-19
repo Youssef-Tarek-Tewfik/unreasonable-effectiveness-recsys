@@ -1,0 +1,3 @@
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+slurmstepd: error: *** JOB 11299729 ON gpu-node005 CANCELLED AT 2026-03-13T11:40:17 DUE TO TIME LIMIT ***

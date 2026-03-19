@@ -1,0 +1,19 @@
+[UEDRS] [00:00:24] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:24] Tag:  RECBOLE:BPR
+[UEDRS] [00:00:24] Tool: RECBOLE
+[UEDRS] [00:00:24] Algorithm: BPR
+[UEDRS] [00:00:24] Datasets: AMAZON
+[UEDRS] [00:00:24] Sizes: [50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:24] Desired size: 50000000
+[UEDRS] [00:00:24] Dataset: AMAZON
+[UEDRS] [00:00:24] Loading
+[UEDRS] [00:05:29] Loading done
+[UEDRS] [00:05:29] Memory Usage: RSS = 60907.19 MB, VMS = 107187.76 MB
+[UEDRS] [00:05:05] Elapsed
+[UEDRS] [00:05:29] Sampling
+[UEDRS] [07:22:18] Sampling done, obtained size: 50000000
+[UEDRS] [07:22:18] Memory Usage: RSS = 37808.23 MB, VMS = 95731.28 MB
+[UEDRS] [07:16:48] Elapsed
+[UEDRS] [07:22:18] Checking [RECBOLE][BPR][AMAZON][50m]
+[UEDRS] [07:22:18] Starting

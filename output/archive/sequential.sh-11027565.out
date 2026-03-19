@@ -1,0 +1,28 @@
+[UEDRS] [00:00:46] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:46] Tag:  LENSKIT:BIASED_SVD
+[UEDRS] [00:00:46] Tool: LENSKIT
+[UEDRS] [00:00:46] Algorithm: BIASED_SVD
+[UEDRS] [00:00:46] Datasets: LASTFM
+[UEDRS] [00:00:46] Sizes: [100000000]
+
+[UEDRS] [00:00:46] Desired size: 100000000
+[UEDRS] [00:00:46] Dataset: LASTFM
+[UEDRS] [00:00:46] Loading
+[UEDRS] [00:01:08] Loading done
+[UEDRS] [00:01:08] Memory Usage: RSS = 8597.07 MB, VMS = 12754.97 MB
+[UEDRS] [00:00:21] Elapsed
+[UEDRS] [00:01:08] Sampling
+[UEDRS] [00:01:57] Sampling done, obtained size: 100000000
+[UEDRS] [00:01:57] Memory Usage: RSS = 10527.66 MB, VMS = 14681.59 MB
+[UEDRS] [00:00:49] Elapsed
+[UEDRS] [00:01:57] Checking [LENSKIT][BIASED_SVD][LASTFM][100m]
+[UEDRS] [00:01:57] Starting
+2026-01-20 07:44:38 [warning  ] loaded pipeline does not match hash
+[UEDRS] [03:00:17] Finished (5.9e-06)
+[UEDRS] [03:00:17] Memory Usage: RSS = 3349.20 MB, VMS = 20820.52 MB
+[UEDRS] [02:58:19] Elapsed
+
+[UEDRS] [03:00:17] Memory Usage: RSS = 3349.20 MB, VMS = 20820.52 MB
+[UEDRS] [03:00:17] Releasing dataframe from memory
+[UEDRS] [03:00:17] Memory Usage: RSS = 3327.17 MB, VMS = 19653.11 MB
+[UEDRS] [03:00:17] Work complete

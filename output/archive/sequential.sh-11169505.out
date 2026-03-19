@@ -1,0 +1,34 @@
+[UEDRS] [00:00:13] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:13] Tag:  LENSKIT:BIASED_SVD
+[UEDRS] [00:00:13] Tool: LENSKIT
+[UEDRS] [00:00:13] Algorithm: BIASED_SVD
+[UEDRS] [00:00:13] Datasets: IPINYOU
+[UEDRS] [00:00:13] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:13] Desired size: 1000000
+[UEDRS] [00:00:13] Dataset: IPINYOU
+[UEDRS] [00:00:13] Loading
+[UEDRS] [00:00:23] Loading done
+[UEDRS] [00:00:23] Memory Usage: RSS = 3800.31 MB, VMS = 10902.99 MB
+[UEDRS] [00:00:09] Elapsed
+[UEDRS] [00:00:23] Sampling
+[UEDRS] [00:08:43] Sampling done, obtained size: 1000000
+[UEDRS] [00:08:43] Memory Usage: RSS = 5313.77 MB, VMS = 12414.32 MB
+[UEDRS] [00:08:20] Elapsed
+[UEDRS] [00:08:43] Checking [LENSKIT][BIASED_SVD][IPINYOU][1m]
+[UEDRS] [00:08:43] Skipping (1.3e-06)
+[UEDRS] [00:08:43] Memory Usage: RSS = 5313.77 MB, VMS = 12414.32 MB
+[UEDRS] [00:08:43] Releasing dataframe from memory
+[UEDRS] [00:08:44] Memory Usage: RSS = 3903.32 MB, VMS = 10985.32 MB
+[UEDRS] [00:08:44] Desired size: 25000000
+[UEDRS] [00:08:44] Dataset: IPINYOU
+[UEDRS] [00:08:44] Loading
+[UEDRS] [00:08:51] Loading done
+[UEDRS] [00:08:51] Memory Usage: RSS = 6191.23 MB, VMS = 14795.13 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:08:51] Sampling
+[UEDRS] [00:08:51] Sampling done, obtained size: 22269879
+[UEDRS] [00:08:51] Memory Usage: RSS = 5851.42 MB, VMS = 14455.32 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [00:08:51] Checking [LENSKIT][BIASED_SVD][IPINYOU][22m]
+[UEDRS] [00:08:51] Starting

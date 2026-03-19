@@ -1,15 +1,16 @@
 #!/bin/bash
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=64
-#SBATCH --time=16:00:00
+#SBATCH --time=23:59:59
 #SBATCH --mem=64G
 #SBATCH --output=./output/%x-%j.out
-#SBATCH --mail-type=END
+#SBATCH --mail-type=BEGIN,END
 #SBATCH --mail-user=youssef.abdou@student.uni-siegen.de
 
 #SBATCH --ntasks-per-node=1
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
+#SBATCH --exclude=gpu-node[006-009]
 
 #SBATCH --error=./output/%x-%j.err
 

@@ -1,0 +1,63 @@
+[UEDRS] [00:00:14] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:14] Tag:  LENSKIT:BIASED_SVD
+[UEDRS] [00:00:14] Tool: LENSKIT
+[UEDRS] [00:00:14] Algorithm: BIASED_SVD
+[UEDRS] [00:00:14] Datasets: IPINYOU, AMAZON
+[UEDRS] [00:00:14] Sizes: [500000, 750000, 1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:14] Desired size: 500000
+[UEDRS] [00:00:14] Dataset: IPINYOU
+[UEDRS] [00:00:14] Loading
+[UEDRS] [00:00:24] Loading done
+[UEDRS] [00:00:24] Memory Usage: RSS = 3802.25 MB, VMS = 10903.46 MB
+[UEDRS] [00:00:10] Elapsed
+[UEDRS] [00:00:24] Sampling
+[UEDRS] [00:08:51] Sampling done, obtained size: 500000
+[UEDRS] [00:08:51] Memory Usage: RSS = 5315.55 MB, VMS = 12414.32 MB
+[UEDRS] [00:08:26] Elapsed
+[UEDRS] [00:08:51] Checking [LENSKIT][BIASED_SVD][IPINYOU][500k]
+[UEDRS] [00:08:51] Skipping (0)
+[UEDRS] [00:08:51] Memory Usage: RSS = 5315.55 MB, VMS = 12414.32 MB
+[UEDRS] [00:08:51] Releasing dataframe from memory
+[UEDRS] [00:08:51] Memory Usage: RSS = 3905.10 MB, VMS = 10985.32 MB
+[UEDRS] [00:08:51] Dataset: AMAZON
+[UEDRS] [00:08:51] Loading
+[UEDRS] [01:23:12] Loading done
+[UEDRS] [01:23:12] Memory Usage: RSS = 65787.96 MB, VMS = 100210.57 MB
+[UEDRS] [01:14:21] Elapsed
+[UEDRS] [01:23:12] Sampling
+[UEDRS] [01:56:03] Sampling done, obtained size: 500000
+[UEDRS] [01:56:03] Memory Usage: RSS = 57765.02 MB, VMS = 92507.23 MB
+[UEDRS] [00:32:50] Elapsed
+[UEDRS] [01:56:03] Checking [LENSKIT][BIASED_SVD][AMAZON][500k]
+[UEDRS] [01:56:03] Starting
+2026-02-15 09:06:20 [warning  ] loaded pipeline does not match hash
+[UEDRS] [08:54:00] Finished (5.2e-06)
+[UEDRS] [08:54:00] Memory Usage: RSS = 47102.48 MB, VMS = 93005.35 MB
+[UEDRS] [06:57:56] Elapsed
+
+[UEDRS] [08:54:00] Memory Usage: RSS = 47102.48 MB, VMS = 93005.35 MB
+[UEDRS] [08:54:00] Releasing dataframe from memory
+[UEDRS] [08:54:00] Memory Usage: RSS = 42652.25 MB, VMS = 88548.35 MB
+[UEDRS] [08:54:00] Desired size: 750000
+[UEDRS] [08:54:00] Dataset: IPINYOU
+[UEDRS] [08:54:00] Loading
+[UEDRS] [08:57:59] Loading done
+[UEDRS] [08:57:59] Memory Usage: RSS = 49944.88 MB, VMS = 90236.16 MB
+[UEDRS] [00:03:58] Elapsed
+[UEDRS] [08:57:59] Sampling
+[UEDRS] [09:06:39] Sampling done, obtained size: 750000
+[UEDRS] [09:06:39] Memory Usage: RSS = 49608.80 MB, VMS = 89899.35 MB
+[UEDRS] [00:08:40] Elapsed
+[UEDRS] [09:06:39] Checking [LENSKIT][BIASED_SVD][IPINYOU][750k]
+[UEDRS] [09:06:39] Starting
+2026-02-15 22:26:42 [warning  ] loaded pipeline does not match hash
+[UEDRS] [22:02:43] Finished (4.5e-07)
+[UEDRS] [22:02:43] Memory Usage: RSS = 49942.17 MB, VMS = 90243.78 MB
+[UEDRS] [12:56:03] Elapsed
+
+[UEDRS] [22:02:43] Memory Usage: RSS = 49942.17 MB, VMS = 90243.78 MB
+[UEDRS] [22:02:43] Releasing dataframe from memory
+[UEDRS] [22:02:43] Memory Usage: RSS = 48577.06 MB, VMS = 88874.78 MB
+[UEDRS] [22:02:43] Dataset: AMAZON
+[UEDRS] [22:02:43] Loading

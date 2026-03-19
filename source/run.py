@@ -4,14 +4,15 @@ import time
 import gc
 from argparse import ArgumentParser
 
-from .constants import Tool, Dataset, Sizing, Scorer, Model, MODE, SIZES_FRACTIONAL, SIZES_ABSOLUTE, FIGURES
+from .constants import Tool, Dataset, Sizing, Scorer, Model, MODE, SIZES_FRACTIONAL, SIZES_ABSOLUTE
 from .load import load
-from .results import OUTPUT_KEY, SizeValue as Result, load_results, save_results, setdefault_nested
+from .results import load_results, save_results, setdefault_nested
 from .sample import sample
-from .utilities import safe_run, show_memory, round_significant
+from .utilities import safe_run, show_memory
 from .use_lenskit import use_lenskit
 from .use_recbole import use_recbole
 from .logger import log
+from .types import OUTPUT_KEY, ResultsSizeValue as Result
 
 
 def main():
@@ -19,7 +20,8 @@ def main():
 
   # Run options
   parallel = True
-  default = (Tool.RECBOLE.name, Model.ITEM_KNN.name)
+  default = (Tool.RECBOLE.name, Model.POP.name)
+  sizes = SIZES_ABSOLUTE[0:]
   datasets = [
     Dataset.MYANIMELIST,
     Dataset.IPINYOU,
@@ -45,7 +47,6 @@ def main():
   # Runtime variables
   lenskit, recbole = Tool.LENSKIT.name, Tool.RECBOLE.name
   sizing, sampling = MODE
-  sizes = SIZES_FRACTIONAL if sizing == Sizing.FRACTIONAL else SIZES_ABSOLUTE if sizing == Sizing.ABSOLUTE else []
   results = load_results()
   result: Result
   current: str
@@ -58,75 +59,78 @@ def main():
   log("Datasets:", ', '.join(d.name for d in datasets))
   log("Sizes:", sizes, end="\n\n")
 
-  for dataset in datasets:
-    log(f"Current dataset [{dataset.name}]")
-    for size in sizes:
-      log("Loading full dataset")
+  for desired_size in sizes:
+    log("Desired size:", desired_size)
+    for dataset in datasets:
+      log("Dataset:", dataset.name)
+      log("Loading")
       stopwatch = time.time()
       dataframe = load(dataset)
       log("Loading done")
       show_memory()
       log("Elapsed", start=stopwatch)
-
-      log(f"Sampling for [{size}]")
+      log("Sampling")
       stopwatch = time.time()
-      dataframe = sample(dataset, dataframe, size)
-      size = len(dataframe)
-      log("Sampling done, obtained size:", size)
+      dataframe = sample(dataset, dataframe, desired_size)
+      obtained_size = len(dataframe)
+      log("Sampling done, obtained size:", obtained_size)
       show_memory()
       log("Elapsed", start=stopwatch)
       if sizing == Sizing.FRACTIONAL:
-        size_formatted = f"{int(size * 100)}%"
+        formatted_size = f"{int(obtained_size * 100)}%"
       elif sizing == Sizing.ABSOLUTE:
-        size_formatted = f"{round(size / 1_000_000)}m" if size >= 1_000_000 else f"{round(size / 1_000)}k"
+        if obtained_size >= 1_000_000:
+          formatted_size = f"{round(obtained_size / 1_000_000)}m"
+        else:
+          formatted_size = f"{round(obtained_size / 1_000)}k"
 
       # LensKit
       for scorer in Scorer:
         if (tool and tool != lenskit) or (algorithm and algorithm != scorer.name):
           continue
 
-        current = f"[{lenskit}][{scorer.name}][{dataset.name}][{size_formatted}]"
+        current = f"[{lenskit}][{scorer.name}][{dataset.name}][{formatted_size}]"
         log(f"Checking {current}")
-        setdefault_nested(results, [OUTPUT_KEY, lenskit, scorer.name, dataset.name, size])
-        result = results[OUTPUT_KEY][lenskit][scorer.name][dataset.name][size]
-        if result is None or result < 0.0:
+        setdefault_nested(results, [OUTPUT_KEY, lenskit, scorer.name, dataset.name, obtained_size])
+        result = results[OUTPUT_KEY][lenskit][scorer.name][dataset.name][obtained_size]
+        if result is None:
           log("Starting")
           stopwatch = time.time()
 
           result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
-          result = round_significant(result)
-          results[OUTPUT_KEY][lenskit][scorer.name][dataset.name][size] = result
+          result = result if 0 <= result <= 1 else -1
+          results[OUTPUT_KEY][lenskit][scorer.name][dataset.name][obtained_size] = result
           save_results(results, tag)
 
-          log(f"Finished ({result})")
+          log(f"Finished ({result:.2g})")
           show_memory()
           log("Elapsed", start=stopwatch, end="\n\n")
         else:
-          log(f"Skipping ({result})")
+          log(f"Skipping ({result:.2g})")
 
       # RecBole
       for model in Model:
         if (tool and tool != recbole) or (algorithm and algorithm != model.name):
           continue
 
-        current = f"[{recbole}][{model.name}][{dataset.name}][{size_formatted}]"
+        current = f"[{recbole}][{model.name}][{dataset.name}][{formatted_size}]"
         log(f"Checking {current}")
-        setdefault_nested(results, [OUTPUT_KEY, recbole, model.name, dataset.name, size])
-        result = results[OUTPUT_KEY][recbole][model.name][dataset.name][size]
-        if result is None or result < 0.0:
+        setdefault_nested(results, [OUTPUT_KEY, recbole, model.name, dataset.name, obtained_size])
+        result = results[OUTPUT_KEY][recbole][model.name][dataset.name][obtained_size]
+        if result is None:
           log("Starting")
           stopwatch = time.time()
 
-          result = safe_run(lambda: use_recbole(dataframe, dataset, f"{size_formatted}-{sampling.name}", model))
-          result = round_significant(result)
-          results[OUTPUT_KEY][recbole][model.name][dataset.name][size] = result
+          result = safe_run(lambda: use_recbole(dataframe, dataset, f"{formatted_size}-{sampling.name}", model))
+          result = result if 0 <= result <= 1 else -1
+          results[OUTPUT_KEY][recbole][model.name][dataset.name][obtained_size] = result
           save_results(results, tag)
 
-          log(f"Finished ({result})")
+          log(f"Finished ({result:.2g})")
           show_memory()
           log("Elapsed", start=stopwatch, end="\n\n")
         else:
-          log(f"Skipping ({result})")
+          log(f"Skipping ({result:.2g})")
 
       show_memory()
       log(f"Releasing dataframe from memory")

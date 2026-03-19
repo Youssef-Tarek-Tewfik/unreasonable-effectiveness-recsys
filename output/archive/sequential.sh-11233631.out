@@ -1,0 +1,19 @@
+[UEDRS] [00:00:11] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:11] Tag:  RECBOLE:NEU_MF
+[UEDRS] [00:00:11] Tool: RECBOLE
+[UEDRS] [00:00:11] Algorithm: NEU_MF
+[UEDRS] [00:00:11] Datasets: LASTFM, AMAZON
+[UEDRS] [00:00:11] Sizes: [25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:11] Desired size: 25000000
+[UEDRS] [00:00:11] Dataset: LASTFM
+[UEDRS] [00:00:11] Loading
+[UEDRS] [00:00:13] Loading done
+[UEDRS] [00:00:13] Memory Usage: RSS = 8648.64 MB, VMS = 18371.66 MB
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:00:13] Sampling
+[UEDRS] [00:00:36] Sampling done, obtained size: 25000000
+[UEDRS] [00:00:36] Memory Usage: RSS = 9148.05 MB, VMS = 18867.66 MB
+[UEDRS] [00:00:23] Elapsed
+[UEDRS] [00:00:36] Checking [RECBOLE][NEU_MF][LASTFM][25m]
+[UEDRS] [00:00:36] Starting

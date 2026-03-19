@@ -1,0 +1,37 @@
+[UEDRS] [00:00:16] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:16] Tag:  RECBOLE:ITEM_KNN
+[UEDRS] [00:00:16] Tool: RECBOLE
+[UEDRS] [00:00:16] Algorithm: ITEM_KNN
+[UEDRS] [00:00:16] Datasets: IPINYOU, TMALL, ALIBABA, GOODREADS, LASTFM, AMAZON
+[UEDRS] [00:00:16] Sizes: [25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:16] Desired size: 25000000
+[UEDRS] [00:00:16] Dataset: IPINYOU
+[UEDRS] [00:00:16] Loading
+[UEDRS] [00:00:23] Loading done
+[UEDRS] [00:00:23] Memory Usage: RSS = 3919.16 MB, VMS = 15583.77 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:00:23] Sampling
+[UEDRS] [00:00:23] Sampling done, obtained size: 22269879
+[UEDRS] [00:00:23] Memory Usage: RSS = 3940.54 MB, VMS = 15604.51 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [00:00:23] Checking [RECBOLE][ITEM_KNN][IPINYOU][22m]
+[UEDRS] [00:00:23] Starting
+[UEDRS] [00:18:35] Finished (0.4)
+[UEDRS] [00:18:35] Memory Usage: RSS = 29968.51 MB, VMS = 68859.91 MB
+[UEDRS] [00:18:11] Elapsed
+
+[UEDRS] [00:18:35] Memory Usage: RSS = 29968.51 MB, VMS = 68859.91 MB
+[UEDRS] [00:18:35] Releasing dataframe from memory
+[UEDRS] [00:19:20] Memory Usage: RSS = 5573.86 MB, VMS = 44262.50 MB
+[UEDRS] [00:19:20] Dataset: TMALL
+[UEDRS] [00:19:20] Loading
+[UEDRS] [00:19:21] Loading done
+[UEDRS] [00:19:21] Memory Usage: RSS = 5953.81 MB, VMS = 45478.51 MB
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:19:21] Sampling
+[UEDRS] [00:19:21] Sampling done, obtained size: 24363557
+[UEDRS] [00:19:21] Memory Usage: RSS = 5953.81 MB, VMS = 45478.51 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [00:19:21] Checking [RECBOLE][ITEM_KNN][TMALL][24m]
+[UEDRS] [00:19:21] Starting

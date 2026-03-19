@@ -1,0 +1,53 @@
+[UEDRS] [00:00:11] File not found:  /mnt/results/latest.yaml
+[UEDRS] [00:00:11] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:11] Tag:  LENSKIT:BIASED_MF
+[UEDRS] [00:00:11] Tool: LENSKIT
+[UEDRS] [00:00:11] Algorithm: BIASED_MF
+[UEDRS] [00:00:11] Datasets: MYANIMELIST, IPINYOU, TMALL, MOVIELENS, MUSIC4ALL, NETFLIX, YAHOO, ALIBABA, GOODREADS, LASTFM, AMAZON
+[UEDRS] [00:00:11] Sizes: [100000, 250000, 500000, 750000, 1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:11] Desired size: 100000
+[UEDRS] [00:00:11] Dataset: MYANIMELIST
+[UEDRS] [00:00:11] Loading
+[UEDRS] [00:00:11] Loading done
+[UEDRS] [00:00:11] Memory Usage: RSS = 931.46 MB, VMS = 10966.87 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [00:00:14] Sampling done, obtained size: 100000
+[UEDRS] [00:00:14] Memory Usage: RSS = 974.49 MB, VMS = 11006.19 MB
+[UEDRS] [00:00:02] Elapsed
+[UEDRS] [00:00:14] Checking [LENSKIT][BIASED_MF][MYANIMELIST][100k]
+[UEDRS] [00:00:14] Starting
+[UEDRS] [00:04:23] Finished (0.00149)
+[UEDRS] [00:04:23] Memory Usage: RSS = 1137.59 MB, VMS = 11249.70 MB
+[UEDRS] [00:04:08] Elapsed
+
+[UEDRS] [00:04:23] Memory Usage: RSS = 1137.59 MB, VMS = 11249.70 MB
+[UEDRS] [00:04:23] Releasing dataframe from memory
+[UEDRS] [00:04:23] Memory Usage: RSS = 1131.59 MB, VMS = 11243.70 MB
+[UEDRS] [00:04:23] Dataset: IPINYOU
+[UEDRS] [00:04:23] Loading
+[UEDRS] [00:04:24] Loading done
+[UEDRS] [00:04:24] Memory Usage: RSS = 1576.88 MB, VMS = 12358.71 MB
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:13:32] Sampling done, obtained size: 100000
+[UEDRS] [00:13:32] Memory Usage: RSS = 3351.33 MB, VMS = 14119.95 MB
+[UEDRS] [00:09:08] Elapsed
+[UEDRS] [00:13:32] Checking [LENSKIT][BIASED_MF][IPINYOU][100k]
+[UEDRS] [00:13:32] Starting
+[UEDRS] [00:18:53] Finished (0)
+[UEDRS] [00:18:53] Memory Usage: RSS = 3409.53 MB, VMS = 14152.95 MB
+[UEDRS] [00:05:20] Elapsed
+
+[UEDRS] [00:18:53] Memory Usage: RSS = 3409.53 MB, VMS = 14152.95 MB
+[UEDRS] [00:18:53] Releasing dataframe from memory
+[UEDRS] [00:18:53] Memory Usage: RSS = 3392.69 MB, VMS = 14135.95 MB
+[UEDRS] [00:18:53] Dataset: TMALL
+[UEDRS] [00:18:53] Loading
+[UEDRS] [00:18:54] Loading done
+[UEDRS] [00:18:54] Memory Usage: RSS = 3899.90 MB, VMS = 15351.95 MB
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:19:16] Sampling done, obtained size: 100000
+[UEDRS] [00:19:16] Memory Usage: RSS = 3898.35 MB, VMS = 15349.95 MB
+[UEDRS] [00:00:21] Elapsed
+[UEDRS] [00:19:16] Checking [LENSKIT][BIASED_MF][TMALL][100k]
+[UEDRS] [00:19:16] Starting

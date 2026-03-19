@@ -1,0 +1,10 @@
+Bright Maschine Learning software stack loaded.
+/home/g064474/.local/lib/python3.11/site-packages/pydantic/type_adapter.py:572: UserWarning: Pydantic serializer warnings:
+  PydanticSerializationUnexpectedValue(Unexpected Value)
+  PydanticSerializationUnexpectedValue(Expected `dict[literal['user','item'], float]` - serialized value may not be as expected [input_value=16, input_type=int])
+  return self.serializer.to_python(
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+slurmstepd: error: *** JOB 11154899 ON gpu-node005 CANCELLED AT 2026-02-18T13:33:29 DUE TO TIME LIMIT ***

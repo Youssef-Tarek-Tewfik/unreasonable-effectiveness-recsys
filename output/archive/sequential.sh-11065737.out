@@ -1,0 +1,38 @@
+[UEDRS] [00:00:36] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:36] Tag:  RECBOLE:POP
+[UEDRS] [00:00:36] Tool: RECBOLE
+[UEDRS] [00:00:36] Algorithm: POP
+[UEDRS] [00:00:36] Datasets: AMAZON
+[UEDRS] [00:00:36] Sizes: [25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:36] Desired size: 25000000
+[UEDRS] [00:00:36] Dataset: AMAZON
+[UEDRS] [00:00:36] Loading
+[UEDRS] [00:03:23] Loading done
+[UEDRS] [00:03:23] Memory Usage: RSS = 53585.02 MB, VMS = 97315.18 MB
+[UEDRS] [00:02:46] Elapsed
+[UEDRS] [00:03:23] Sampling
+[UEDRS] [00:38:58] Sampling done, obtained size: 25000000
+[UEDRS] [00:38:58] Memory Usage: RSS = 50408.73 MB, VMS = 94134.79 MB
+[UEDRS] [00:35:35] Elapsed
+[UEDRS] [00:38:58] Checking [RECBOLE][POP][AMAZON][25m]
+[UEDRS] [00:38:58] Starting
+[UEDRS] [05:38:55] Finished (0.0013)
+[UEDRS] [05:38:55] Memory Usage: RSS = 74214.54 MB, VMS = 139648.95 MB
+[UEDRS] [04:59:56] Elapsed
+
+[UEDRS] [05:38:55] Memory Usage: RSS = 74214.54 MB, VMS = 139648.95 MB
+[UEDRS] [05:38:55] Releasing dataframe from memory
+[UEDRS] [05:39:35] Memory Usage: RSS = 47297.26 MB, VMS = 112653.61 MB
+[UEDRS] [05:39:35] Desired size: 50000000
+[UEDRS] [05:39:35] Dataset: AMAZON
+[UEDRS] [05:39:35] Loading
+[UEDRS] [07:47:01] Loading done
+[UEDRS] [07:47:01] Memory Usage: RSS = 80794.39 MB, VMS = 141009.82 MB
+[UEDRS] [02:07:25] Elapsed
+[UEDRS] [07:47:01] Sampling
+[UEDRS] [09:27:00] Sampling done, obtained size: 50000000
+[UEDRS] [09:27:00] Memory Usage: RSS = 71865.39 MB, VMS = 132397.61 MB
+[UEDRS] [01:39:59] Elapsed
+[UEDRS] [09:27:00] Checking [RECBOLE][POP][AMAZON][50m]
+[UEDRS] [09:27:00] Starting

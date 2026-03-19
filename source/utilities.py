@@ -1,6 +1,6 @@
 import torch
 import os
-import time
+# import time
 import psutil
 import math
 import numpy as np
@@ -12,28 +12,15 @@ from .constants import (
     ALLOWED_EXCEPTIONS, DIRECTORY_DATASETS, COLUMN_NAMES, FIGURES, SIGNIFICANT_FIGURES, SIZES_ABSOLUTE,
     Dataset, Model, Scorer, Sizing, Sampling
 )
-from .load import load
-from .sample import sample
+# from .load import load
+# from .sample import sample
 from .logger import log
 # from .use_recbole import use_recbole
 # from .use_lenskit import use_lenskit
 
 
 def main():
-    excluded = [Dataset.IPINYOU]
-    excluded = []
-    for dataset in [d for d in Dataset if d not in excluded]:
-        log(f"Loading dataset: {dataset.name}")
-        full = load(dataset)
-        log("Length:", f"{len(full) / 1_000_000:.2f}m")
-        for size in reversed(SIZES_ABSOLUTE):
-            if size < len(full):
-                log("Size:", size)
-                log("Sampling")
-                sampled = sample(dataset, full, size)
-                log("Result:", len(sampled))
-                log("Matches:", len(sampled) == size)
-        print('\n')
+    pass
 
     
 def gpu_check() -> None:
@@ -171,16 +158,16 @@ def is_contiguous(series: pd.Series) -> bool:
     unique_vals = np.sort(s_int.unique())
     return unique_vals[0] == 0 and np.array_equal(unique_vals, np.arange(len(unique_vals)))
 
-def check_contiguous(df: pd.DataFrame) -> tuple[bool, bool]:
+def check_contiguous(df: pd.DataFrame) -> bool:
     """
     Check if user and item columns are 0-based contiguous.
     Returns (user_ok, item_ok).
     """
     user_ok = is_contiguous(df[COLUMN_NAMES["user_id"]])
     item_ok = is_contiguous(df[COLUMN_NAMES["item_id"]])
-    log(f"user_id contiguous 0-based: {user_ok}")
-    log(f"item_id contiguous 0-based: {item_ok}")
-    return user_ok, item_ok
+    # log(f"user_id contiguous 0-based: {user_ok}")
+    # log(f"item_id contiguous 0-based: {item_ok}")
+    return user_ok and item_ok
 
 def make_contiguous(df: pd.DataFrame, output: str | Path) -> None:
     """
@@ -202,8 +189,8 @@ def make_contiguous(df: pd.DataFrame, output: str | Path) -> None:
     df_reindexed[item_col] = df_reindexed[item_col].map(item_map)
 
     # Sanity checks
-    user_ok, item_ok = check_contiguous(df_reindexed)
-    if not (user_ok and item_ok):
+    contiguous = check_contiguous(df_reindexed)
+    if not contiguous:
         log("Warning: reindexed IDs are not contiguous 0-based as expected.")
 
     # Save with no header, same column order, comma-separated
@@ -218,7 +205,7 @@ def check_unique(df: pd.DataFrame) -> bool:
     user_col = COLUMN_NAMES["user_id"]
     item_col = COLUMN_NAMES["item_id"]
     has_dupes = df.duplicated(subset=[user_col, item_col]).any()
-    log(f"(user_id, item_id) pairs unique: {not has_dupes}")
+    # log(f"(user_id, item_id) pairs unique: {not has_dupes}")
     return not has_dupes
 
 def make_unique(
@@ -247,9 +234,9 @@ def make_unique(
         log("Warning: duplicates still present after make_unique")
 
     # Save with no header, same column order, comma-separated
-    output = Path(output)
-    df_unique.to_csv(output, index=False, header=False)
-    log(f"Saved unique data to\n{output}")
+    # output = Path(output)
+    # df_unique.to_csv(output, index=False, header=False)
+    # log(f"Saved unique data to\n{output}")
 
     return df_unique
 
@@ -266,7 +253,7 @@ def downcast_dtypes(df: pd.DataFrame) -> pd.DataFrame:
     Downcast numeric columns to more memory-efficient types.
     """
     for col in df.select_dtypes(include=["int", "float"]).columns:
-        df[col] = pd.to_numeric(df[col], downcast="unsigned")
+        df[col] = pd.to_numeric(df[col], downcast="signed")
     return df
 
 def check_sparsity(df: pd.DataFrame) -> dict[str, float]:

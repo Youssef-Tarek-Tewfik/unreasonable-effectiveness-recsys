@@ -1,0 +1,53 @@
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/relationships.py:378: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/metrics/ranking/_dcg.py:97: RuntimeWarning: invalid value encountered in scalar divide
+  return realized / ideal
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/metrics/ranking/_dcg.py:97: RuntimeWarning: invalid value encountered in scalar divide
+  return realized / ideal
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+Exception in initializer:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/source/run.py", line 145, in <module>
+    main()
+  File "/mnt/source/run.py", line 100, in main
+    result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/utilities.py", line 94, in safe_run
+    raise exception
+  File "/mnt/source/utilities.py", line 86, in safe_run
+    return function()
+           ^^^^^^^^^^
+  File "/mnt/source/run.py", line 100, in <lambda>
+    result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/use_lenskit.py", line 63, in use_lenskit
+    recs = recommend(fit, split.test.keys(), n=RECOMMENDATIONS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/batch/__init__.py", line 101, in recommend
+    outs = runner.run(pipeline, users)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/batch/_runner.py", line 167, in run
+    for key, outs in worker.map(test_iter):
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/parallel/pool.py", line 75, in map
+    return self.pool.map(worker.worker, self._task_iter(tasks))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/process.py", line 837, in map
+    results = super().map(partial(_process_chunk, fn),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 608, in map
+    fs = [self.submit(fn, *args) for args in zip(*iterables)]
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 608, in <listcomp>
+    fs = [self.submit(fn, *args) for args in zip(*iterables)]
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/process.py", line 791, in submit
+    raise BrokenProcessPool(self._broken)
+concurrent.futures.process.BrokenProcessPool: A child process terminated abruptly, the process pool is not usable anymore

@@ -1,0 +1,358 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:00] Length: 7.81m
+[UEDRS] [00:00:00] Size: 1000000
+[UEDRS] [00:00:00] Sampling
+[UEDRS] [00:00:03] Result: 1000000
+[UEDRS] [00:00:03] Matches: True
+[UEDRS] [00:00:03] Size: 750000
+[UEDRS] [00:00:03] Sampling
+[UEDRS] [00:00:05] Result: 750000
+[UEDRS] [00:00:05] Matches: True
+[UEDRS] [00:00:05] Size: 500000
+[UEDRS] [00:00:05] Sampling
+[UEDRS] [00:00:08] Result: 500000
+[UEDRS] [00:00:08] Matches: True
+[UEDRS] [00:00:08] Size: 250000
+[UEDRS] [00:00:08] Sampling
+[UEDRS] [00:00:11] Result: 250000
+[UEDRS] [00:00:11] Matches: True
+[UEDRS] [00:00:11] Size: 100000
+[UEDRS] [00:00:11] Sampling
+[UEDRS] [00:00:13] Result: 100000
+[UEDRS] [00:00:13] Matches: True
+
+
+[UEDRS] [00:00:13] Loading dataset: IPINYOU
+[UEDRS] [00:00:15] Length: 22.27m
+[UEDRS] [00:00:15] Size: 1000000
+[UEDRS] [00:00:15] Sampling
+[UEDRS] [00:09:31] Result: 1000000
+[UEDRS] [00:09:31] Matches: True
+[UEDRS] [00:09:31] Size: 750000
+[UEDRS] [00:09:31] Sampling
+[UEDRS] [00:18:43] Result: 750000
+[UEDRS] [00:18:43] Matches: True
+[UEDRS] [00:18:43] Size: 500000
+[UEDRS] [00:18:43] Sampling
+[UEDRS] [00:27:58] Result: 500000
+[UEDRS] [00:27:58] Matches: True
+[UEDRS] [00:27:58] Size: 250000
+[UEDRS] [00:27:58] Sampling
+[UEDRS] [00:37:08] Result: 250000
+[UEDRS] [00:37:08] Matches: True
+[UEDRS] [00:37:08] Size: 100000
+[UEDRS] [00:37:08] Sampling
+[UEDRS] [00:46:23] Result: 100000
+[UEDRS] [00:46:23] Matches: True
+
+
+[UEDRS] [00:46:23] Loading dataset: TMALL
+[UEDRS] [00:46:24] Length: 24.36m
+[UEDRS] [00:46:24] Size: 1000000
+[UEDRS] [00:46:24] Sampling
+[UEDRS] [00:46:45] Result: 1000000
+[UEDRS] [00:46:45] Matches: True
+[UEDRS] [00:46:45] Size: 750000
+[UEDRS] [00:46:45] Sampling
+[UEDRS] [00:47:05] Result: 750000
+[UEDRS] [00:47:05] Matches: True
+[UEDRS] [00:47:05] Size: 500000
+[UEDRS] [00:47:05] Sampling
+[UEDRS] [00:47:26] Result: 500000
+[UEDRS] [00:47:26] Matches: True
+[UEDRS] [00:47:26] Size: 250000
+[UEDRS] [00:47:26] Sampling
+[UEDRS] [00:47:46] Result: 250000
+[UEDRS] [00:47:46] Matches: True
+[UEDRS] [00:47:46] Size: 100000
+[UEDRS] [00:47:46] Sampling
+[UEDRS] [00:48:07] Result: 100000
+[UEDRS] [00:48:07] Matches: True
+
+
+[UEDRS] [00:48:07] Loading dataset: MOVIELENS
+[UEDRS] [00:48:08] Length: 32.00m
+[UEDRS] [00:48:08] Size: 25000000
+[UEDRS] [00:48:08] Sampling
+[UEDRS] [00:48:18] Result: 25000000
+[UEDRS] [00:48:18] Matches: True
+[UEDRS] [00:48:18] Size: 1000000
+[UEDRS] [00:48:18] Sampling
+[UEDRS] [00:48:26] Result: 1000000
+[UEDRS] [00:48:26] Matches: True
+[UEDRS] [00:48:26] Size: 750000
+[UEDRS] [00:48:26] Sampling
+[UEDRS] [00:48:33] Result: 750000
+[UEDRS] [00:48:33] Matches: True
+[UEDRS] [00:48:33] Size: 500000
+[UEDRS] [00:48:33] Sampling
+[UEDRS] [00:48:40] Result: 500000
+[UEDRS] [00:48:40] Matches: True
+[UEDRS] [00:48:40] Size: 250000
+[UEDRS] [00:48:40] Sampling
+[UEDRS] [00:48:48] Result: 250000
+[UEDRS] [00:48:48] Matches: True
+[UEDRS] [00:48:48] Size: 100000
+[UEDRS] [00:48:48] Sampling
+[UEDRS] [00:48:55] Result: 100000
+[UEDRS] [00:48:55] Matches: True
+
+
+[UEDRS] [00:48:55] Loading dataset: MUSIC4ALL
+[UEDRS] [00:49:00] Length: 50.02m
+[UEDRS] [00:49:00] Size: 50000000
+[UEDRS] [00:49:00] Sampling
+[UEDRS] [00:49:18] Result: 50000000
+[UEDRS] [00:49:18] Matches: True
+[UEDRS] [00:49:18] Size: 25000000
+[UEDRS] [00:49:18] Sampling
+[UEDRS] [00:49:31] Result: 25000000
+[UEDRS] [00:49:31] Matches: True
+[UEDRS] [00:49:31] Size: 1000000
+[UEDRS] [00:49:31] Sampling
+[UEDRS] [00:49:38] Result: 1000000
+[UEDRS] [00:49:38] Matches: True
+[UEDRS] [00:49:38] Size: 750000
+[UEDRS] [00:49:38] Sampling
+[UEDRS] [00:49:45] Result: 750000
+[UEDRS] [00:49:45] Matches: True
+[UEDRS] [00:49:45] Size: 500000
+[UEDRS] [00:49:45] Sampling
+[UEDRS] [00:49:52] Result: 500000
+[UEDRS] [00:49:52] Matches: True
+[UEDRS] [00:49:52] Size: 250000
+[UEDRS] [00:49:52] Sampling
+[UEDRS] [00:49:58] Result: 250000
+[UEDRS] [00:49:58] Matches: True
+[UEDRS] [00:49:58] Size: 100000
+[UEDRS] [00:49:58] Sampling
+[UEDRS] [00:50:05] Result: 100000
+[UEDRS] [00:50:05] Matches: True
+
+
+[UEDRS] [00:50:05] Loading dataset: NETFLIX
+[UEDRS] [00:50:10] Length: 100.48m
+[UEDRS] [00:50:10] Size: 100000000
+[UEDRS] [00:50:10] Sampling
+[UEDRS] [00:50:55] Result: 100000000
+[UEDRS] [00:50:55] Matches: True
+[UEDRS] [00:50:55] Size: 75000000
+[UEDRS] [00:50:55] Sampling
+[UEDRS] [00:51:35] Result: 75000000
+[UEDRS] [00:51:35] Matches: True
+[UEDRS] [00:51:35] Size: 50000000
+[UEDRS] [00:51:35] Sampling
+[UEDRS] [00:52:09] Result: 50000000
+[UEDRS] [00:52:09] Matches: True
+[UEDRS] [00:52:09] Size: 25000000
+[UEDRS] [00:52:09] Sampling
+[UEDRS] [00:52:39] Result: 25000000
+[UEDRS] [00:52:39] Matches: True
+[UEDRS] [00:52:39] Size: 1000000
+[UEDRS] [00:52:39] Sampling
+[UEDRS] [00:53:07] Result: 1000000
+[UEDRS] [00:53:07] Matches: True
+[UEDRS] [00:53:07] Size: 750000
+[UEDRS] [00:53:07] Sampling
+[UEDRS] [00:53:34] Result: 750000
+[UEDRS] [00:53:34] Matches: True
+[UEDRS] [00:53:34] Size: 500000
+[UEDRS] [00:53:34] Sampling
+[UEDRS] [00:54:01] Result: 500000
+[UEDRS] [00:54:01] Matches: True
+[UEDRS] [00:54:01] Size: 250000
+[UEDRS] [00:54:01] Sampling
+[UEDRS] [00:54:28] Result: 250000
+[UEDRS] [00:54:28] Matches: True
+[UEDRS] [00:54:28] Size: 100000
+[UEDRS] [00:54:28] Sampling
+[UEDRS] [00:54:55] Result: 100000
+[UEDRS] [00:54:55] Matches: True
+
+
+[UEDRS] [00:54:55] Loading dataset: YAHOO
+[UEDRS] [00:54:59] Length: 115.58m
+[UEDRS] [00:54:59] Size: 100000000
+[UEDRS] [00:54:59] Sampling
+[UEDRS] [00:56:12] Result: 100000000
+[UEDRS] [00:56:12] Matches: True
+[UEDRS] [00:56:12] Size: 75000000
+[UEDRS] [00:56:12] Sampling
+[UEDRS] [00:57:22] Result: 75000000
+[UEDRS] [00:57:22] Matches: True
+[UEDRS] [00:57:22] Size: 50000000
+[UEDRS] [00:57:22] Sampling
+[UEDRS] [00:58:28] Result: 50000000
+[UEDRS] [00:58:28] Matches: True
+[UEDRS] [00:58:28] Size: 25000000
+[UEDRS] [00:58:28] Sampling
+[UEDRS] [00:59:31] Result: 25000000
+[UEDRS] [00:59:31] Matches: True
+[UEDRS] [00:59:31] Size: 1000000
+[UEDRS] [00:59:31] Sampling
+[UEDRS] [01:00:32] Result: 1000000
+[UEDRS] [01:00:32] Matches: True
+[UEDRS] [01:00:32] Size: 750000
+[UEDRS] [01:00:32] Sampling
+[UEDRS] [01:01:32] Result: 750000
+[UEDRS] [01:01:32] Matches: True
+[UEDRS] [01:01:32] Size: 500000
+[UEDRS] [01:01:32] Sampling
+[UEDRS] [01:02:32] Result: 500000
+[UEDRS] [01:02:32] Matches: True
+[UEDRS] [01:02:32] Size: 250000
+[UEDRS] [01:02:32] Sampling
+[UEDRS] [01:03:33] Result: 250000
+[UEDRS] [01:03:33] Matches: True
+[UEDRS] [01:03:33] Size: 100000
+[UEDRS] [01:03:33] Sampling
+[UEDRS] [01:04:33] Result: 100000
+[UEDRS] [01:04:33] Matches: True
+
+
+[UEDRS] [01:04:33] Loading dataset: ALIBABA
+[UEDRS] [01:04:42] Length: 191.39m
+[UEDRS] [01:04:42] Size: 100000000
+[UEDRS] [01:04:42] Sampling
+[UEDRS] [01:06:50] Result: 100000000
+[UEDRS] [01:06:50] Matches: True
+[UEDRS] [01:06:50] Size: 75000000
+[UEDRS] [01:06:50] Sampling
+[UEDRS] [01:08:53] Result: 75000000
+[UEDRS] [01:08:53] Matches: True
+[UEDRS] [01:08:53] Size: 50000000
+[UEDRS] [01:08:53] Sampling
+[UEDRS] [01:10:50] Result: 50000000
+[UEDRS] [01:10:50] Matches: True
+[UEDRS] [01:10:50] Size: 25000000
+[UEDRS] [01:10:50] Sampling
+[UEDRS] [01:12:44] Result: 25000000
+[UEDRS] [01:12:44] Matches: True
+[UEDRS] [01:12:44] Size: 1000000
+[UEDRS] [01:12:44] Sampling
+[UEDRS] [01:14:36] Result: 1000000
+[UEDRS] [01:14:36] Matches: True
+[UEDRS] [01:14:36] Size: 750000
+[UEDRS] [01:14:36] Sampling
+[UEDRS] [01:16:27] Result: 750000
+[UEDRS] [01:16:27] Matches: True
+[UEDRS] [01:16:27] Size: 500000
+[UEDRS] [01:16:27] Sampling
+[UEDRS] [01:18:19] Result: 500000
+[UEDRS] [01:18:19] Matches: True
+[UEDRS] [01:18:19] Size: 250000
+[UEDRS] [01:18:19] Sampling
+[UEDRS] [01:20:10] Result: 250000
+[UEDRS] [01:20:10] Matches: True
+[UEDRS] [01:20:10] Size: 100000
+[UEDRS] [01:20:10] Sampling
+[UEDRS] [01:22:00] Result: 100000
+[UEDRS] [01:22:00] Matches: True
+
+
+[UEDRS] [01:22:00] Loading dataset: GOODREADS
+[UEDRS] [01:22:10] Length: 228.65m
+[UEDRS] [01:22:10] Size: 100000000
+[UEDRS] [01:22:10] Sampling
+[UEDRS] [01:23:01] Result: 100000000
+[UEDRS] [01:23:01] Matches: True
+[UEDRS] [01:23:01] Size: 75000000
+[UEDRS] [01:23:01] Sampling
+[UEDRS] [01:23:50] Result: 75000000
+[UEDRS] [01:23:50] Matches: True
+[UEDRS] [01:23:50] Size: 50000000
+[UEDRS] [01:23:50] Sampling
+[UEDRS] [01:24:37] Result: 50000000
+[UEDRS] [01:24:37] Matches: True
+[UEDRS] [01:24:37] Size: 25000000
+[UEDRS] [01:24:37] Sampling
+[UEDRS] [01:25:20] Result: 25000000
+[UEDRS] [01:25:20] Matches: True
+[UEDRS] [01:25:20] Size: 1000000
+[UEDRS] [01:25:20] Sampling
+[UEDRS] [01:25:59] Result: 1000000
+[UEDRS] [01:25:59] Matches: True
+[UEDRS] [01:25:59] Size: 750000
+[UEDRS] [01:25:59] Sampling
+[UEDRS] [01:26:37] Result: 750000
+[UEDRS] [01:26:37] Matches: True
+[UEDRS] [01:26:37] Size: 500000
+[UEDRS] [01:26:37] Sampling
+[UEDRS] [01:27:14] Result: 500000
+[UEDRS] [01:27:14] Matches: True
+[UEDRS] [01:27:14] Size: 250000
+[UEDRS] [01:27:14] Sampling
+[UEDRS] [01:27:51] Result: 250000
+[UEDRS] [01:27:51] Matches: True
+[UEDRS] [01:27:51] Size: 100000
+[UEDRS] [01:27:51] Sampling
+[UEDRS] [01:28:28] Result: 100000
+[UEDRS] [01:28:28] Matches: True
+
+
+[UEDRS] [01:28:28] Loading dataset: LASTFM
+[UEDRS] [01:28:46] Length: 319.95m
+[UEDRS] [01:28:46] Size: 100000000
+[UEDRS] [01:28:46] Sampling
+[UEDRS] [01:29:19] Result: 100000000
+[UEDRS] [01:29:19] Matches: True
+[UEDRS] [01:29:19] Size: 75000000
+[UEDRS] [01:29:19] Sampling
+[UEDRS] [01:29:50] Result: 75000000
+[UEDRS] [01:29:50] Matches: True
+[UEDRS] [01:29:50] Size: 50000000
+[UEDRS] [01:29:50] Sampling
+[UEDRS] [01:30:18] Result: 50000000
+[UEDRS] [01:30:18] Matches: True
+[UEDRS] [01:30:18] Size: 25000000
+[UEDRS] [01:30:18] Sampling
+[UEDRS] [01:30:43] Result: 25000000
+[UEDRS] [01:30:43] Matches: True
+[UEDRS] [01:30:43] Size: 1000000
+[UEDRS] [01:30:43] Sampling
+[UEDRS] [01:31:05] Result: 1000000
+[UEDRS] [01:31:05] Matches: True
+[UEDRS] [01:31:05] Size: 750000
+[UEDRS] [01:31:05] Sampling
+[UEDRS] [01:31:26] Result: 750000
+[UEDRS] [01:31:26] Matches: True
+[UEDRS] [01:31:26] Size: 500000
+[UEDRS] [01:31:26] Sampling
+[UEDRS] [01:31:48] Result: 500000
+[UEDRS] [01:31:48] Matches: True
+[UEDRS] [01:31:48] Size: 250000
+[UEDRS] [01:31:48] Sampling
+[UEDRS] [01:32:09] Result: 250000
+[UEDRS] [01:32:09] Matches: True
+[UEDRS] [01:32:09] Size: 100000
+[UEDRS] [01:32:09] Sampling
+[UEDRS] [01:32:31] Result: 100000
+[UEDRS] [01:32:31] Matches: True
+
+
+[UEDRS] [01:32:31] Loading dataset: AMAZON
+[UEDRS] [01:33:18] Length: 564.54m
+[UEDRS] [01:33:18] Size: 100000000
+[UEDRS] [01:33:18] Sampling
+[UEDRS] [02:02:51] Result: 100000000
+[UEDRS] [02:02:51] Matches: True
+[UEDRS] [02:02:51] Size: 75000000
+[UEDRS] [02:02:51] Sampling
+[UEDRS] [02:32:19] Result: 75000000
+[UEDRS] [02:32:20] Matches: True
+[UEDRS] [02:32:20] Size: 50000000
+[UEDRS] [02:32:20] Sampling
+[UEDRS] [03:01:47] Result: 50000000
+[UEDRS] [03:01:47] Matches: True
+[UEDRS] [03:01:47] Size: 25000000
+[UEDRS] [03:01:47] Sampling
+[UEDRS] [03:31:14] Result: 25000000
+[UEDRS] [03:31:14] Matches: True
+[UEDRS] [03:31:14] Size: 1000000
+[UEDRS] [03:31:14] Sampling
+[UEDRS] [17:10:08] Factor: 3.73
+[UEDRS] [17:10:08] Iterations: 27
+[UEDRS] [17:10:08] Result: 1000000
+[UEDRS] [17:10:08] Matches: True
+[UEDRS] [17:10:08] Size: 750000
+[UEDRS] [17:10:08] Sampling

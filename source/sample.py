@@ -1,7 +1,5 @@
 import pandas as pd
 import yaml
-from math import ceil
-from typing import TypeAlias
 from pathlib import Path
 
 from .constants import (
@@ -9,24 +7,14 @@ from .constants import (
 )
 from .logger import log
 from .results import setdefault_nested
+from .types import Factors
 
 
-# Definitions
-## Constants
 FACTOR_FIGURES = 2
 FACTOR_MULTIPLIER = 1.05
 USER, ITEM = COLUMN_NAMES["user_id"], COLUMN_NAMES["item_id"]
 
 
-## Types
-FactorValue: TypeAlias = float | None
-FactorKey: TypeAlias = int  # Size
-DatasetKey: TypeAlias = str
-DatasetValue: TypeAlias = dict[FactorKey, FactorValue]
-Factors: TypeAlias = dict[DatasetKey, DatasetValue]
-
-
-## Functions
 def create_factors() -> Factors:
   factors: Factors = {
     dataset.name: {
@@ -41,7 +29,7 @@ def load_factors(path: str | Path = PATH_SAMPLING_FACTORS) -> Factors:
     with open(path, 'r') as f:
       factors = yaml.safe_load(f)
   except FileNotFoundError:
-    log("File not found: ", path)
+    log("File not found:", path)
     factors = create_factors()
   return factors
 
@@ -67,8 +55,7 @@ def sample_proportional(dataset: Dataset, full: pd.DataFrame, size: int, column:
       factor = round(factor * FACTOR_MULTIPLIER, FACTOR_FIGURES)
       sampled = full.groupby(column).sample(frac=fraction * factor, random_state=SEED)
 
-    log("Factor:", f"{factor:.2f}")
-    log("Iterations:", iterations)
+    log("Sampling factor:", f"{factor:.2f}")
     factors[dataset.name][size] = factor
     save_factors(factors)
 

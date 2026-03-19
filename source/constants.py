@@ -1,5 +1,6 @@
 from enum import Enum
 from pathlib import Path
+from torch.cuda import OutOfMemoryError
 
 
 # Enums
@@ -76,6 +77,8 @@ ALLOWED_EXCEPTIONS = [
   (ValueError, "Some feat is empty"),
   (AssertionError, ""),
   (AttributeError, "'NoneType' object has no attribute 'items'"),
+  (RuntimeError, "\"coalesce\" not implemented"),
+  (OutOfMemoryError, "CUDA out of memory"),
 ]
 
 
@@ -145,6 +148,9 @@ RECOMMENDATIONS = 10
 SEED = 42
 FIGURES = 10
 SIGNIFICANT_FIGURES = 3
+TRAIN_SIZE = 0.8
+VALID_SIZE = 0.1
+TEST_SIZE = 0.1
 SIZES_FRACTIONAL = [0.1, 0.25, 0.5, 0.75, 1.0]
 SIZES_ABSOLUTE = [
   *[i * 1_000 for i in [100, 250, 500, 750]],
@@ -161,9 +167,6 @@ SPLIT_TO = 1
 
 
 # Hyperparameters
-TRAIN_SIZE = 0.8
-VALID_SIZE = 0.1
-TEST_SIZE = 0.1
 PARTITIONS = 1
 EPOCHS = 1
 K = 16

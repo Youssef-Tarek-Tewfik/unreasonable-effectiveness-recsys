@@ -1,0 +1,27 @@
+[UEDRS] [00:00:12] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:12] Tag:  RECBOLE:NEU_MF
+[UEDRS] [00:00:12] Tool: RECBOLE
+[UEDRS] [00:00:12] Algorithm: NEU_MF
+[UEDRS] [00:00:12] Datasets: YAHOO
+[UEDRS] [00:00:12] Sizes: [100000000]
+
+[UEDRS] [00:00:12] Desired size: 100000000
+[UEDRS] [00:00:12] Dataset: YAHOO
+[UEDRS] [00:00:12] Loading
+[UEDRS] [00:00:13] Loading done
+[UEDRS] [00:00:13] Memory Usage: RSS = 3053.66 MB, VMS = 9161.14 MB
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:00:13] Sampling
+[UEDRS] [00:01:32] Sampling done, obtained size: 100000000
+[UEDRS] [00:01:32] Memory Usage: RSS = 4825.91 MB, VMS = 10930.77 MB
+[UEDRS] [00:01:18] Elapsed
+[UEDRS] [00:01:32] Checking [RECBOLE][NEU_MF][YAHOO][100m]
+[UEDRS] [00:01:32] Starting
+[UEDRS] [08:30:31] Finished (0.085)
+[UEDRS] [08:30:31] Memory Usage: RSS = 32469.27 MB, VMS = 58626.52 MB
+[UEDRS] [08:28:58] Elapsed
+
+[UEDRS] [08:30:31] Memory Usage: RSS = 32469.27 MB, VMS = 58626.52 MB
+[UEDRS] [08:30:31] Releasing dataframe from memory
+[UEDRS] [08:31:27] Memory Usage: RSS = 20764.72 MB, VMS = 46850.05 MB
+[UEDRS] [08:31:27] Work complete

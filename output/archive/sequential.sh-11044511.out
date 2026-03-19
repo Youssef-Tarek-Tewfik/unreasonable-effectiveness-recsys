@@ -1,0 +1,89 @@
+[UEDRS] [00:00:15] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:15] Tag:  RECBOLE:NEU_MF
+[UEDRS] [00:00:15] Tool: RECBOLE
+[UEDRS] [00:00:15] Algorithm: NEU_MF
+[UEDRS] [00:00:15] Datasets: MYANIMELIST, MOVIELENS, MUSIC4ALL, NETFLIX, YAHOO, LASTFM
+[UEDRS] [00:00:15] Sizes: [25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:15] Desired size: 25000000
+[UEDRS] [00:00:15] Dataset: MYANIMELIST
+[UEDRS] [00:00:15] Loading
+[UEDRS] [00:00:16] Loading done
+[UEDRS] [00:00:16] Memory Usage: RSS = 881.22 MB, VMS = 10330.68 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [00:00:16] Sampling
+[UEDRS] [00:00:16] Sampling done, obtained size: 7813730
+[UEDRS] [00:00:16] Memory Usage: RSS = 931.65 MB, VMS = 10380.98 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [00:00:16] Checking [RECBOLE][NEU_MF][MYANIMELIST][8m]
+[UEDRS] [00:00:16] Skipping (0.11)
+[UEDRS] [00:00:16] Memory Usage: RSS = 929.71 MB, VMS = 10380.98 MB
+[UEDRS] [00:00:16] Releasing dataframe from memory
+[UEDRS] [00:00:16] Memory Usage: RSS = 859.68 MB, VMS = 10313.91 MB
+[UEDRS] [00:00:16] Dataset: MOVIELENS
+[UEDRS] [00:00:16] Loading
+[UEDRS] [00:00:18] Loading done
+[UEDRS] [00:00:18] Memory Usage: RSS = 2275.80 MB, VMS = 14134.09 MB
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:00:18] Sampling
+[UEDRS] [00:00:30] Sampling done, obtained size: 25000000
+[UEDRS] [00:00:30] Memory Usage: RSS = 2649.19 MB, VMS = 14505.70 MB
+[UEDRS] [00:00:11] Elapsed
+[UEDRS] [00:00:30] Checking [RECBOLE][NEU_MF][MOVIELENS][25m]
+[UEDRS] [00:00:30] Skipping (0.075)
+[UEDRS] [00:00:30] Memory Usage: RSS = 2649.19 MB, VMS = 14505.70 MB
+[UEDRS] [00:00:30] Releasing dataframe from memory
+[UEDRS] [00:00:30] Memory Usage: RSS = 2267.71 MB, VMS = 14124.22 MB
+[UEDRS] [00:00:30] Dataset: MUSIC4ALL
+[UEDRS] [00:00:30] Loading
+[UEDRS] [00:00:34] Loading done
+[UEDRS] [00:00:34] Memory Usage: RSS = 3881.24 MB, VMS = 16729.41 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:34] Sampling
+[UEDRS] [00:00:47] Sampling done, obtained size: 25000000
+[UEDRS] [00:00:47] Memory Usage: RSS = 3501.13 MB, VMS = 16348.70 MB
+[UEDRS] [00:00:12] Elapsed
+[UEDRS] [00:00:47] Checking [RECBOLE][NEU_MF][MUSIC4ALL][25m]
+[UEDRS] [00:00:47] Skipping (0.011)
+[UEDRS] [00:00:47] Memory Usage: RSS = 3501.13 MB, VMS = 16348.70 MB
+[UEDRS] [00:00:47] Releasing dataframe from memory
+[UEDRS] [00:00:47] Memory Usage: RSS = 3116.70 MB, VMS = 15964.22 MB
+[UEDRS] [00:00:47] Dataset: NETFLIX
+[UEDRS] [00:00:47] Loading
+[UEDRS] [00:00:51] Loading done
+[UEDRS] [00:00:51] Memory Usage: RSS = 4337.61 MB, VMS = 21114.83 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:51] Sampling
+[UEDRS] [00:01:27] Sampling done, obtained size: 25000000
+[UEDRS] [00:01:27] Memory Usage: RSS = 3806.71 MB, VMS = 20584.76 MB
+[UEDRS] [00:00:35] Elapsed
+[UEDRS] [00:01:27] Checking [RECBOLE][NEU_MF][NETFLIX][25m]
+[UEDRS] [00:01:27] Skipping (0.025)
+[UEDRS] [00:01:27] Memory Usage: RSS = 3806.71 MB, VMS = 20584.76 MB
+[UEDRS] [00:01:27] Releasing dataframe from memory
+[UEDRS] [00:01:27] Memory Usage: RSS = 3615.50 MB, VMS = 20393.02 MB
+[UEDRS] [00:01:27] Dataset: YAHOO
+[UEDRS] [00:01:27] Loading
+[UEDRS] [00:01:30] Loading done
+[UEDRS] [00:01:30] Memory Usage: RSS = 3842.39 MB, VMS = 19809.02 MB
+[UEDRS] [00:00:03] Elapsed
+[UEDRS] [00:01:30] Sampling
+[UEDRS] [00:02:36] Sampling done, obtained size: 25000000
+[UEDRS] [00:02:36] Memory Usage: RSS = 4209.14 MB, VMS = 20176.93 MB
+[UEDRS] [00:01:05] Elapsed
+[UEDRS] [00:02:36] Checking [RECBOLE][NEU_MF][YAHOO][25m]
+[UEDRS] [00:02:36] Skipping (0.042)
+[UEDRS] [00:02:36] Memory Usage: RSS = 4209.14 MB, VMS = 20176.93 MB
+[UEDRS] [00:02:36] Releasing dataframe from memory
+[UEDRS] [00:02:36] Memory Usage: RSS = 4017.40 MB, VMS = 19985.19 MB
+[UEDRS] [00:02:36] Dataset: LASTFM
+[UEDRS] [00:02:36] Loading
+[UEDRS] [00:02:51] Loading done
+[UEDRS] [00:02:51] Memory Usage: RSS = 10257.64 MB, VMS = 23607.09 MB
+[UEDRS] [00:00:15] Elapsed
+[UEDRS] [00:02:51] Sampling
+[UEDRS] [00:03:29] Sampling done, obtained size: 25000000
+[UEDRS] [00:03:29] Memory Usage: RSS = 10543.75 MB, VMS = 23893.19 MB
+[UEDRS] [00:00:37] Elapsed
+[UEDRS] [00:03:29] Checking [RECBOLE][NEU_MF][LASTFM][25m]
+[UEDRS] [00:03:29] Starting

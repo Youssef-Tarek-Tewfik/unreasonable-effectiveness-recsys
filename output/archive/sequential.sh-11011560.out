@@ -1,0 +1,56 @@
+[UEDRS] [00:00:18] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:18] Tag:  LENSKIT:IMPLICIT_MF
+[UEDRS] [00:00:18] Tool: LENSKIT
+[UEDRS] [00:00:18] Algorithm: IMPLICIT_MF
+[UEDRS] [00:00:18] Datasets: YAHOO, GOODREADS, LASTFM
+[UEDRS] [00:00:18] Sizes: [100000000]
+
+[UEDRS] [00:00:18] Desired size: 100000000
+[UEDRS] [00:00:18] Dataset: YAHOO
+[UEDRS] [00:00:18] Loading
+[UEDRS] [00:00:19] Loading done
+[UEDRS] [00:00:19] Memory Usage: RSS = 3052.30 MB, VMS = 9179.14 MB
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:00:19] Sampling
+[UEDRS] [00:01:35] Sampling done, obtained size: 100000000
+[UEDRS] [00:01:35] Memory Usage: RSS = 4825.39 MB, VMS = 10948.62 MB
+[UEDRS] [00:01:15] Elapsed
+[UEDRS] [00:01:35] Checking [LENSKIT][IMPLICIT_MF][YAHOO][100m]
+[UEDRS] [00:01:35] Starting
+[UEDRS] [03:04:03] Finished (0.12)
+[UEDRS] [03:04:03] Memory Usage: RSS = 9112.46 MB, VMS = 23881.77 MB
+[UEDRS] [03:02:28] Elapsed
+
+[UEDRS] [03:04:03] Memory Usage: RSS = 9112.46 MB, VMS = 23881.77 MB
+[UEDRS] [03:04:03] Releasing dataframe from memory
+[UEDRS] [03:04:03] Memory Usage: RSS = 8291.43 MB, VMS = 23059.83 MB
+[UEDRS] [03:04:03] Dataset: GOODREADS
+[UEDRS] [03:04:03] Loading
+[UEDRS] [03:04:05] Loading done
+[UEDRS] [03:04:05] Memory Usage: RSS = 12049.99 MB, VMS = 23891.83 MB
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [03:04:05] Sampling
+[UEDRS] [03:04:57] Sampling done, obtained size: 100000000
+[UEDRS] [03:04:57] Memory Usage: RSS = 12822.37 MB, VMS = 24655.77 MB
+[UEDRS] [00:00:51] Elapsed
+[UEDRS] [03:04:57] Checking [LENSKIT][IMPLICIT_MF][GOODREADS][100m]
+[UEDRS] [03:04:57] Starting
+[UEDRS] [07:31:51] Finished (0.034)
+[UEDRS] [07:31:51] Memory Usage: RSS = 14292.03 MB, VMS = 26862.89 MB
+[UEDRS] [04:26:53] Elapsed
+
+[UEDRS] [07:31:51] Memory Usage: RSS = 14292.03 MB, VMS = 26862.89 MB
+[UEDRS] [07:31:51] Releasing dataframe from memory
+[UEDRS] [07:31:51] Memory Usage: RSS = 13465.53 MB, VMS = 26035.95 MB
+[UEDRS] [07:31:51] Dataset: LASTFM
+[UEDRS] [07:31:51] Loading
+[UEDRS] [07:31:54] Loading done
+[UEDRS] [07:31:54] Memory Usage: RSS = 19751.46 MB, VMS = 30151.95 MB
+[UEDRS] [00:00:03] Elapsed
+[UEDRS] [07:31:54] Sampling
+[UEDRS] [07:32:34] Sampling done, obtained size: 100000000
+[UEDRS] [07:32:34] Memory Usage: RSS = 20895.87 MB, VMS = 31296.36 MB
+[UEDRS] [00:00:39] Elapsed
+[UEDRS] [07:32:34] Checking [LENSKIT][IMPLICIT_MF][LASTFM][100m]
+[UEDRS] [07:32:34] Starting
+2026-01-10 18:17:10 [error    ] deserialization failed: [enforce fail at alloc_cpu.cpp:117] err == 0. DefaultCPUAllocator: can't allocate memory: you tried to allocate 3953412096 bytes. Error code 12 (Cannot allocate memory) [lenskit.parallel.worker] pid=29494 pname=LensKitProcess-83

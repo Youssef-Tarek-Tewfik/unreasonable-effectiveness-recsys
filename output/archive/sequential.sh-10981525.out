@@ -1,0 +1,50 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:00] Length: 7.81m
+[UEDRS] [00:00:00] Size: 1000000
+[UEDRS] [00:00:00] Sampling
+[UEDRS] [00:00:03] Result: 1000000
+[UEDRS] [00:00:03] Matches: True
+[UEDRS] [00:00:03] Size: 750000
+[UEDRS] [00:00:03] Sampling
+[UEDRS] [00:00:05] Result: 750000
+[UEDRS] [00:00:05] Matches: True
+[UEDRS] [00:00:05] Size: 500000
+[UEDRS] [00:00:05] Sampling
+[UEDRS] [00:00:08] Result: 500000
+[UEDRS] [00:00:08] Matches: True
+[UEDRS] [00:00:08] Size: 250000
+[UEDRS] [00:00:08] Sampling
+[UEDRS] [00:00:10] Result: 250000
+[UEDRS] [00:00:10] Matches: True
+[UEDRS] [00:00:10] Size: 100000
+[UEDRS] [00:00:10] Sampling
+[UEDRS] [00:00:13] Result: 100000
+[UEDRS] [00:00:13] Matches: True
+
+
+[UEDRS] [00:00:13] Loading dataset: IPINYOU
+[UEDRS] [00:00:14] Length: 22.27m
+[UEDRS] [00:00:14] Size: 1000000
+[UEDRS] [00:00:14] Sampling
+[UEDRS] [00:09:25] Result: 1000000
+[UEDRS] [00:09:25] Matches: True
+[UEDRS] [00:09:25] Size: 750000
+[UEDRS] [00:09:25] Sampling
+[UEDRS] [06:41:38] Factor: 7.79
+[UEDRS] [06:41:38] Iterations: 42
+[UEDRS] [06:41:38] Result: 750000
+[UEDRS] [06:41:38] Matches: True
+[UEDRS] [06:41:38] Size: 500000
+[UEDRS] [06:41:38] Sampling
+[UEDRS] [14:24:59] Factor: 11.51
+[UEDRS] [14:24:59] Iterations: 50
+[UEDRS] [14:24:59] Result: 500000
+[UEDRS] [14:24:59] Matches: True
+[UEDRS] [14:24:59] Size: 250000
+[UEDRS] [14:24:59] Sampling
+[UEDRS] [23:03:19] Factor: 15.42
+[UEDRS] [23:03:19] Iterations: 56
+[UEDRS] [23:03:19] Result: 250000
+[UEDRS] [23:03:19] Matches: True
+[UEDRS] [23:03:19] Size: 100000
+[UEDRS] [23:03:19] Sampling

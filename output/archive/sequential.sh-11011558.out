@@ -1,0 +1,178 @@
+[UEDRS] [00:00:08] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:08] Tag:  RECBOLE:BPR
+[UEDRS] [00:00:08] Tool: RECBOLE
+[UEDRS] [00:00:08] Algorithm: BPR
+[UEDRS] [00:00:08] Datasets: NETFLIX, YAHOO, ALIBABA, GOODREADS, LASTFM
+[UEDRS] [00:00:08] Sizes: [75000000, 100000000]
+
+[UEDRS] [00:00:08] Desired size: 75000000
+[UEDRS] [00:00:08] Dataset: NETFLIX
+[UEDRS] [00:00:08] Loading
+[UEDRS] [00:00:09] Loading done
+[UEDRS] [00:00:09] Memory Usage: RSS = 2989.00 MB, VMS = 16082.42 MB
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:00:09] Sampling
+[UEDRS] [00:00:52] Sampling done, obtained size: 75000000
+[UEDRS] [00:00:52] Memory Usage: RSS = 3477.05 MB, VMS = 16568.63 MB
+[UEDRS] [00:00:43] Elapsed
+[UEDRS] [00:00:52] Checking [RECBOLE][BPR][NETFLIX][75m]
+[UEDRS] [00:00:52] Skipping (0.00096)
+[UEDRS] [00:00:52] Memory Usage: RSS = 3477.05 MB, VMS = 16568.63 MB
+[UEDRS] [00:00:52] Releasing dataframe from memory
+[UEDRS] [00:00:52] Memory Usage: RSS = 2902.89 MB, VMS = 15994.42 MB
+[UEDRS] [00:00:52] Dataset: YAHOO
+[UEDRS] [00:00:52] Loading
+[UEDRS] [00:00:52] Loading done
+[UEDRS] [00:00:52] Memory Usage: RSS = 3875.96 MB, VMS = 18474.42 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [00:00:52] Sampling
+[UEDRS] [00:02:03] Sampling done, obtained size: 75000000
+[UEDRS] [00:02:03] Memory Usage: RSS = 4887.16 MB, VMS = 19485.34 MB
+[UEDRS] [00:01:10] Elapsed
+[UEDRS] [00:02:03] Checking [RECBOLE][BPR][YAHOO][75m]
+[UEDRS] [00:02:03] Skipping (7.7e-05)
+[UEDRS] [00:02:03] Memory Usage: RSS = 4887.16 MB, VMS = 19485.34 MB
+[UEDRS] [00:02:03] Releasing dataframe from memory
+[UEDRS] [00:02:03] Memory Usage: RSS = 4312.98 MB, VMS = 18911.13 MB
+[UEDRS] [00:02:03] Dataset: ALIBABA
+[UEDRS] [00:02:03] Loading
+[UEDRS] [00:02:12] Loading done
+[UEDRS] [00:02:12] Memory Usage: RSS = 5096.86 MB, VMS = 19263.13 MB
+[UEDRS] [00:00:08] Elapsed
+[UEDRS] [00:02:12] Sampling
+[UEDRS] [00:04:14] Sampling done, obtained size: 75000000
+[UEDRS] [00:04:14] Memory Usage: RSS = 5697.09 MB, VMS = 19865.43 MB
+[UEDRS] [00:02:01] Elapsed
+[UEDRS] [00:04:14] Checking [RECBOLE][BPR][ALIBABA][75m]
+[UEDRS] [00:04:14] Skipping (1.5e-06)
+[UEDRS] [00:04:14] Memory Usage: RSS = 5697.09 MB, VMS = 19865.43 MB
+[UEDRS] [00:04:14] Releasing dataframe from memory
+[UEDRS] [00:04:14] Memory Usage: RSS = 5122.89 MB, VMS = 19291.23 MB
+[UEDRS] [00:04:14] Dataset: GOODREADS
+[UEDRS] [00:04:14] Loading
+[UEDRS] [00:04:23] Loading done
+[UEDRS] [00:04:23] Memory Usage: RSS = 6258.62 MB, VMS = 20967.26 MB
+[UEDRS] [00:00:08] Elapsed
+[UEDRS] [00:04:23] Sampling
+[UEDRS] [00:05:12] Sampling done, obtained size: 75000000
+[UEDRS] [00:05:12] Memory Usage: RSS = 6834.98 MB, VMS = 21541.46 MB
+[UEDRS] [00:00:49] Elapsed
+[UEDRS] [00:05:12] Checking [RECBOLE][BPR][GOODREADS][75m]
+[UEDRS] [00:05:12] Starting
+[UEDRS] [01:08:22] Finished (8.2e-06)
+[UEDRS] [01:08:22] Memory Usage: RSS = 25832.23 MB, VMS = 51795.06 MB
+[UEDRS] [01:03:09] Elapsed
+
+[UEDRS] [01:08:22] Memory Usage: RSS = 25832.23 MB, VMS = 51795.06 MB
+[UEDRS] [01:08:22] Releasing dataframe from memory
+[UEDRS] [01:08:43] Memory Usage: RSS = 17782.29 MB, VMS = 43742.30 MB
+[UEDRS] [01:08:43] Dataset: LASTFM
+[UEDRS] [01:08:43] Loading
+[UEDRS] [01:08:59] Loading done
+[UEDRS] [01:08:59] Memory Usage: RSS = 21380.61 MB, VMS = 45434.30 MB
+[UEDRS] [00:00:15] Elapsed
+[UEDRS] [01:08:59] Sampling
+[UEDRS] [01:09:30] Sampling done, obtained size: 75000000
+[UEDRS] [01:09:30] Memory Usage: RSS = 21380.62 MB, VMS = 45434.30 MB
+[UEDRS] [00:00:31] Elapsed
+[UEDRS] [01:09:30] Checking [RECBOLE][BPR][LASTFM][75m]
+[UEDRS] [01:09:30] Starting
+[UEDRS] [07:01:39] Finished (9.6e-06)
+[UEDRS] [07:01:39] Memory Usage: RSS = 35438.85 MB, VMS = 66141.86 MB
+[UEDRS] [05:52:08] Elapsed
+
+[UEDRS] [07:01:39] Memory Usage: RSS = 35438.85 MB, VMS = 66141.86 MB
+[UEDRS] [07:01:39] Releasing dataframe from memory
+[UEDRS] [07:01:58] Memory Usage: RSS = 21975.01 MB, VMS = 52651.01 MB
+[UEDRS] [07:01:58] Desired size: 100000000
+[UEDRS] [07:01:58] Dataset: NETFLIX
+[UEDRS] [07:01:58] Loading
+[UEDRS] [07:02:02] Loading done
+[UEDRS] [07:02:02] Memory Usage: RSS = 20732.59 MB, VMS = 51031.01 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [07:02:02] Sampling
+[UEDRS] [07:02:56] Sampling done, obtained size: 100000000
+[UEDRS] [07:02:56] Memory Usage: RSS = 20732.77 MB, VMS = 51031.01 MB
+[UEDRS] [00:00:53] Elapsed
+[UEDRS] [07:02:56] Checking [RECBOLE][BPR][NETFLIX][100m]
+[UEDRS] [07:02:56] Starting
+[UEDRS] [07:38:28] Finished (0.0013)
+[UEDRS] [07:38:28] Memory Usage: RSS = 32322.11 MB, VMS = 62710.80 MB
+[UEDRS] [00:35:32] Elapsed
+
+[UEDRS] [07:38:28] Memory Usage: RSS = 32322.11 MB, VMS = 62710.80 MB
+[UEDRS] [07:38:28] Releasing dataframe from memory
+[UEDRS] [07:38:57] Memory Usage: RSS = 25305.60 MB, VMS = 55671.33 MB
+[UEDRS] [07:38:57] Dataset: YAHOO
+[UEDRS] [07:38:57] Loading
+[UEDRS] [07:39:01] Loading done
+[UEDRS] [07:39:01] Memory Usage: RSS = 24722.43 MB, VMS = 55671.33 MB
+[UEDRS] [00:00:03] Elapsed
+[UEDRS] [07:39:01] Sampling
+[UEDRS] [07:40:15] Sampling done, obtained size: 100000000
+[UEDRS] [07:40:15] Memory Usage: RSS = 24722.46 MB, VMS = 55671.33 MB
+[UEDRS] [00:01:14] Elapsed
+[UEDRS] [07:40:15] Checking [RECBOLE][BPR][YAHOO][100m]
+[UEDRS] [07:40:15] Starting
+[UEDRS] [09:16:14] Finished (7.5e-05)
+[UEDRS] [09:16:14] Memory Usage: RSS = 36479.72 MB, VMS = 67513.57 MB
+[UEDRS] [01:35:58] Elapsed
+
+[UEDRS] [09:16:14] Memory Usage: RSS = 36479.72 MB, VMS = 67513.57 MB
+[UEDRS] [09:16:14] Releasing dataframe from memory
+[UEDRS] [09:16:50] Memory Usage: RSS = 27860.28 MB, VMS = 58871.63 MB
+[UEDRS] [09:16:50] Dataset: ALIBABA
+[UEDRS] [09:16:50] Loading
+[UEDRS] [09:16:58] Loading done
+[UEDRS] [09:16:58] Memory Usage: RSS = 28230.73 MB, VMS = 58871.63 MB
+[UEDRS] [00:00:08] Elapsed
+[UEDRS] [09:16:58] Sampling
+[UEDRS] [09:19:07] Sampling done, obtained size: 100000000
+[UEDRS] [09:19:07] Memory Usage: RSS = 28231.59 MB, VMS = 58871.63 MB
+[UEDRS] [00:02:08] Elapsed
+[UEDRS] [09:19:07] Checking [RECBOLE][BPR][ALIBABA][100m]
+[UEDRS] [09:19:07] Starting
+[UEDRS] [14:25:17] Finished (1.6e-06)
+[UEDRS] [14:25:17] Memory Usage: RSS = 43552.37 MB, VMS = 74288.05 MB
+[UEDRS] [05:06:09] Elapsed
+
+[UEDRS] [14:25:17] Memory Usage: RSS = 43552.37 MB, VMS = 74288.05 MB
+[UEDRS] [14:25:17] Releasing dataframe from memory
+[UEDRS] [14:26:09] Memory Usage: RSS = 31169.15 MB, VMS = 61880.98 MB
+[UEDRS] [14:26:09] Dataset: GOODREADS
+[UEDRS] [14:26:09] Loading
+[UEDRS] [14:26:18] Loading done
+[UEDRS] [14:26:18] Memory Usage: RSS = 31736.44 MB, VMS = 61878.98 MB
+[UEDRS] [00:00:08] Elapsed
+[UEDRS] [14:26:18] Sampling
+[UEDRS] [14:27:21] Sampling done, obtained size: 100000000
+[UEDRS] [14:27:21] Memory Usage: RSS = 31731.91 MB, VMS = 61873.98 MB
+[UEDRS] [00:01:02] Elapsed
+[UEDRS] [14:27:21] Checking [RECBOLE][BPR][GOODREADS][100m]
+[UEDRS] [14:27:21] Starting
+[UEDRS] [15:35:09] Finished (5.6e-06)
+[UEDRS] [15:35:09] Memory Usage: RSS = 38360.29 MB, VMS = 68894.00 MB
+[UEDRS] [01:07:48] Elapsed
+
+[UEDRS] [15:35:09] Memory Usage: RSS = 38360.29 MB, VMS = 68894.00 MB
+[UEDRS] [15:35:09] Releasing dataframe from memory
+[UEDRS] [15:35:36] Memory Usage: RSS = 31448.95 MB, VMS = 61961.00 MB
+[UEDRS] [15:35:36] Dataset: LASTFM
+[UEDRS] [15:35:36] Loading
+[UEDRS] [15:35:52] Loading done
+[UEDRS] [15:35:52] Memory Usage: RSS = 36049.35 MB, VMS = 65629.00 MB
+[UEDRS] [00:00:16] Elapsed
+[UEDRS] [15:35:52] Sampling
+[UEDRS] [15:52:43] Sampling done, obtained size: 100000000
+[UEDRS] [15:52:43] Memory Usage: RSS = 36051.18 MB, VMS = 65629.00 MB
+[UEDRS] [00:16:50] Elapsed
+[UEDRS] [15:52:43] Checking [RECBOLE][BPR][LASTFM][100m]
+[UEDRS] [15:52:43] Starting
+[UEDRS] [17:52:19] Finished (9.2e-06)
+[UEDRS] [17:52:19] Memory Usage: RSS = 50500.98 MB, VMS = 86579.02 MB
+[UEDRS] [01:59:35] Elapsed
+
+[UEDRS] [17:52:19] Memory Usage: RSS = 50500.98 MB, VMS = 86579.02 MB
+[UEDRS] [17:52:19] Releasing dataframe from memory
+[UEDRS] [17:52:41] Memory Usage: RSS = 35308.20 MB, VMS = 71360.02 MB
+[UEDRS] [17:52:41] Work complete
