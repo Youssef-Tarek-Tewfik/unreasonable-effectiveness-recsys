@@ -1,0 +1,226 @@
+[UEDRS] [00:00:09] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:09] Tag:  LENSKIT:ITEM_KNN
+[UEDRS] [00:00:09] Tool: LENSKIT
+[UEDRS] [00:00:09] Algorithm: ITEM_KNN
+[UEDRS] [00:00:09] Datasets: MOVIELENS, NETFLIX, GOODREADS, MUSIC4ALL
+[UEDRS] [00:00:09] Excluded datasets: ALIBABA, AMAZON
+[UEDRS] [00:00:09] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:09] Current dataset [MOVIELENS]
+[UEDRS] [00:00:09] Memory Usage: RSS = 609.88 MB, VMS = 3819.62 MB
+[UEDRS] [00:00:09] Loading full dataset
+[UEDRS] [00:00:13] Loading done
+[UEDRS] [00:00:13] Memory Usage: RSS = 1353.39 MB, VMS = 4562.45 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:13] Sampling for [1000000]
+[UEDRS] [00:00:20] Sampling done
+[UEDRS] [00:00:20] Memory Usage: RSS = 712.83 MB, VMS = 3919.75 MB
+[UEDRS] [00:00:06] Elapsed
+[UEDRS] [00:00:20] Checking [LENSKIT][ITEM_KNN][MOVIELENS][1m]
+[UEDRS] [00:00:20] Skipping (0.0)
+[UEDRS] [00:00:20] Memory Usage: RSS = 712.83 MB, VMS = 3919.75 MB
+[UEDRS] [00:00:20] Releasing dataframe from memory
+[UEDRS] [00:00:20] Memory Usage: RSS = 651.78 MB, VMS = 3858.57 MB
+[UEDRS] [00:00:20] Memory Usage: RSS = 651.78 MB, VMS = 3858.57 MB
+[UEDRS] [00:00:20] Loading full dataset
+[UEDRS] [00:00:25] Loading done
+[UEDRS] [00:00:25] Memory Usage: RSS = 1384.21 MB, VMS = 4591.00 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:25] Sampling for [25000000]
+[UEDRS] [00:00:32] Sampling done
+[UEDRS] [00:00:32] Memory Usage: RSS = 1409.16 MB, VMS = 4616.07 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:00:32] Checking [LENSKIT][ITEM_KNN][MOVIELENS][25m]
+[UEDRS] [00:00:32] Starting
+[UEDRS] [00:23:55] Finished (0.00336)
+[UEDRS] [00:23:55] Memory Usage: RSS = 7303.88 MB, VMS = 21934.86 MB
+[UEDRS] [00:23:23] Elapsed
+
+[UEDRS] [00:23:55] Memory Usage: RSS = 7303.88 MB, VMS = 21934.86 MB
+[UEDRS] [00:23:55] Releasing dataframe from memory
+[UEDRS] [00:23:56] Memory Usage: RSS = 6710.70 MB, VMS = 21341.68 MB
+[UEDRS] [00:23:56] Memory Usage: RSS = 6710.70 MB, VMS = 21341.68 MB
+[UEDRS] [00:23:56] Loading full dataset
+[UEDRS] [00:24:04] Loading done
+[UEDRS] [00:24:04] Memory Usage: RSS = 7469.63 MB, VMS = 22100.49 MB
+[UEDRS] [00:00:08] Elapsed
+[UEDRS] [00:24:04] Sampling for [50000000]
+[UEDRS] [00:24:12] Sampling done
+[UEDRS] [00:24:12] Memory Usage: RSS = 7470.21 MB, VMS = 22100.49 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:24:12] Checking [LENSKIT][ITEM_KNN][MOVIELENS][32m]
+[UEDRS] [00:24:12] Starting
+[UEDRS] [00:55:09] Finished (0.00341)
+[UEDRS] [00:55:09] Memory Usage: RSS = 10654.70 MB, VMS = 25888.91 MB
+[UEDRS] [00:30:56] Elapsed
+
+[UEDRS] [00:55:09] Memory Usage: RSS = 10654.70 MB, VMS = 25888.91 MB
+[UEDRS] [00:55:09] Releasing dataframe from memory
+[UEDRS] [00:55:09] Memory Usage: RSS = 9899.30 MB, VMS = 25133.48 MB
+[UEDRS] [00:55:09] Memory Usage: RSS = 9899.30 MB, VMS = 25133.48 MB
+[UEDRS] [00:55:09] Loading full dataset
+[UEDRS] [00:55:14] Loading done
+[UEDRS] [00:55:14] Memory Usage: RSS = 10660.73 MB, VMS = 25894.91 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:55:14] Sampling for [75000000]
+[UEDRS] [00:55:21] Sampling done
+[UEDRS] [00:55:21] Memory Usage: RSS = 10660.14 MB, VMS = 25894.43 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:55:21] Checking [LENSKIT][ITEM_KNN][MOVIELENS][32m]
+[UEDRS] [00:55:21] Skipping (0.00341)
+[UEDRS] [00:55:21] Memory Usage: RSS = 10660.14 MB, VMS = 25894.43 MB
+[UEDRS] [00:55:21] Releasing dataframe from memory
+[UEDRS] [00:55:21] Memory Usage: RSS = 9926.71 MB, VMS = 25161.00 MB
+[UEDRS] [00:55:21] Memory Usage: RSS = 9926.71 MB, VMS = 25161.00 MB
+[UEDRS] [00:55:21] Loading full dataset
+[UEDRS] [00:55:26] Loading done
+[UEDRS] [00:55:26] Memory Usage: RSS = 10658.74 MB, VMS = 25892.91 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:55:26] Sampling for [100000000]
+[UEDRS] [00:55:34] Sampling done
+[UEDRS] [00:55:34] Memory Usage: RSS = 10659.14 MB, VMS = 25893.43 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:55:34] Checking [LENSKIT][ITEM_KNN][MOVIELENS][32m]
+[UEDRS] [00:55:34] Skipping (0.00341)
+[UEDRS] [00:55:34] Memory Usage: RSS = 10659.14 MB, VMS = 25893.43 MB
+[UEDRS] [00:55:34] Releasing dataframe from memory
+[UEDRS] [00:55:34] Memory Usage: RSS = 9926.71 MB, VMS = 25161.00 MB
+[UEDRS] [00:55:34] Current dataset [NETFLIX]
+[UEDRS] [00:55:34] Memory Usage: RSS = 9926.71 MB, VMS = 25161.00 MB
+[UEDRS] [00:55:34] Loading full dataset
+[UEDRS] [00:56:02] Loading done
+[UEDRS] [00:56:02] Memory Usage: RSS = 12266.13 MB, VMS = 27500.30 MB
+[UEDRS] [00:00:28] Elapsed
+[UEDRS] [00:56:02] Sampling for [1000000]
+[UEDRS] [01:11:30] Sampling done
+[UEDRS] [01:11:30] Memory Usage: RSS = 9919.02 MB, VMS = 25151.88 MB
+[UEDRS] [00:15:27] Elapsed
+[UEDRS] [01:11:30] Checking [LENSKIT][ITEM_KNN][NETFLIX][1m]
+[UEDRS] [01:11:30] Starting
+[UEDRS] [01:19:30] Finished (0.0)
+[UEDRS] [01:19:30] Memory Usage: RSS = 9930.65 MB, VMS = 25126.48 MB
+[UEDRS] [00:08:00] Elapsed
+
+[UEDRS] [01:19:30] Memory Usage: RSS = 9930.65 MB, VMS = 25126.48 MB
+[UEDRS] [01:19:30] Releasing dataframe from memory
+[UEDRS] [01:19:30] Memory Usage: RSS = 9902.85 MB, VMS = 25098.48 MB
+[UEDRS] [01:19:30] Memory Usage: RSS = 9902.85 MB, VMS = 25098.48 MB
+[UEDRS] [01:19:30] Loading full dataset
+[UEDRS] [01:19:59] Loading done
+[UEDRS] [01:19:59] Memory Usage: RSS = 12269.70 MB, VMS = 27465.30 MB
+[UEDRS] [00:00:28] Elapsed
+[UEDRS] [01:19:59] Sampling for [25000000]
+[UEDRS] [01:20:27] Sampling done
+[UEDRS] [01:20:27] Memory Usage: RSS = 10495.78 MB, VMS = 25691.14 MB
+[UEDRS] [00:00:28] Elapsed
+[UEDRS] [01:20:27] Checking [LENSKIT][ITEM_KNN][NETFLIX][25m]
+[UEDRS] [01:20:27] Starting
+[UEDRS] [01:40:02] Finished (0.004)
+[UEDRS] [01:40:02] Memory Usage: RSS = 11150.66 MB, VMS = 25966.31 MB
+[UEDRS] [00:19:34] Elapsed
+
+[UEDRS] [01:40:02] Memory Usage: RSS = 11150.66 MB, VMS = 25966.31 MB
+[UEDRS] [01:40:02] Releasing dataframe from memory
+[UEDRS] [01:40:02] Memory Usage: RSS = 10533.96 MB, VMS = 25349.48 MB
+[UEDRS] [01:40:02] Memory Usage: RSS = 10533.96 MB, VMS = 25349.48 MB
+[UEDRS] [01:40:02] Loading full dataset
+[UEDRS] [01:40:18] Loading done
+[UEDRS] [01:40:18] Memory Usage: RSS = 12854.78 MB, VMS = 27670.30 MB
+[UEDRS] [00:00:16] Elapsed
+[UEDRS] [01:40:18] Sampling for [50000000]
+[UEDRS] [01:40:48] Sampling done
+[UEDRS] [01:40:48] Memory Usage: RSS = 11607.36 MB, VMS = 26422.89 MB
+[UEDRS] [00:00:29] Elapsed
+[UEDRS] [01:40:48] Checking [LENSKIT][ITEM_KNN][NETFLIX][50m]
+[UEDRS] [01:40:48] Starting
+[UEDRS] [02:06:57] Finished (0.01072)
+[UEDRS] [02:06:57] Memory Usage: RSS = 14105.00 MB, VMS = 28903.44 MB
+[UEDRS] [00:26:09] Elapsed
+
+[UEDRS] [02:06:57] Memory Usage: RSS = 14105.00 MB, VMS = 28903.44 MB
+[UEDRS] [02:06:57] Releasing dataframe from memory
+[UEDRS] [02:06:57] Memory Usage: RSS = 12910.60 MB, VMS = 27708.74 MB
+[UEDRS] [02:06:57] Memory Usage: RSS = 12910.60 MB, VMS = 27708.74 MB
+[UEDRS] [02:06:57] Loading full dataset
+[UEDRS] [02:07:13] Loading done
+[UEDRS] [02:07:13] Memory Usage: RSS = 15215.53 MB, VMS = 30013.56 MB
+[UEDRS] [00:00:16] Elapsed
+[UEDRS] [02:07:13] Sampling for [75000000]
+[UEDRS] [02:07:44] Sampling done
+[UEDRS] [02:07:44] Memory Usage: RSS = 14468.77 MB, VMS = 29266.80 MB
+[UEDRS] [00:00:30] Elapsed
+[UEDRS] [02:07:44] Checking [LENSKIT][ITEM_KNN][NETFLIX][75m]
+[UEDRS] [02:07:44] Starting
+[UEDRS] [02:41:53] Finished (0.02034)
+[UEDRS] [02:41:53] Memory Usage: RSS = 17669.80 MB, VMS = 31775.99 MB
+[UEDRS] [00:34:08] Elapsed
+
+[UEDRS] [02:41:53] Memory Usage: RSS = 17669.80 MB, VMS = 31775.99 MB
+[UEDRS] [02:41:53] Releasing dataframe from memory
+[UEDRS] [02:41:53] Memory Usage: RSS = 15905.51 MB, VMS = 30011.45 MB
+[UEDRS] [02:41:53] Memory Usage: RSS = 15905.51 MB, VMS = 30011.45 MB
+[UEDRS] [02:41:53] Loading full dataset
+[UEDRS] [02:42:09] Loading done
+[UEDRS] [02:42:09] Memory Usage: RSS = 18162.07 MB, VMS = 32267.89 MB
+[UEDRS] [00:00:15] Elapsed
+[UEDRS] [02:42:09] Sampling for [100000000]
+[UEDRS] [02:42:46] Sampling done
+[UEDRS] [02:42:46] Memory Usage: RSS = 18151.07 MB, VMS = 32256.89 MB
+[UEDRS] [00:00:37] Elapsed
+[UEDRS] [02:42:46] Checking [LENSKIT][ITEM_KNN][NETFLIX][100m]
+[UEDRS] [02:42:46] Starting
+[UEDRS] [03:28:34] Finished (0.03288)
+[UEDRS] [03:28:34] Memory Usage: RSS = 21003.13 MB, VMS = 34691.31 MB
+[UEDRS] [00:45:47] Elapsed
+
+[UEDRS] [03:28:34] Memory Usage: RSS = 21003.13 MB, VMS = 34691.31 MB
+[UEDRS] [03:28:34] Releasing dataframe from memory
+[UEDRS] [03:28:34] Memory Usage: RSS = 18676.47 MB, VMS = 32364.49 MB
+[UEDRS] [03:28:34] Current dataset [GOODREADS]
+[UEDRS] [03:28:34] Memory Usage: RSS = 18676.47 MB, VMS = 32364.49 MB
+[UEDRS] [03:28:34] Loading full dataset
+[UEDRS] [03:29:41] Loading done
+[UEDRS] [03:29:41] Memory Usage: RSS = 23904.55 MB, VMS = 37592.46 MB
+[UEDRS] [00:01:06] Elapsed
+[UEDRS] [03:29:41] Sampling for [1000000]
+[UEDRS] [03:30:19] Sampling done
+[UEDRS] [03:30:19] Memory Usage: RSS = 18671.22 MB, VMS = 32359.12 MB
+[UEDRS] [00:00:38] Elapsed
+[UEDRS] [03:30:19] Checking [LENSKIT][ITEM_KNN][GOODREADS][1m]
+[UEDRS] [03:30:19] Starting
+[UEDRS] [03:44:31] Finished (0.0)
+[UEDRS] [03:44:31] Memory Usage: RSS = 16383.96 MB, VMS = 30057.12 MB
+[UEDRS] [00:14:11] Elapsed
+
+[UEDRS] [03:44:31] Memory Usage: RSS = 16383.96 MB, VMS = 30057.12 MB
+[UEDRS] [03:44:31] Releasing dataframe from memory
+[UEDRS] [03:44:31] Memory Usage: RSS = 16346.31 MB, VMS = 30019.12 MB
+[UEDRS] [03:44:31] Memory Usage: RSS = 16346.31 MB, VMS = 30019.12 MB
+[UEDRS] [03:44:31] Loading full dataset
+[UEDRS] [03:45:40] Loading done
+[UEDRS] [03:45:40] Memory Usage: RSS = 21551.48 MB, VMS = 35224.27 MB
+[UEDRS] [00:01:09] Elapsed
+[UEDRS] [03:45:40] Sampling for [25000000]
+[UEDRS] [03:52:59] Sampling done
+[UEDRS] [03:52:59] Memory Usage: RSS = 16905.31 MB, VMS = 30578.22 MB
+[UEDRS] [00:07:19] Elapsed
+[UEDRS] [03:52:59] Checking [LENSKIT][ITEM_KNN][GOODREADS][25m]
+[UEDRS] [03:52:59] Starting
+[UEDRS] [07:45:49] Finished (0.00136)
+[UEDRS] [07:45:49] Memory Usage: RSS = 21368.34 MB, VMS = 35273.99 MB
+[UEDRS] [03:52:49] Elapsed
+
+[UEDRS] [07:45:49] Memory Usage: RSS = 21368.34 MB, VMS = 35273.99 MB
+[UEDRS] [07:45:49] Releasing dataframe from memory
+[UEDRS] [07:45:49] Memory Usage: RSS = 20761.40 MB, VMS = 34666.98 MB
+[UEDRS] [07:45:49] Memory Usage: RSS = 20761.40 MB, VMS = 34666.98 MB
+[UEDRS] [07:45:49] Loading full dataset
+[UEDRS] [07:46:55] Loading done
+[UEDRS] [07:46:55] Memory Usage: RSS = 26005.75 MB, VMS = 39911.33 MB
+[UEDRS] [00:01:05] Elapsed
+[UEDRS] [07:46:55] Sampling for [50000000]
+[UEDRS] [07:47:35] Sampling done
+[UEDRS] [07:47:35] Memory Usage: RSS = 21917.29 MB, VMS = 35822.12 MB
+[UEDRS] [00:00:40] Elapsed
+[UEDRS] [07:47:35] Checking [LENSKIT][ITEM_KNN][GOODREADS][50m]
+[UEDRS] [07:47:35] Starting

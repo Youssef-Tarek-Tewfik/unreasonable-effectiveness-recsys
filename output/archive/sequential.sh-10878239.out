@@ -1,0 +1,17 @@
+[UEDRS] [00:00:03] starting
+[UEDRS] [00:00:03] cpus: 32
+[UEDRS] [00:00:03] memory: 64
+[UEDRS] [00:00:03] env variables:
+[UEDRS] [00:00:03] OMP_NUM_THREADS: 1
+[UEDRS] [00:00:03] MKL_NUM_THREADS: 1
+[UEDRS] [00:00:03] OPENBLAS_NUM_THREADS: 1
+[UEDRS] [00:00:03] NUMBA_NUM_THREADS: 1
+
+
+[UEDRS] [00:01:16] NETFLIX loaded
+[UEDRS] [00:01:13] elapsed
+
+[UEDRS] [00:01:16] starting with {}
+[UEDRS] [04:33:43] finished
+[UEDRS] [04:32:26] elapsed
+

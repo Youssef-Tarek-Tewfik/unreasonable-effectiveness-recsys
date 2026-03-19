@@ -1,0 +1,73 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:01] Loaded
+[UEDRS] [00:00:01] Starting
+[UEDRS] [00:00:02] user_id contiguous 0-based: True
+[UEDRS] [00:00:02] item_id contiguous 0-based: True
+[UEDRS] [00:00:10] Saved reindexed data to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\myanimelist\fixed-ratings.csv
+[UEDRS] [00:00:10] Done
+[UEDRS] [00:00:09] Elapsed
+
+[UEDRS] [00:00:10] Loading dataset: IPINYOU
+[UEDRS] [00:00:34] Loaded
+[UEDRS] [00:00:34] Starting
+[UEDRS] [00:01:28] user_id contiguous 0-based: True
+[UEDRS] [00:01:28] item_id contiguous 0-based: True
+[UEDRS] [00:01:53] Saved reindexed data to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\ipinyou\fixed-ratings.csv
+[UEDRS] [00:01:53] Done
+[UEDRS] [00:01:19] Elapsed
+
+[UEDRS] [00:01:53] Loading dataset: TMALL
+[UEDRS] [00:02:00] Loaded
+[UEDRS] [00:02:00] Starting
+[UEDRS] [00:02:23] user_id contiguous 0-based: True
+[UEDRS] [00:02:23] item_id contiguous 0-based: True
+[UEDRS] [00:02:43] Saved reindexed data to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\tmall\fixed-ratings.csv
+[UEDRS] [00:02:43] Done
+[UEDRS] [00:00:43] Elapsed
+
+[UEDRS] [00:02:43] Loading dataset: YAHOO
+[UEDRS] [00:03:04] Loaded
+[UEDRS] [00:03:16] user_id contiguous 0-based: True
+[UEDRS] [00:03:16] item_id contiguous 0-based: True
+[UEDRS] [00:05:22] Saved reindexed data to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\yahoo\fixed-ratings.csv
+[UEDRS] [00:05:23] Done
+[UEDRS] [00:02:19] Elapsed
+
+[UEDRS] [00:05:23] Loading dataset: LASTFM
+[UEDRS] [00:06:44] Loaded
+[UEDRS] [00:06:44] Starting
+[UEDRS] [00:10:44] user_id contiguous 0-based: True
+[UEDRS] [00:10:44] item_id contiguous 0-based: True
+[UEDRS] [00:16:18] Saved reindexed data to: G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\lastfm\fixed-ratings.csv
+[UEDRS] [00:16:20] Done
+[UEDRS] [00:09:36] Elapsed
+
+
+[UEDRS] [00:00:00] Copied first 5 lines from
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\myanimelist\ratings.csv
+to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\myanimelist\demo.csv
+
+
+[UEDRS] [00:00:00] Copied first 5 lines from
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\ipinyou\ratings.csv
+to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\ipinyou\demo.csv
+
+
+[UEDRS] [00:00:00] Copied first 5 lines from
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\tmall\ratings.csv
+to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\tmall\demo.csv
+
+
+[UEDRS] [00:00:00] Copied first 5 lines from
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\yahoo\ratings.csv
+to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\yahoo\demo.csv
+
+
+[UEDRS] [00:00:00] Copied first 5 lines from
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\lastfm\ratings.csv
+to
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\datasets\lastfm\demo.csv

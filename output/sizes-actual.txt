@@ -1,0 +1,75 @@
+[UEDRS] [00:00:00] Dataset: MYANIMELIST
+[UEDRS] [00:00:00] Loading
+[UEDRS] [00:00:00] Done
+[UEDRS] [00:00:00] Length: 7813730
+[UEDRS] [00:00:00] In millions: 7.81373
+
+
+[UEDRS] [00:00:00] Dataset: IPINYOU
+[UEDRS] [00:00:00] Loading
+[UEDRS] [00:00:00] Done
+[UEDRS] [00:00:00] Length: 22271265
+[UEDRS] [00:00:00] In millions: 22.271265
+
+
+[UEDRS] [00:00:00] Dataset: MOVIELENS
+[UEDRS] [00:00:00] Loading
+[UEDRS] [00:00:01] Done
+[UEDRS] [00:00:01] Length: 32000204
+[UEDRS] [00:00:01] In millions: 32.000204
+
+
+[UEDRS] [00:00:01] Dataset: TMALL
+[UEDRS] [00:00:01] Loading
+[UEDRS] [00:00:01] Done
+[UEDRS] [00:00:01] Length: 24363557
+[UEDRS] [00:00:01] In millions: 24.363557
+
+
+[UEDRS] [00:00:01] Dataset: NETFLIX
+[UEDRS] [00:00:01] Loading
+[UEDRS] [00:00:03] Done
+[UEDRS] [00:00:03] Length: 100480507
+[UEDRS] [00:00:03] In millions: 100.480507
+
+
+[UEDRS] [00:00:03] Dataset: YAHOO
+[UEDRS] [00:00:03] Loading
+[UEDRS] [00:00:04] Done
+[UEDRS] [00:00:04] Length: 115579440
+[UEDRS] [00:00:04] In millions: 115.57944
+
+
+[UEDRS] [00:00:04] Dataset: ALIBABA
+[UEDRS] [00:00:04] Loading
+[UEDRS] [00:00:06] Done
+[UEDRS] [00:00:06] Length: 191394393
+[UEDRS] [00:00:06] In millions: 191.394393
+
+
+[UEDRS] [00:00:06] Dataset: GOODREADS
+[UEDRS] [00:00:06] Loading
+[UEDRS] [00:00:09] Done
+[UEDRS] [00:00:09] Length: 228648342
+[UEDRS] [00:00:09] In millions: 228.648342
+
+
+[UEDRS] [00:00:09] Dataset: MUSIC4ALL
+[UEDRS] [00:00:09] Loading
+[UEDRS] [00:00:13] Done
+[UEDRS] [00:00:13] Length: 50016042
+[UEDRS] [00:00:13] In millions: 50.016042
+
+
+[UEDRS] [00:00:13] Dataset: AMAZON
+[UEDRS] [00:00:13] Loading
+[UEDRS] [00:00:24] Done
+[UEDRS] [00:00:24] Length: 564540881
+[UEDRS] [00:00:24] In millions: 564.540881
+
+
+[UEDRS] [00:00:24] Dataset: LASTFM
+[UEDRS] [00:00:24] Loading
+[UEDRS] [00:00:29] Done
+[UEDRS] [00:00:29] Length: 319951294
+[UEDRS] [00:00:29] In millions: 319.951294

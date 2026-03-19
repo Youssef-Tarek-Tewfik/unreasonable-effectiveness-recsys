@@ -1,22 +1,34 @@
-from enum import Enum
 import pandas as pd
 
-from .constants import COLUMN_NAMES
+from .constants import (
+  Dataset, DATASET_FEEDBACK_EXPLICIT, COLUMN_NAMES, DIRECTORY_DATASETS, FILE_NAME_RATINGS, FILE_NAME_RATINGS_PARQUET
+)
 
 
-class Datasets(Enum):
-  MOVIELENS = "movielens"
-  GOODREADS = "goodreads"
-  AMAZON = "amazon"
-  MOVIETWEETINGS = "movietweetings"
-  PERSONALITY = "personality"
+SEP = ','
+USECOLS_EXPLICIT = [0, 1, 2]
+USECOLS_IMPLICIT = [0, 1]
+NAMES_EXPLICIT = [COLUMN_NAMES["user_id"], COLUMN_NAMES["item_id"], COLUMN_NAMES["rating"]]
+NAMES_IMPLICIT = [COLUMN_NAMES["user_id"], COLUMN_NAMES["item_id"]]
+UPCAST_DICT = {"uint16": "int32", "uint32": "int32", "uint64": "int64"}
 
-def load(dataset: Datasets = Datasets.MOVIELENS) -> pd.DataFrame:
-  path = f"./datasets/{dataset.value}/ratings.csv"
-  df = pd.read_csv(path, sep=',', usecols=[0, 1, 2], names=[
-    COLUMN_NAMES["user_id"],
-    COLUMN_NAMES["item_id"],
-    COLUMN_NAMES["rating"]
-  ])
-  df = df.reset_index(drop=True)
+
+def upcast(df: pd.DataFrame) -> pd.DataFrame:
+  for current, desired in UPCAST_DICT.items():
+    for column in df.select_dtypes(include=[current]).columns: # type: ignore
+      df[column] = df[column].astype(desired)
   return df
+
+def load(dataset: Dataset = Dataset.MOVIELENS, parquet: bool = True) -> pd.DataFrame:
+  explicit = DATASET_FEEDBACK_EXPLICIT[dataset]
+  names = NAMES_EXPLICIT if explicit else NAMES_IMPLICIT
+
+  if parquet:
+    path = DIRECTORY_DATASETS / dataset.value / FILE_NAME_RATINGS_PARQUET
+    df = pd.read_parquet(path, columns=names)
+  else:
+    path = DIRECTORY_DATASETS / dataset.value / FILE_NAME_RATINGS
+    usecols = USECOLS_EXPLICIT if explicit else USECOLS_IMPLICIT
+    df = pd.read_csv(path, sep=SEP, usecols=usecols, names=names)
+
+  return upcast(df)

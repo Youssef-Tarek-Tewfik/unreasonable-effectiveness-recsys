@@ -1,0 +1,21 @@
+[UEDRS] [00:00:06] starting
+[UEDRS] [00:00:06] cpus: 64
+[UEDRS] [00:00:06] memory: 64
+[UEDRS] [00:00:06] env variables:
+[UEDRS] [00:00:06] OMP_NUM_THREADS: 32
+[UEDRS] [00:00:06] MKL_NUM_THREADS: 32
+[UEDRS] [00:00:06] OPENBLAS_NUM_THREADS: 32
+[UEDRS] [00:00:06] NUMBA_NUM_THREADS: 32
+[UEDRS] [00:00:06] LK_NUM_PROCS: 64
+[UEDRS] [00:00:06] LK_NUM_THREADS: 64
+
+
+[UEDRS] [00:00:06] algorithm: ITEM_KNN
+[UEDRS] [00:00:18] MOVIELENS loaded
+[UEDRS] [00:00:12] elapsed
+
+[UEDRS] [00:00:18] starting with {'change': False}
+2025-11-13 08:32:36 [warning  ] loaded pipeline does not match hash
+[UEDRS] [00:28:47] finished with result: 0.0034053676085232503
+[UEDRS] [00:28:28] elapsed
+

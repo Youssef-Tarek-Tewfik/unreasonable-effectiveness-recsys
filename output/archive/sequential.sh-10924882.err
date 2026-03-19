@@ -1,0 +1,179 @@
+Bright Maschine Learning software stack loaded.
+25 Nov 21:20    INFO  ['/mnt/source/run.py']
+25 Nov 21:20    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 42
+state = INFO
+reproducibility = True
+data_path = /mnt/artifacts/recbole/datasets/movielens-1m
+checkpoint_dir = /mnt/artifacts/recbole/checkpoints
+show_progress = False
+save_dataset = False
+dataset_save_path = None
+save_dataloaders = False
+dataloaders_save_path = None
+log_wandb = False
+
+Training Hyper Parameters:
+epochs = 1
+train_batch_size = 8192
+learner = sgd
+learning_rate = 1.0
+train_neg_sample_args = {'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}
+eval_step = 4
+stopping_step = 2
+clip_grad_norm = None
+weight_decay = 0.0
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_args = {'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}
+repeatable = False
+metrics = ['NDCG']
+topk = [10]
+valid_metric = NDCG@10
+valid_metric_bigger = True
+eval_batch_size = 8192
+metric_decimal_place = 5
+
+Dataset Hyper Parameters:
+field_separator = ,
+seq_separator = 
+
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = rating
+TIME_FIELD = None
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = None
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+rm_dup_inter = None
+val_interval = None
+filter_inter_by_user_or_item = True
+user_inter_num_interval = [0,inf)
+item_inter_num_interval = [0,inf)
+alias_of_user_id = None
+alias_of_item_id = None
+alias_of_entity_id = None
+alias_of_relation_id = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+benchmark_filename = None
+
+Other Hyper Parameters: 
+worker = 4
+wandb_project = recbole
+shuffle = True
+require_pow = False
+enable_amp = False
+enable_scaler = False
+transform = None
+type = ED
+n_layers = 3
+ssl_tau = 0.5
+reg_weight = 1e-05
+ssl_weight = 0.05
+drop_ratio = 0.1
+embedding_size = 32
+numerical_features = []
+discretization = None
+kg_reverse_r = False
+entity_kg_num_interval = [0,inf)
+relation_kg_num_interval = [0,inf)
+MODEL_TYPE = ModelType.GENERAL
+split_to = 1
+MODEL_INPUT_TYPE = InputType.PAIRWISE
+eval_type = EvaluatorType.RANKING
+single_spec = True
+local_rank = 0
+device = cuda
+valid_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+test_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+
+
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=0, inplace=True)
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:650: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+25 Nov 21:20    INFO  movielens-1m
+The number of users: 200681
+Average actions of users: 4.983057604145904
+The number of items: 27504
+Average actions of items: 36.359669854197726
+The number of inters: 1000000
+The sparsity of the dataset: 99.98188251609437%
+Remain Fields: ['user_id', 'item_id', 'rating']
+25 Nov 21:20    INFO  [Training]: train_batch_size = [8192] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}]
+25 Nov 21:20    INFO  [Evaluation]: eval_batch_size = [8192] eval_args: [{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+/home/g064474/.local/lib/python3.11/site-packages/recbole/model/general_recommender/sgl.py:179: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:651.)
+  x = torch.sparse.FloatTensor(
+25 Nov 21:20    INFO  SGL(
+  (user_embedding): Embedding(200681, 32)
+  (item_embedding): Embedding(27504, 32)
+  (reg_loss): EmbLoss()
+)
+Trainable parameters: 7301920
+25 Nov 21:20    INFO  FLOPs: 0.0
+/home/g064474/.local/lib/python3.11/site-packages/recbole/trainer/trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/source/run.py", line 129, in <module>
+    main()
+  File "/mnt/source/run.py", line 108, in main
+    result = safe_run(lambda: use_recbole(dataframe, dataset, size_formatted, model))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/utilities.py", line 90, in safe_run
+    raise exception
+  File "/mnt/source/utilities.py", line 82, in safe_run
+    return function()
+           ^^^^^^^^^^
+  File "/mnt/source/run.py", line 108, in <lambda>
+    result = safe_run(lambda: use_recbole(dataframe, dataset, size_formatted, model))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/use_recbole.py", line 36, in use_recbole
+    result = run_recbole(model=model.value, dataset=name, config_dict=config, saved=RECBOLE_SAVED)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/recbole/quick_start/quick_start.py", line 148, in run_recbole
+    best_valid_score, best_valid_result = trainer.fit(
+                                          ^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/recbole/trainer/trainer.py", line 439, in fit
+    train_loss = self._train_epoch(
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/recbole/trainer/trainer.py", line 245, in _train_epoch
+    losses = loss_func(interaction)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/recbole/model/general_recommender/sgl.py", line 215, in calculate_loss
+    ) + self.calc_ssl_loss(
+        ^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/recbole/model/general_recommender/sgl.py", line 274, in calc_ssl_loss
+    v2 = torch.sum(torch.exp(v2 / self.ssl_tau), dim=1)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.12 GiB. GPU 0 has a total capacity of 15.77 GiB of which 2.90 GiB is free. Including non-PyTorch memory, this process has 12.86 GiB memory in use. Of the allocated memory 12.48 GiB is allocated by PyTorch, and 17.67 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

@@ -1,0 +1,929 @@
+07 Jan 11:10    INFO  ['/mnt/source/run.py']
+07 Jan 11:10    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 42
+state = INFO
+reproducibility = True
+data_path = /mnt/artifacts/recbole/datasets/alibaba-75m-STRATIFIED_USER
+checkpoint_dir = /mnt/artifacts/recbole/checkpoints
+show_progress = False
+save_dataset = False
+dataset_save_path = None
+save_dataloaders = False
+dataloaders_save_path = None
+log_wandb = False
+
+Training Hyper Parameters:
+epochs = 1
+train_batch_size = 4096
+learner = sgd
+learning_rate = 1.0
+train_neg_sample_args = {'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}
+eval_step = 4
+stopping_step = 2
+clip_grad_norm = None
+weight_decay = 0.0
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_args = {'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}
+repeatable = False
+metrics = ['NDCG']
+topk = [10]
+valid_metric = NDCG@10
+valid_metric_bigger = True
+eval_batch_size = 4096
+metric_decimal_place = 10
+
+Dataset Hyper Parameters:
+field_separator = ,
+seq_separator = 
+
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = None
+TIME_FIELD = None
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = None
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+rm_dup_inter = None
+val_interval = None
+filter_inter_by_user_or_item = True
+user_inter_num_interval = [0,inf)
+item_inter_num_interval = [0,inf)
+alias_of_user_id = None
+alias_of_item_id = None
+alias_of_entity_id = None
+alias_of_relation_id = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+benchmark_filename = None
+
+Other Hyper Parameters: 
+worker = 4
+wandb_project = recbole
+shuffle = True
+require_pow = False
+enable_amp = False
+enable_scaler = False
+transform = None
+embedding_size = 32
+margin = 0.5
+negative_weight = 10
+gamma = 0.5
+aggregator = mean
+history_len = 50
+reg_weight = 1e-05
+dropout_prob = 0.1
+numerical_features = []
+discretization = None
+kg_reverse_r = False
+entity_kg_num_interval = [0,inf)
+relation_kg_num_interval = [0,inf)
+MODEL_TYPE = ModelType.GENERAL
+MODEL_INPUT_TYPE = InputType.PAIRWISE
+eval_type = EvaluatorType.RANKING
+single_spec = True
+local_rank = 0
+device = cuda
+valid_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+test_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+
+
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=0, inplace=True)
+07 Jan 11:16    INFO  alibaba-75m-STRATIFIED_USER
+The number of users: 3569073
+Average actions of users: 21.01386578920235
+The number of items: 3455640
+Average actions of items: 21.70365596637843
+The number of inters: 75000000
+The sparsity of the dataset: 99.99939189672821%
+Remain Fields: ['user_id', 'item_id']
+07 Jan 11:24    INFO  [Training]: train_batch_size = [4096] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}]
+07 Jan 11:24    INFO  [Evaluation]: eval_batch_size = [4096] eval_args: [{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+07 Jan 11:26    INFO  SimpleX(
+  (user_emb): Embedding(3569073, 32)
+  (item_emb): Embedding(3455640, 32, padding_idx=0)
+  (UI_map): Linear(in_features=32, out_features=32, bias=False)
+  (dropout): Dropout(p=0.1, inplace=False)
+  (reg_loss): EmbLoss()
+)
+Trainable parameters: 224791840
+07 Jan 11:26    INFO  FLOPs: 2688.0
+/home/g064474/.local/lib/python3.11/site-packages/recbole/trainer/trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+07 Jan 11:30    INFO  epoch 0 training [time: 217.63s, train loss: 7788.8079]
+07 Jan 16:39    INFO  epoch 0 evaluating [time: 18529.25s, valid_score: 0.000798]
+07 Jan 16:39    INFO  valid result: 
+ndcg@10 : 0.0007979244
+07 Jan 21:50    INFO  The running environment of this training is as follows:
++-------------+------------------+
+| Environment |      Usage       |
++=============+==================+
+| CPU         |      0.10 %      |
++-------------+------------------+
+| GPU         |  4.83 G/15.77 G  |
++-------------+------------------+
+| Memory      | 35.51 G/251.74 G |
++-------------+------------------+
+07 Jan 21:50    INFO  best valid : OrderedDict([('ndcg@10', 0.0007979244)])
+07 Jan 21:50    INFO  test result: OrderedDict([('ndcg@10', 0.0008026792)])
+07 Jan 21:51    INFO  ['/mnt/source/run.py']
+07 Jan 21:51    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 42
+state = INFO
+reproducibility = True
+data_path = /mnt/artifacts/recbole/datasets/goodreads-75m-STRATIFIED_USER
+checkpoint_dir = /mnt/artifacts/recbole/checkpoints
+show_progress = False
+save_dataset = False
+dataset_save_path = None
+save_dataloaders = False
+dataloaders_save_path = None
+log_wandb = False
+
+Training Hyper Parameters:
+epochs = 1
+train_batch_size = 4096
+learner = sgd
+learning_rate = 1.0
+train_neg_sample_args = {'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}
+eval_step = 4
+stopping_step = 2
+clip_grad_norm = None
+weight_decay = 0.0
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_args = {'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}
+repeatable = False
+metrics = ['NDCG']
+topk = [10]
+valid_metric = NDCG@10
+valid_metric_bigger = True
+eval_batch_size = 4096
+metric_decimal_place = 10
+
+Dataset Hyper Parameters:
+field_separator = ,
+seq_separator = 
+
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = rating
+TIME_FIELD = None
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = None
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+rm_dup_inter = None
+val_interval = None
+filter_inter_by_user_or_item = True
+user_inter_num_interval = [0,inf)
+item_inter_num_interval = [0,inf)
+alias_of_user_id = None
+alias_of_item_id = None
+alias_of_entity_id = None
+alias_of_relation_id = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+benchmark_filename = None
+
+Other Hyper Parameters: 
+worker = 4
+wandb_project = recbole
+shuffle = True
+require_pow = False
+enable_amp = False
+enable_scaler = False
+transform = None
+embedding_size = 32
+margin = 0.5
+negative_weight = 10
+gamma = 0.5
+aggregator = mean
+history_len = 50
+reg_weight = 1e-05
+dropout_prob = 0.1
+numerical_features = []
+discretization = None
+kg_reverse_r = False
+entity_kg_num_interval = [0,inf)
+relation_kg_num_interval = [0,inf)
+MODEL_TYPE = ModelType.GENERAL
+MODEL_INPUT_TYPE = InputType.PAIRWISE
+eval_type = EvaluatorType.RANKING
+single_spec = True
+local_rank = 0
+device = cuda
+valid_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+test_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+
+
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=0, inplace=True)
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:650: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+07 Jan 21:57    INFO  goodreads-75m-STRATIFIED_USER
+The number of users: 849741
+Average actions of users: 88.26229199519854
+The number of items: 1955584
+Average actions of items: 38.35173449554429
+The number of inters: 75000000
+The sparsity of the dataset: 99.99548665830127%
+Remain Fields: ['user_id', 'item_id', 'rating']
+07 Jan 22:02    INFO  [Training]: train_batch_size = [4096] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}]
+07 Jan 22:02    INFO  [Evaluation]: eval_batch_size = [4096] eval_args: [{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+07 Jan 22:03    INFO  SimpleX(
+  (user_emb): Embedding(849741, 32)
+  (item_emb): Embedding(1955584, 32, padding_idx=0)
+  (UI_map): Linear(in_features=32, out_features=32, bias=False)
+  (dropout): Dropout(p=0.1, inplace=False)
+  (reg_loss): EmbLoss()
+)
+Trainable parameters: 89771424
+07 Jan 22:03    INFO  FLOPs: 2688.0
+/home/g064474/.local/lib/python3.11/site-packages/recbole/trainer/trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+07 Jan 22:06    INFO  epoch 0 training [time: 134.45s, train loss: 6646.9622]
+07 Jan 22:54    INFO  epoch 0 evaluating [time: 2910.70s, valid_score: 0.004645]
+07 Jan 22:54    INFO  valid result: 
+ndcg@10 : 0.004645324
+07 Jan 23:44    INFO  The running environment of this training is as follows:
++-------------+------------------+
+| Environment |      Usage       |
++=============+==================+
+| CPU         |      0.00 %      |
++-------------+------------------+
+| GPU         |  4.83 G/15.77 G  |
++-------------+------------------+
+| Memory      | 27.23 G/251.74 G |
++-------------+------------------+
+07 Jan 23:44    INFO  best valid : OrderedDict([('ndcg@10', 0.004645324)])
+07 Jan 23:44    INFO  test result: OrderedDict([('ndcg@10', 0.0047001609)])
+07 Jan 23:45    INFO  ['/mnt/source/run.py']
+07 Jan 23:45    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 42
+state = INFO
+reproducibility = True
+data_path = /mnt/artifacts/recbole/datasets/lastfm-75m-STRATIFIED_USER
+checkpoint_dir = /mnt/artifacts/recbole/checkpoints
+show_progress = False
+save_dataset = False
+dataset_save_path = None
+save_dataloaders = False
+dataloaders_save_path = None
+log_wandb = False
+
+Training Hyper Parameters:
+epochs = 1
+train_batch_size = 4096
+learner = sgd
+learning_rate = 1.0
+train_neg_sample_args = {'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}
+eval_step = 4
+stopping_step = 2
+clip_grad_norm = None
+weight_decay = 0.0
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_args = {'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}
+repeatable = False
+metrics = ['NDCG']
+topk = [10]
+valid_metric = NDCG@10
+valid_metric_bigger = True
+eval_batch_size = 4096
+metric_decimal_place = 10
+
+Dataset Hyper Parameters:
+field_separator = ,
+seq_separator = 
+
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = rating
+TIME_FIELD = None
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = None
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+rm_dup_inter = None
+val_interval = None
+filter_inter_by_user_or_item = True
+user_inter_num_interval = [0,inf)
+item_inter_num_interval = [0,inf)
+alias_of_user_id = None
+alias_of_item_id = None
+alias_of_entity_id = None
+alias_of_relation_id = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+benchmark_filename = None
+
+Other Hyper Parameters: 
+worker = 4
+wandb_project = recbole
+shuffle = True
+require_pow = False
+enable_amp = False
+enable_scaler = False
+transform = None
+embedding_size = 32
+margin = 0.5
+negative_weight = 10
+gamma = 0.5
+aggregator = mean
+history_len = 50
+reg_weight = 1e-05
+dropout_prob = 0.1
+numerical_features = []
+discretization = None
+kg_reverse_r = False
+entity_kg_num_interval = [0,inf)
+relation_kg_num_interval = [0,inf)
+MODEL_TYPE = ModelType.GENERAL
+MODEL_INPUT_TYPE = InputType.PAIRWISE
+eval_type = EvaluatorType.RANKING
+single_spec = True
+local_rank = 0
+device = cuda
+valid_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+test_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+
+
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=0, inplace=True)
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:650: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+07 Jan 23:52    INFO  lastfm-75m-STRATIFIED_USER
+The number of users: 120301
+Average actions of users: 623.4413965087282
+The number of items: 12907171
+Average actions of items: 5.810723807000295
+The number of inters: 75000000
+The sparsity of the dataset: 99.99516984617185%
+Remain Fields: ['user_id', 'item_id', 'rating']
+07 Jan 23:55    INFO  [Training]: train_batch_size = [4096] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}]
+07 Jan 23:55    INFO  [Evaluation]: eval_batch_size = [4096] eval_args: [{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+07 Jan 23:56    INFO  SimpleX(
+  (user_emb): Embedding(120301, 32)
+  (item_emb): Embedding(12907171, 32, padding_idx=0)
+  (UI_map): Linear(in_features=32, out_features=32, bias=False)
+  (dropout): Dropout(p=0.1, inplace=False)
+  (reg_loss): EmbLoss()
+)
+Trainable parameters: 416880128
+07 Jan 23:56    INFO  FLOPs: 2688.0
+/home/g064474/.local/lib/python3.11/site-packages/recbole/trainer/trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+08 Jan 00:03    INFO  epoch 0 training [time: 417.86s, train loss: 11165.2239]
+08 Jan 00:33    INFO  epoch 0 evaluating [time: 1807.27s, valid_score: 0.000022]
+08 Jan 00:33    INFO  valid result: 
+ndcg@10 : 2.19168e-05
+08 Jan 01:04    INFO  The running environment of this training is as follows:
++-------------+------------------+
+| Environment |      Usage       |
++=============+==================+
+| CPU         |      1.40 %      |
++-------------+------------------+
+| GPU         |  9.45 G/15.77 G  |
++-------------+------------------+
+| Memory      | 37.61 G/251.74 G |
++-------------+------------------+
+08 Jan 01:04    INFO  best valid : OrderedDict([('ndcg@10', 2.19168e-05)])
+08 Jan 01:04    INFO  test result: OrderedDict([('ndcg@10', 2.52162e-05)])
+08 Jan 01:05    INFO  ['/mnt/source/run.py']
+08 Jan 01:05    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 42
+state = INFO
+reproducibility = True
+data_path = /mnt/artifacts/recbole/datasets/netflix-100m-STRATIFIED_USER
+checkpoint_dir = /mnt/artifacts/recbole/checkpoints
+show_progress = False
+save_dataset = False
+dataset_save_path = None
+save_dataloaders = False
+dataloaders_save_path = None
+log_wandb = False
+
+Training Hyper Parameters:
+epochs = 1
+train_batch_size = 4096
+learner = sgd
+learning_rate = 1.0
+train_neg_sample_args = {'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}
+eval_step = 4
+stopping_step = 2
+clip_grad_norm = None
+weight_decay = 0.0
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_args = {'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}
+repeatable = False
+metrics = ['NDCG']
+topk = [10]
+valid_metric = NDCG@10
+valid_metric_bigger = True
+eval_batch_size = 4096
+metric_decimal_place = 10
+
+Dataset Hyper Parameters:
+field_separator = ,
+seq_separator = 
+
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = rating
+TIME_FIELD = None
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = None
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+rm_dup_inter = None
+val_interval = None
+filter_inter_by_user_or_item = True
+user_inter_num_interval = [0,inf)
+item_inter_num_interval = [0,inf)
+alias_of_user_id = None
+alias_of_item_id = None
+alias_of_entity_id = None
+alias_of_relation_id = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+benchmark_filename = None
+
+Other Hyper Parameters: 
+worker = 4
+wandb_project = recbole
+shuffle = True
+require_pow = False
+enable_amp = False
+enable_scaler = False
+transform = None
+embedding_size = 32
+margin = 0.5
+negative_weight = 10
+gamma = 0.5
+aggregator = mean
+history_len = 50
+reg_weight = 1e-05
+dropout_prob = 0.1
+numerical_features = []
+discretization = None
+kg_reverse_r = False
+entity_kg_num_interval = [0,inf)
+relation_kg_num_interval = [0,inf)
+MODEL_TYPE = ModelType.GENERAL
+MODEL_INPUT_TYPE = InputType.PAIRWISE
+eval_type = EvaluatorType.RANKING
+single_spec = True
+local_rank = 0
+device = cuda
+valid_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+test_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+
+
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=0, inplace=True)
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:650: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+08 Jan 01:11    INFO  netflix-100m-STRATIFIED_USER
+The number of users: 480190
+Average actions of users: 208.25133437042498
+The number of items: 17771
+Average actions of items: 5627.462014631401
+The number of inters: 100000000
+The sparsity of the dataset: 98.82814191275028%
+Remain Fields: ['user_id', 'item_id', 'rating']
+08 Jan 01:17    INFO  [Training]: train_batch_size = [4096] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}]
+08 Jan 01:17    INFO  [Evaluation]: eval_batch_size = [4096] eval_args: [{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+08 Jan 01:18    INFO  SimpleX(
+  (user_emb): Embedding(480190, 32)
+  (item_emb): Embedding(17771, 32, padding_idx=0)
+  (UI_map): Linear(in_features=32, out_features=32, bias=False)
+  (dropout): Dropout(p=0.1, inplace=False)
+  (reg_loss): EmbLoss()
+)
+Trainable parameters: 15935776
+08 Jan 01:18    INFO  FLOPs: 2688.0
+/home/g064474/.local/lib/python3.11/site-packages/recbole/trainer/trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+08 Jan 01:20    INFO  epoch 0 training [time: 115.02s, train loss: 7917.6806]
+08 Jan 01:34    INFO  epoch 0 evaluating [time: 836.98s, valid_score: 0.081868]
+08 Jan 01:34    INFO  valid result: 
+ndcg@10 : 0.0818678636
+08 Jan 01:48    INFO  The running environment of this training is as follows:
++-------------+------------------+
+| Environment |      Usage       |
++=============+==================+
+| CPU         |      0.00 %      |
++-------------+------------------+
+| GPU         |  9.45 G/15.77 G  |
++-------------+------------------+
+| Memory      | 31.82 G/251.74 G |
++-------------+------------------+
+08 Jan 01:48    INFO  best valid : OrderedDict([('ndcg@10', 0.0818678636)])
+08 Jan 01:48    INFO  test result: OrderedDict([('ndcg@10', 0.0968769904)])
+08 Jan 01:50    INFO  ['/mnt/source/run.py']
+08 Jan 01:50    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 42
+state = INFO
+reproducibility = True
+data_path = /mnt/artifacts/recbole/datasets/yahoo-100m-STRATIFIED_USER
+checkpoint_dir = /mnt/artifacts/recbole/checkpoints
+show_progress = False
+save_dataset = False
+dataset_save_path = None
+save_dataloaders = False
+dataloaders_save_path = None
+log_wandb = False
+
+Training Hyper Parameters:
+epochs = 1
+train_batch_size = 4096
+learner = sgd
+learning_rate = 1.0
+train_neg_sample_args = {'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}
+eval_step = 4
+stopping_step = 2
+clip_grad_norm = None
+weight_decay = 0.0
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_args = {'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}
+repeatable = False
+metrics = ['NDCG']
+topk = [10]
+valid_metric = NDCG@10
+valid_metric_bigger = True
+eval_batch_size = 4096
+metric_decimal_place = 10
+
+Dataset Hyper Parameters:
+field_separator = ,
+seq_separator = 
+
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = rating
+TIME_FIELD = None
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = None
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+rm_dup_inter = None
+val_interval = None
+filter_inter_by_user_or_item = True
+user_inter_num_interval = [0,inf)
+item_inter_num_interval = [0,inf)
+alias_of_user_id = None
+alias_of_item_id = None
+alias_of_entity_id = None
+alias_of_relation_id = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+benchmark_filename = None
+
+Other Hyper Parameters: 
+worker = 4
+wandb_project = recbole
+shuffle = True
+require_pow = False
+enable_amp = False
+enable_scaler = False
+transform = None
+embedding_size = 32
+margin = 0.5
+negative_weight = 10
+gamma = 0.5
+aggregator = mean
+history_len = 50
+reg_weight = 1e-05
+dropout_prob = 0.1
+numerical_features = []
+discretization = None
+kg_reverse_r = False
+entity_kg_num_interval = [0,inf)
+relation_kg_num_interval = [0,inf)
+MODEL_TYPE = ModelType.GENERAL
+MODEL_INPUT_TYPE = InputType.PAIRWISE
+eval_type = EvaluatorType.RANKING
+single_spec = True
+local_rank = 0
+device = cuda
+valid_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+test_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+
+
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=0, inplace=True)
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:650: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=feat[field].mean(), inplace=True)
+08 Jan 01:58    INFO  yahoo-100m-STRATIFIED_USER
+The number of users: 1948812
+Average actions of users: 51.31333926173446
+The number of items: 92702
+Average actions of items: 1078.7370147031854
+The number of inters: 100000000
+The sparsity of the dataset: 99.94464702710711%
+Remain Fields: ['user_id', 'item_id', 'rating']
+08 Jan 02:05    INFO  [Training]: train_batch_size = [4096] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}]
+08 Jan 02:05    INFO  [Evaluation]: eval_batch_size = [4096] eval_args: [{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+08 Jan 02:07    INFO  SimpleX(
+  (user_emb): Embedding(1948812, 32)
+  (item_emb): Embedding(92702, 32, padding_idx=0)
+  (UI_map): Linear(in_features=32, out_features=32, bias=False)
+  (dropout): Dropout(p=0.1, inplace=False)
+  (reg_loss): EmbLoss()
+)
+Trainable parameters: 65329472
+08 Jan 02:07    INFO  FLOPs: 2688.0
+/home/g064474/.local/lib/python3.11/site-packages/recbole/trainer/trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+08 Jan 02:09    INFO  epoch 0 training [time: 127.71s, train loss: 4049.4255]
+08 Jan 02:57    INFO  epoch 0 evaluating [time: 2890.65s, valid_score: 0.065852]
+08 Jan 02:57    INFO  valid result: 
+ndcg@10 : 0.0658522348
+08 Jan 03:48    INFO  The running environment of this training is as follows:
++-------------+------------------+
+| Environment |      Usage       |
++=============+==================+
+| CPU         |      0.10 %      |
++-------------+------------------+
+| GPU         |  9.45 G/15.77 G  |
++-------------+------------------+
+| Memory      | 37.06 G/251.74 G |
++-------------+------------------+
+08 Jan 03:48    INFO  best valid : OrderedDict([('ndcg@10', 0.0658522348)])
+08 Jan 03:48    INFO  test result: OrderedDict([('ndcg@10', 0.0690567787)])
+08 Jan 03:51    INFO  ['/mnt/source/run.py']
+08 Jan 03:51    INFO  
+General Hyper Parameters:
+gpu_id = 0
+use_gpu = True
+seed = 42
+state = INFO
+reproducibility = True
+data_path = /mnt/artifacts/recbole/datasets/alibaba-100m-STRATIFIED_USER
+checkpoint_dir = /mnt/artifacts/recbole/checkpoints
+show_progress = False
+save_dataset = False
+dataset_save_path = None
+save_dataloaders = False
+dataloaders_save_path = None
+log_wandb = False
+
+Training Hyper Parameters:
+epochs = 1
+train_batch_size = 4096
+learner = sgd
+learning_rate = 1.0
+train_neg_sample_args = {'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}
+eval_step = 4
+stopping_step = 2
+clip_grad_norm = None
+weight_decay = 0.0
+loss_decimal_place = 4
+
+Evaluation Hyper Parameters:
+eval_args = {'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}
+repeatable = False
+metrics = ['NDCG']
+topk = [10]
+valid_metric = NDCG@10
+valid_metric_bigger = True
+eval_batch_size = 4096
+metric_decimal_place = 10
+
+Dataset Hyper Parameters:
+field_separator = ,
+seq_separator = 
+
+USER_ID_FIELD = user_id
+ITEM_ID_FIELD = item_id
+RATING_FIELD = None
+TIME_FIELD = None
+seq_len = None
+LABEL_FIELD = label
+threshold = None
+NEG_PREFIX = neg_
+load_col = None
+unload_col = None
+unused_col = None
+additional_feat_suffix = None
+rm_dup_inter = None
+val_interval = None
+filter_inter_by_user_or_item = True
+user_inter_num_interval = [0,inf)
+item_inter_num_interval = [0,inf)
+alias_of_user_id = None
+alias_of_item_id = None
+alias_of_entity_id = None
+alias_of_relation_id = None
+preload_weight = None
+normalize_field = None
+normalize_all = None
+ITEM_LIST_LENGTH_FIELD = item_length
+LIST_SUFFIX = _list
+MAX_ITEM_LIST_LENGTH = 50
+POSITION_FIELD = position_id
+HEAD_ENTITY_ID_FIELD = head_id
+TAIL_ENTITY_ID_FIELD = tail_id
+RELATION_ID_FIELD = relation_id
+ENTITY_ID_FIELD = entity_id
+benchmark_filename = None
+
+Other Hyper Parameters: 
+worker = 4
+wandb_project = recbole
+shuffle = True
+require_pow = False
+enable_amp = False
+enable_scaler = False
+transform = None
+embedding_size = 32
+margin = 0.5
+negative_weight = 10
+gamma = 0.5
+aggregator = mean
+history_len = 50
+reg_weight = 1e-05
+dropout_prob = 0.1
+numerical_features = []
+discretization = None
+kg_reverse_r = False
+entity_kg_num_interval = [0,inf)
+relation_kg_num_interval = [0,inf)
+MODEL_TYPE = ModelType.GENERAL
+MODEL_INPUT_TYPE = InputType.PAIRWISE
+eval_type = EvaluatorType.RANKING
+single_spec = True
+local_rank = 0
+device = cuda
+valid_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+test_neg_sample_args = {'distribution': 'uniform', 'sample_num': 'none'}
+
+
+/home/g064474/.local/lib/python3.11/site-packages/recbole/data/dataset/dataset.py:648: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  feat[field].fillna(value=0, inplace=True)
+08 Jan 04:00    INFO  alibaba-100m-STRATIFIED_USER
+The number of users: 3569113
+Average actions of users: 28.018173708194084
+The number of items: 3761758
+Average actions of items: 26.583322633545972
+The number of inters: 100000000
+The sparsity of the dataset: 99.9992551842554%
+Remain Fields: ['user_id', 'item_id']
+08 Jan 04:12    INFO  [Training]: train_batch_size = [4096] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 0}]
+08 Jan 04:12    INFO  [Evaluation]: eval_batch_size = [4096] eval_args: [{'split': {'RS': [0.8, 0.1, 0.1]}, 'order': 'RO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+08 Jan 04:14    INFO  SimpleX(
+  (user_emb): Embedding(3569113, 32)
+  (item_emb): Embedding(3761758, 32, padding_idx=0)
+  (UI_map): Linear(in_features=32, out_features=32, bias=False)
+  (dropout): Dropout(p=0.1, inplace=False)
+  (reg_loss): EmbLoss()
+)
+Trainable parameters: 234588896
+08 Jan 04:14    INFO  FLOPs: 2688.0
+/home/g064474/.local/lib/python3.11/site-packages/recbole/trainer/trainer.py:235: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = amp.GradScaler(enabled=self.enable_scaler)
+08 Jan 04:19    INFO  epoch 0 training [time: 300.76s, train loss: 10082.9204]
+08 Jan 09:48    INFO  epoch 0 evaluating [time: 19734.41s, valid_score: 0.000896]
+08 Jan 09:48    INFO  valid result: 
+ndcg@10 : 0.0008961887
+slurmstepd: error: *** JOB 11001445 ON gpu-node002 CANCELLED AT 2026-01-08T11:05:47 DUE TO TIME LIMIT ***

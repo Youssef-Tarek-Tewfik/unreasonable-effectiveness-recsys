@@ -1,0 +1,76 @@
+[UEDRS] [00:00:00] Dataset: MYANIMELIST length: 7813730
+[UEDRS] [00:00:00] Users: 73,515
+[UEDRS] [00:00:00] Items: 11,200
+[UEDRS] [00:00:00] Interactions: 7,813,730
+[UEDRS] [00:00:00] Density: 0.009490 (0.9490%)
+[UEDRS] [00:00:00] Sparsity: 0.990510 (99.0510%)
+
+[UEDRS] [00:00:00] Dataset: IPINYOU length: 22269879
+[UEDRS] [00:00:02] Users: 19,730,198
+[UEDRS] [00:00:02] Items: 163
+[UEDRS] [00:00:02] Interactions: 22,269,879
+[UEDRS] [00:00:02] Density: 0.006925 (0.6925%)
+[UEDRS] [00:00:02] Sparsity: 0.993075 (99.3075%)
+
+[UEDRS] [00:00:02] Dataset: TMALL length: 24363557
+[UEDRS] [00:00:03] Users: 626,041
+[UEDRS] [00:00:03] Items: 2,200,291
+[UEDRS] [00:00:03] Interactions: 24,363,557
+[UEDRS] [00:00:03] Density: 0.000018 (0.0018%)
+[UEDRS] [00:00:03] Sparsity: 0.999982 (99.9982%)
+
+[UEDRS] [00:00:03] Dataset: MOVIELENS length: 32000204
+[UEDRS] [00:00:04] Users: 200,948
+[UEDRS] [00:00:04] Items: 84,432
+[UEDRS] [00:00:04] Interactions: 32,000,204
+[UEDRS] [00:00:04] Density: 0.001886 (0.1886%)
+[UEDRS] [00:00:04] Sparsity: 0.998114 (99.8114%)
+
+[UEDRS] [00:00:10] Dataset: MUSIC4ALL length: 50016042
+[UEDRS] [00:00:14] Users: 119,140
+[UEDRS] [00:00:14] Items: 56,512
+[UEDRS] [00:00:14] Interactions: 50,016,042
+[UEDRS] [00:00:14] Density: 0.007429 (0.7429%)
+[UEDRS] [00:00:14] Sparsity: 0.992571 (99.2571%)
+
+[UEDRS] [00:00:15] Dataset: NETFLIX length: 100480507
+[UEDRS] [00:00:18] Users: 480,189
+[UEDRS] [00:00:18] Items: 17,770
+[UEDRS] [00:00:18] Interactions: 100,480,507
+[UEDRS] [00:00:18] Density: 0.011776 (1.1776%)
+[UEDRS] [00:00:18] Sparsity: 0.988224 (98.8224%)
+
+[UEDRS] [00:00:19] Dataset: YAHOO length: 115579440
+[UEDRS] [00:00:20] Users: 1,948,882
+[UEDRS] [00:00:20] Items: 98,213
+[UEDRS] [00:00:20] Interactions: 115,579,440
+[UEDRS] [00:00:20] Density: 0.000604 (0.0604%)
+[UEDRS] [00:00:20] Sparsity: 0.999396 (99.9396%)
+
+[UEDRS] [00:00:22] Dataset: ALIBABA length: 191394393
+[UEDRS] [00:00:29] Users: 3,569,112
+[UEDRS] [00:00:29] Items: 4,463,302
+[UEDRS] [00:00:29] Interactions: 191,394,393
+[UEDRS] [00:00:29] Density: 0.000012 (0.0012%)
+[UEDRS] [00:00:29] Sparsity: 0.999988 (99.9988%)
+
+[UEDRS] [00:00:30] Dataset: GOODREADS length: 228648342
+[UEDRS] [00:00:33] Users: 876,145
+[UEDRS] [00:00:33] Items: 2,360,650
+[UEDRS] [00:00:33] Interactions: 228,648,342
+[UEDRS] [00:00:33] Density: 0.000111 (0.0111%)
+[UEDRS] [00:00:33] Sparsity: 0.999889 (99.9889%)
+
+[UEDRS] [00:00:36] Dataset: LASTFM length: 319951294
+[UEDRS] [00:00:44] Users: 120,322
+[UEDRS] [00:00:44] Items: 31,634,450
+[UEDRS] [00:00:44] Interactions: 319,951,294
+[UEDRS] [00:00:44] Density: 0.000084 (0.0084%)
+[UEDRS] [00:00:44] Sparsity: 0.999916 (99.9916%)
+
+[UEDRS] [00:00:51] Dataset: AMAZON length: 564540881
+[UEDRS] [00:01:39] Users: 54,514,264
+[UEDRS] [00:01:39] Items: 48,185,153
+[UEDRS] [00:01:39] Interactions: 564,540,881
+[UEDRS] [00:01:39] Density: 0.000000 (0.0000%)
+[UEDRS] [00:01:39] Sparsity: 1.000000 (100.0000%)

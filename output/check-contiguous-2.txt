@@ -1,0 +1,46 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:01] Loading done
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:00:01] Checking
+[UEDRS] [00:00:01] user_id contiguous 0-based: False
+[UEDRS] [00:00:01] item_id contiguous 0-based: False
+[UEDRS] [00:00:01] Result: (False, False)
+[UEDRS] [00:00:00] Elapsed
+
+[UEDRS] [00:00:01] Loading dataset: IPINYOU
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\source\load.py:19: DtypeWarning: Columns (1) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path, sep=SEP, usecols=usecols, names=names)
+[UEDRS] [00:00:28] Loading done
+[UEDRS] [00:00:26] Elapsed
+[UEDRS] [00:00:28] Checking
+[UEDRS] [00:00:55] user_id contiguous 0-based: False
+[UEDRS] [00:00:55] item_id contiguous 0-based: False
+[UEDRS] [00:00:55] Result: (False, False)
+[UEDRS] [00:00:27] Elapsed
+
+[UEDRS] [00:00:55] Loading dataset: TMALL
+[UEDRS] [00:00:59] Loading done
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:59] Checking
+[UEDRS] [00:01:00] user_id contiguous 0-based: False
+[UEDRS] [00:01:00] item_id contiguous 0-based: False
+[UEDRS] [00:01:00] Result: (False, False)
+[UEDRS] [00:00:00] Elapsed
+
+[UEDRS] [00:01:00] Loading dataset: YAHOO
+[UEDRS] [00:01:20] Loading done
+[UEDRS] [00:00:19] Elapsed
+[UEDRS] [00:01:20] Checking
+[UEDRS] [00:01:22] user_id contiguous 0-based: False
+[UEDRS] [00:01:22] item_id contiguous 0-based: False
+[UEDRS] [00:01:22] Result: (False, False)
+[UEDRS] [00:00:02] Elapsed
+
+[UEDRS] [00:01:22] Loading dataset: LASTFM
+[UEDRS] [00:02:40] Loading done
+[UEDRS] [00:01:18] Elapsed
+[UEDRS] [00:02:40] Checking
+[UEDRS] [00:02:54] user_id contiguous 0-based: False
+[UEDRS] [00:02:54] item_id contiguous 0-based: False
+[UEDRS] [00:02:54] Result: (False, False)
+[UEDRS] [00:00:13] Elapsed

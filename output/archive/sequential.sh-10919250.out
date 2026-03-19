@@ -1,0 +1,44 @@
+[UEDRS] [00:00:10] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:10] Tag:  RECBOLE:ASYM_KNN
+[UEDRS] [00:00:10] Tool: RECBOLE
+[UEDRS] [00:00:10] Algorithm: ASYM_KNN
+[UEDRS] [00:00:10] Datasets: MOVIELENS, NETFLIX, GOODREADS, MUSIC4ALL
+[UEDRS] [00:00:10] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:10] Current dataset [MOVIELENS]
+[UEDRS] [00:00:10] Loading full dataset
+[UEDRS] [00:00:15] Loading done
+[UEDRS] [00:00:15] Memory Usage: RSS = 1347.27 MB, VMS = 4553.99 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:15] Sampling for [1000000]
+[UEDRS] [00:00:23] Sampling done
+[UEDRS] [00:00:23] Memory Usage: RSS = 706.57 MB, VMS = 3912.26 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [00:00:23] Checking [RECBOLE][ASYM_KNN][MOVIELENS][1m]
+[UEDRS] [00:00:23] Skipping (0.00559)
+[UEDRS] [00:00:23] Memory Usage: RSS = 706.57 MB, VMS = 3912.26 MB
+[UEDRS] [00:00:23] Releasing dataframe from memory
+[UEDRS] [00:00:23] Memory Usage: RSS = 706.57 MB, VMS = 3912.26 MB
+[UEDRS] [00:00:23] Loading full dataset
+[UEDRS] [00:00:28] Loading done
+[UEDRS] [00:00:28] Memory Usage: RSS = 1385.59 MB, VMS = 4591.15 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:28] Sampling for [25000000]
+[UEDRS] [00:00:36] Sampling done
+[UEDRS] [00:00:36] Memory Usage: RSS = 1411.48 MB, VMS = 4616.21 MB
+[UEDRS] [00:00:08] Elapsed
+[UEDRS] [00:00:36] Checking [RECBOLE][ASYM_KNN][MOVIELENS][25m]
+[UEDRS] [00:00:36] Skipping (0.03751)
+[UEDRS] [00:00:36] Memory Usage: RSS = 1411.48 MB, VMS = 4616.21 MB
+[UEDRS] [00:00:36] Releasing dataframe from memory
+[UEDRS] [00:00:36] Memory Usage: RSS = 839.30 MB, VMS = 4044.03 MB
+[UEDRS] [00:00:36] Loading full dataset
+[UEDRS] [00:00:41] Loading done
+[UEDRS] [00:00:41] Memory Usage: RSS = 1612.79 MB, VMS = 4817.38 MB
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:41] Sampling for [50000000]
+[UEDRS] [00:00:49] Sampling done
+[UEDRS] [00:00:49] Memory Usage: RSS = 1652.62 MB, VMS = 4857.34 MB
+[UEDRS] [00:00:08] Elapsed
+[UEDRS] [00:00:49] Checking [RECBOLE][ASYM_KNN][MOVIELENS][32m]
+[UEDRS] [00:00:49] Starting

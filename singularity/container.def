@@ -1,0 +1,14 @@
+Bootstrap: docker
+FROM: python:3.11
+
+%post
+    pip install numpy==1.26.4
+    pip install pandas==2.3.1
+    pip install torch==2.5.1
+    pip install scikit-learn==1.7.1
+    pip install matplotlib==3.10.3
+    pip install lenskit==2025.2.0
+    pip install recbole==1.2.1
+
+%runscript
+    echo "Container was created $NOW"

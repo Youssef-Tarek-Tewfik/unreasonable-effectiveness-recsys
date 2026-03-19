@@ -1,0 +1,51 @@
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_explicit.py:58: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  rmat = rmat.to_sparse_csr()
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/metrics/ranking/_dcg.py:97: RuntimeWarning: invalid value encountered in scalar divide
+  return realized / ideal
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/metrics/ranking/_dcg.py:97: RuntimeWarning: invalid value encountered in scalar divide
+  return realized / ideal
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/source/run.py", line 144, in <module>
+    main()
+  File "/mnt/source/run.py", line 99, in main
+    result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/utilities.py", line 94, in safe_run
+    raise exception
+  File "/mnt/source/utilities.py", line 86, in safe_run
+    return function()
+           ^^^^^^^^^^
+  File "/mnt/source/run.py", line 99, in <lambda>
+    result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/use_lenskit.py", line 62, in use_lenskit
+    fit.train(split.train, TrainingOptions(device=("cuda" if GPUS else None), rng=SEED))
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py", line 294, in train
+    comp.train(data, c_opts)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/training.py", line 174, in train
+    loop = self.training_loop(data, options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 174, in training_loop
+    train = self.prepare_data(data)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_explicit.py", line 52, in prepare_data
+    rmat = data.interaction_matrix(format="torch", layout="coo", field="rating")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/dataset.py", line 53, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/dataset.py", line 433, in interaction_matrix
+    return iset.torch(attribute=field, layout=layout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/relationships.py", line 389, in torch
+    ).coalesce()
+      ^^^^^^^^^^
+RuntimeError: "coalesce" not implemented for 'UInt16'

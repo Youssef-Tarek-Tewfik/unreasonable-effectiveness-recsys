@@ -1,0 +1,40 @@
+[UEDRS] [00:00:04] starting
+[UEDRS] [00:00:04] cpus: 64
+[UEDRS] [00:00:04] memory: 128
+[UEDRS] [00:00:04] env variables:
+[UEDRS] [00:00:04] OMP_NUM_THREADS: 64
+[UEDRS] [00:00:04] MKL_NUM_THREADS: 64
+[UEDRS] [00:00:04] OPENBLAS_NUM_THREADS: 64
+[UEDRS] [00:00:04] NUMBA_NUM_THREADS: 64
+[UEDRS] [00:00:04] LK_NUM_PROCS: 32
+[UEDRS] [00:00:04] LK_NUM_THREADS: 2
+
+
+[UEDRS] [00:00:04] algorithm: ITEM_KNN
+[UEDRS] [00:00:14] MOVIELENS loaded
+[UEDRS] [00:00:09] elapsed
+[UEDRS] [00:00:17] RANDOM sampling done
+[UEDRS] [00:00:17] actual size: 32000204
+[UEDRS] [00:00:02] elapsed
+[UEDRS] [00:00:17] starting
+[UEDRS] [00:28:12] finished with result: 0.24401
+[UEDRS] [00:27:55] elapsed
+
+[UEDRS] [00:28:28] STRATIFIED_USER sampling done
+[UEDRS] [00:28:28] actual size: 32000204
+[UEDRS] [00:00:15] elapsed
+[UEDRS] [00:28:28] starting
+[UEDRS] [00:55:39] finished with result: 0.24401
+[UEDRS] [00:27:10] elapsed
+
+[UEDRS] [00:55:46] STRATIFIED_ITEM sampling done
+[UEDRS] [00:55:46] actual size: 32000204
+[UEDRS] [00:00:06] elapsed
+[UEDRS] [00:55:46] starting
+[UEDRS] [01:23:10] finished with result: 0.24401
+[UEDRS] [00:27:24] elapsed
+
+[UEDRS] [01:23:32] STRATIFIED_HYBRID sampling done
+[UEDRS] [01:23:32] actual size: 32000204
+[UEDRS] [00:00:21] elapsed
+[UEDRS] [01:23:32] starting

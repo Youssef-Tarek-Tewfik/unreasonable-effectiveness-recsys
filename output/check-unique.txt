@@ -1,0 +1,89 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:01] Loading done
+[UEDRS] [00:00:01] Elapsed
+[UEDRS] [00:00:01] Checking
+[UEDRS] [00:00:02] (user_id, item_id) pairs unique: False
+[UEDRS] [00:00:02] Result: False
+[UEDRS] [00:00:01] Elapsed
+
+[UEDRS] [00:00:02] Loading dataset: IPINYOU
+G:\My Drive\Workspace\Thesis\Repository\unreasonable-effectiveness-recsys\source\load.py:19: DtypeWarning: Columns (1) have mixed types. Specify dtype option on import or set low_memory=False.
+  df = pd.read_csv(path, sep=SEP, usecols=usecols, names=names)
+[UEDRS] [00:00:19] Loading done
+[UEDRS] [00:00:16] Elapsed
+[UEDRS] [00:00:19] Checking
+[UEDRS] [00:00:33] (user_id, item_id) pairs unique: False
+[UEDRS] [00:00:33] Result: False
+[UEDRS] [00:00:14] Elapsed
+
+[UEDRS] [00:00:33] Loading dataset: MOVIELENS
+[UEDRS] [00:00:38] Loading done
+[UEDRS] [00:00:05] Elapsed
+[UEDRS] [00:00:38] Checking
+[UEDRS] [00:00:43] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:43] Result: True
+[UEDRS] [00:00:04] Elapsed
+
+[UEDRS] [00:00:43] Loading dataset: TMALL
+[UEDRS] [00:00:48] Loading done
+[UEDRS] [00:00:04] Elapsed
+[UEDRS] [00:00:48] Checking
+[UEDRS] [00:00:52] (user_id, item_id) pairs unique: True
+[UEDRS] [00:00:52] Result: True
+[UEDRS] [00:00:04] Elapsed
+
+[UEDRS] [00:00:52] Loading dataset: NETFLIX
+[UEDRS] [00:01:09] Loading done
+[UEDRS] [00:00:17] Elapsed
+[UEDRS] [00:01:09] Checking
+[UEDRS] [00:01:28] (user_id, item_id) pairs unique: True
+[UEDRS] [00:01:28] Result: True
+[UEDRS] [00:00:19] Elapsed
+
+[UEDRS] [00:01:28] Loading dataset: YAHOO
+[UEDRS] [00:01:50] Loading done
+[UEDRS] [00:00:21] Elapsed
+[UEDRS] [00:01:50] Checking
+[UEDRS] [00:02:16] (user_id, item_id) pairs unique: True
+[UEDRS] [00:02:16] Result: True
+[UEDRS] [00:00:25] Elapsed
+
+[UEDRS] [00:02:16] Loading dataset: ALIBABA
+[UEDRS] [00:02:47] Loading done
+[UEDRS] [00:00:31] Elapsed
+[UEDRS] [00:02:47] Checking
+[UEDRS] [00:03:32] (user_id, item_id) pairs unique: True
+[UEDRS] [00:03:32] Result: True
+[UEDRS] [00:00:45] Elapsed
+
+[UEDRS] [00:03:32] Loading dataset: GOODREADS
+[UEDRS] [00:04:06] Loading done
+[UEDRS] [00:00:33] Elapsed
+[UEDRS] [00:04:06] Checking
+[UEDRS] [00:05:03] (user_id, item_id) pairs unique: True
+[UEDRS] [00:05:03] Result: True
+[UEDRS] [00:00:57] Elapsed
+
+[UEDRS] [00:05:03] Loading dataset: MUSIC4ALL
+[UEDRS] [00:09:03] Loading done
+[UEDRS] [00:03:59] Elapsed
+[UEDRS] [00:09:03] Checking
+[UEDRS] [00:09:16] (user_id, item_id) pairs unique: True
+[UEDRS] [00:09:16] Result: True
+[UEDRS] [00:00:13] Elapsed
+
+[UEDRS] [00:09:16] Loading dataset: AMAZON
+[UEDRS] [01:37:47] Loading done
+[UEDRS] [01:28:30] Elapsed
+[UEDRS] [01:37:47] Checking
+[UEDRS] [01:48:20] (user_id, item_id) pairs unique: True
+[UEDRS] [01:48:20] Result: True
+[UEDRS] [00:10:32] Elapsed
+
+[UEDRS] [01:48:20] Loading dataset: LASTFM
+[UEDRS] [01:50:10] Loading done
+[UEDRS] [00:01:49] Elapsed
+[UEDRS] [01:50:10] Checking
+[UEDRS] [01:52:07] (user_id, item_id) pairs unique: True
+[UEDRS] [01:52:07] Result: True
+[UEDRS] [00:01:57] Elapsed

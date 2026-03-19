@@ -1,0 +1,21 @@
+[UEDRS] [00:00:05] starting
+[UEDRS] [00:00:05] cpus: 32
+[UEDRS] [00:00:05] memory: 128
+[UEDRS] [00:00:05] env variables:
+[UEDRS] [00:00:05] OMP_NUM_THREADS: 1
+[UEDRS] [00:00:05] MKL_NUM_THREADS: 1
+[UEDRS] [00:00:05] OPENBLAS_NUM_THREADS: 1
+[UEDRS] [00:00:05] NUMBA_NUM_THREADS: 1
+
+
+[UEDRS] [00:01:25] NETFLIX loaded
+[UEDRS] [00:01:19] elapsed
+
+[UEDRS] [00:01:25] starting with {'train_batch_size': 8192}
+[UEDRS] [01:02:28] finished
+[UEDRS] [01:01:03] elapsed
+
+[UEDRS] [01:02:28] starting with {'eval_batch_size': 8192}
+[UEDRS] [02:05:09] finished
+[UEDRS] [01:02:40] elapsed
+

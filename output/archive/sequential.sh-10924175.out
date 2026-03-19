@@ -1,0 +1,71 @@
+[UEDRS] [00:00:03] starting
+[UEDRS] [00:00:03] cpus: 64
+[UEDRS] [00:00:03] memory: 128
+[UEDRS] [00:00:03] env variables:
+[UEDRS] [00:00:03] OMP_NUM_THREADS: 64
+[UEDRS] [00:00:03] MKL_NUM_THREADS: 64
+[UEDRS] [00:00:03] OPENBLAS_NUM_THREADS: 64
+[UEDRS] [00:00:03] NUMBA_NUM_THREADS: 64
+[UEDRS] [00:00:03] LK_NUM_PROCS: 32
+[UEDRS] [00:00:03] LK_NUM_THREADS: 2
+
+
+[UEDRS] [00:00:03] dataset: MOVIELENS
+[UEDRS] [00:00:08] MOVIELENS loaded
+[UEDRS] [00:00:06] elapsed
+[UEDRS] [00:00:09] algorithm: GCMC
+[UEDRS] [00:00:09] starting
+[UEDRS] [00:00:45] failed
+
+[UEDRS] [00:00:45] algorithm: NGCF
+[UEDRS] [00:00:45] starting
+[UEDRS] [00:01:17] failed
+
+[UEDRS] [00:01:18] algorithm: LightGCN
+[UEDRS] [00:01:18] starting
+[UEDRS] [00:01:50] failed
+
+[UEDRS] [00:01:50] algorithm: LINE
+[UEDRS] [00:01:50] starting
+[UEDRS] [00:11:12] finished with result: 0.00014
+[UEDRS] [00:09:22] elapsed
+
+[UEDRS] [00:11:12] algorithm: MultiVAE
+[UEDRS] [00:11:12] starting
+[UEDRS] [00:23:12] finished with result: 0.00422
+[UEDRS] [00:11:59] elapsed
+
+[UEDRS] [00:23:12] algorithm: MultiDAE
+[UEDRS] [00:23:12] starting
+[UEDRS] [00:35:10] finished with result: 0.00375
+[UEDRS] [00:11:58] elapsed
+
+[UEDRS] [00:35:10] algorithm: CDAE
+[UEDRS] [00:35:10] starting
+[UEDRS] [00:45:58] finished with result: 0.00288
+[UEDRS] [00:10:47] elapsed
+
+[UEDRS] [00:45:58] algorithm: ENMF
+[UEDRS] [00:45:58] starting
+[UEDRS] [00:46:40] failed
+
+[UEDRS] [00:46:40] algorithm: NNCF
+[UEDRS] [00:46:40] starting
+[UEDRS] [02:40:30] finished with result: 0.0061
+[UEDRS] [01:53:50] elapsed
+
+[UEDRS] [02:40:30] algorithm: RaCT
+[UEDRS] [02:40:30] starting
+[UEDRS] [02:41:36] failed
+
+[UEDRS] [02:41:36] algorithm: RecVAE
+[UEDRS] [02:41:36] starting
+[UEDRS] [02:42:18] failed
+
+[UEDRS] [02:42:18] algorithm: EASE
+[UEDRS] [02:42:18] starting
+[UEDRS] [03:04:11] finished with result: 0.02848
+[UEDRS] [00:21:52] elapsed
+
+[UEDRS] [03:04:11] algorithm: SLIMElastic
+[UEDRS] [03:04:11] starting

@@ -1,0 +1,42 @@
+[UEDRS] [00:00:04] starting
+[UEDRS] [00:00:04] cpus: 64
+[UEDRS] [00:00:04] memory: 128
+[UEDRS] [00:00:04] env variables:
+[UEDRS] [00:00:04] OMP_NUM_THREADS: 64
+[UEDRS] [00:00:04] MKL_NUM_THREADS: 64
+[UEDRS] [00:00:04] OPENBLAS_NUM_THREADS: 64
+[UEDRS] [00:00:04] NUMBA_NUM_THREADS: 64
+[UEDRS] [00:00:04] LK_NUM_PROCS: 32
+[UEDRS] [00:00:04] LK_NUM_THREADS: 2
+
+
+[UEDRS] [00:00:04] dataset: MOVIELENS
+[UEDRS] [00:00:12] MOVIELENS loaded and sampled
+[UEDRS] [00:00:07] elapsed
+[UEDRS] [00:00:12] algorithm: NCEPLRec
+[UEDRS] [00:00:12] starting
+[UEDRS] [00:19:00] finished with result: 0.16561
+[UEDRS] [00:18:48] elapsed
+
+[UEDRS] [00:19:00] algorithm: SimpleX
+[UEDRS] [00:19:00] starting
+[UEDRS] [00:33:47] finished with result: 0.03403
+[UEDRS] [00:14:47] elapsed
+
+[UEDRS] [00:33:47] algorithm: NCL
+[UEDRS] [00:33:47] starting
+[UEDRS] [00:36:46] failed: 'dok_matrix' object has no attribute '_update'
+
+[UEDRS] [00:36:48] algorithm: Random
+[UEDRS] [00:36:48] starting
+[UEDRS] [01:01:36] finished with result: 0.00019
+[UEDRS] [00:24:48] elapsed
+
+[UEDRS] [01:01:36] algorithm: DiffRec
+[UEDRS] [01:01:36] starting
+[UEDRS] [01:04:44] failed: CUDA out of memory. Tried to allocate 31.19 GiB. GPU 0 has a total capacity of 15.77 GiB of which 15.12 GiB is free. Including non-PyTorch memory, this process has 656.00 MiB memory in use. Of the allocated memory 16.25 MiB is allocated by PyTorch, and 257.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+[UEDRS] [01:04:44] algorithm: LDiffRec
+[UEDRS] [01:04:44] starting
+[UEDRS] [01:07:58] failed: CUDA out of memory. Tried to allocate 31.19 GiB. GPU 0 has a total capacity of 15.77 GiB of which 15.12 GiB is free. Including non-PyTorch memory, this process has 656.00 MiB memory in use. Of the allocated memory 16.25 MiB is allocated by PyTorch, and 257.75 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+

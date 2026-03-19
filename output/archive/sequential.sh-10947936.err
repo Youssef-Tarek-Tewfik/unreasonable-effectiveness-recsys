@@ -1,0 +1,98 @@
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/relationships.py:378: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/concurrent/futures/process.py", line 261, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/process.py", line 210, in _process_chunk
+    return [fn(*args) for args in chunk]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/process.py", line 210, in <listcomp>
+    return [fn(*args) for args in chunk]
+            ^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/parallel/worker.py", line 50, in worker
+    res = __work_context.func(__work_context.model, arg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/batch/_runner.py", line 207, in _run_pipeline
+    outs = pipeline.run_all(*nodes, **inputs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py", line 412, in run_all
+    runner.run(node)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 75, in run
+    raise e
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 144, in _run_component
+    ival = self.run(snode, required=ireq)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 75, in run
+    raise e
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 70, in run
+    self._run_node(node, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 92, in _run_node
+    self._run_component(name, comp, required)
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/runner.py", line 169, in _run_component
+    self.state[name] = comp(**in_data)
+                       ^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_common.py", line 291, in __call__
+    u_feat, u_offset = self.new_user_embedding(user_num, query.user_items)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 126, in new_user_embedding
+    u_feat = self._train_new_row(ri_it, ri_val, self.item_features_, self.OtOr_)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_implicit.py", line 156, in _train_new_row
+    x = solve_cholesky(A, y)
+        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/math/solve.py", line 39, in solve_cholesky
+    raise RuntimeError("cholesky solve failed")
+RuntimeError: cholesky solve failed
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/source/run.py", line 140, in <module>
+    main()
+  File "/mnt/source/run.py", line 95, in main
+    result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/utilities.py", line 90, in safe_run
+    raise exception
+  File "/mnt/source/utilities.py", line 82, in safe_run
+    return function()
+           ^^^^^^^^^^
+  File "/mnt/source/run.py", line 95, in <lambda>
+    result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/use_lenskit.py", line 63, in use_lenskit
+    recs = recommend(fit, split.test.keys(), n=RECOMMENDATIONS)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/batch/__init__.py", line 101, in recommend
+    outs = runner.run(pipeline, users)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/batch/_runner.py", line 167, in run
+    for key, outs in worker.map(test_iter):
+  File "/usr/local/lib/python3.11/concurrent/futures/process.py", line 620, in _chain_from_iterable_of_lists
+    for element in iterable:
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+RuntimeError: cholesky solve failed

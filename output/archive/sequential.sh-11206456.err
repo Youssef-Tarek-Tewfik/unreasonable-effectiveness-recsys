@@ -1,0 +1,4 @@
+Bright Maschine Learning software stack loaded.
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+slurmstepd: error: *** JOB 11206456 ON gpu-node010 CANCELLED AT 2026-02-26T22:14:13 DUE TO TIME LIMIT ***

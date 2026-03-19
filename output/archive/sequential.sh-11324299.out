@@ -1,0 +1,38 @@
+[UEDRS] [00:00:12] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:12] Tag:  LENSKIT:POP
+[UEDRS] [00:00:12] Tool: LENSKIT
+[UEDRS] [00:00:12] Algorithm: POP
+[UEDRS] [00:00:12] Datasets: IPINYOU
+[UEDRS] [00:00:12] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:12] Desired size: 1000000
+[UEDRS] [00:00:12] Dataset: IPINYOU
+[UEDRS] [00:00:12] Loading
+[UEDRS] [00:00:23] Loading done
+[UEDRS] [00:00:23] Memory Usage: RSS = 3801.22 MB, VMS = 10926.95 MB
+[UEDRS] [00:00:10] Elapsed
+[UEDRS] [00:00:23] Sampling
+[UEDRS] [00:09:14] Sampling done, obtained size: 1000000
+[UEDRS] [00:09:14] Memory Usage: RSS = 5324.57 MB, VMS = 12437.29 MB
+[UEDRS] [00:08:51] Elapsed
+[UEDRS] [00:09:14] Checking [LENSKIT][POP][IPINYOU][1m]
+[UEDRS] [00:09:14] Starting
+[UEDRS] [22:45:57] Finished (4.3e-07)
+[UEDRS] [22:45:57] Memory Usage: RSS = 5567.65 MB, VMS = 14267.66 MB
+[UEDRS] [22:36:43] Elapsed
+
+[UEDRS] [22:45:57] Memory Usage: RSS = 5567.65 MB, VMS = 14267.66 MB
+[UEDRS] [22:45:57] Releasing dataframe from memory
+[UEDRS] [22:45:58] Memory Usage: RSS = 4152.00 MB, VMS = 12851.66 MB
+[UEDRS] [22:45:58] Desired size: 25000000
+[UEDRS] [22:45:58] Dataset: IPINYOU
+[UEDRS] [22:45:58] Loading
+[UEDRS] [22:46:05] Loading done
+[UEDRS] [22:46:05] Memory Usage: RSS = 7408.19 MB, VMS = 18617.48 MB
+[UEDRS] [00:00:07] Elapsed
+[UEDRS] [22:46:05] Sampling
+[UEDRS] [22:46:06] Sampling done, obtained size: 22269879
+[UEDRS] [22:46:06] Memory Usage: RSS = 7068.38 MB, VMS = 18277.66 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [22:46:06] Checking [LENSKIT][POP][IPINYOU][22m]
+[UEDRS] [22:46:06] Starting

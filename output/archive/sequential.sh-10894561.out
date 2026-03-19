@@ -1,0 +1,99 @@
+[UEDRS] [00:00:10] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:10] Tag:  none
+[UEDRS] [00:00:10] Tool: LENSKIT
+[UEDRS] [00:00:10] Algorithm: POP
+[UEDRS] [00:00:10] Excluded datasets: ALIBABA
+[UEDRS] [00:00:10] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:10] Loading dataset [MOVIELENS]
+[UEDRS] [00:00:18] Sampling for [1000000]
+[UEDRS] [00:00:25] Checking [LENSKIT][POP][MOVIELENS][1m]
+[UEDRS] [00:00:25] Skipping (0.00858)
+
+[UEDRS] [00:00:25] Sampling for [25000000]
+[UEDRS] [00:00:32] Checking [LENSKIT][POP][MOVIELENS][25m]
+[UEDRS] [00:00:32] Skipping (0.11333)
+
+[UEDRS] [00:00:32] Sampling for [50000000]
+[UEDRS] [00:00:40] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:40] Skipping (0.16701)
+
+[UEDRS] [00:00:40] Sampling for [75000000]
+[UEDRS] [00:00:47] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:47] Skipping (0.16701)
+
+[UEDRS] [00:00:47] Sampling for [100000000]
+[UEDRS] [00:00:55] Checking [LENSKIT][POP][MOVIELENS][32m]
+[UEDRS] [00:00:55] Skipping (0.16701)
+
+[UEDRS] [00:00:55] Loading dataset [NETFLIX]
+[UEDRS] [00:02:17] Sampling for [1000000]
+[UEDRS] [00:02:34] Checking [LENSKIT][POP][NETFLIX][1m]
+[UEDRS] [00:02:34] Skipping (0.00297)
+
+[UEDRS] [00:02:34] Sampling for [25000000]
+[UEDRS] [00:02:53] Checking [LENSKIT][POP][NETFLIX][25m]
+[UEDRS] [00:02:53] Skipping (0.03352)
+
+[UEDRS] [00:02:53] Sampling for [50000000]
+[UEDRS] [00:03:13] Checking [LENSKIT][POP][NETFLIX][50m]
+[UEDRS] [00:03:13] Skipping (0.05555)
+
+[UEDRS] [00:03:13] Sampling for [75000000]
+[UEDRS] [00:03:32] Checking [LENSKIT][POP][NETFLIX][75m]
+[UEDRS] [00:03:32] Skipping (0.08792)
+
+[UEDRS] [00:03:32] Sampling for [100000000]
+[UEDRS] [00:04:02] Checking [LENSKIT][POP][NETFLIX][100m]
+[UEDRS] [00:04:02] Skipping (0.14026)
+
+[UEDRS] [00:04:02] Loading dataset [GOODREADS]
+[UEDRS] [00:07:23] Sampling for [1000000]
+[UEDRS] [00:07:58] Checking [LENSKIT][POP][GOODREADS][1m]
+[UEDRS] [00:07:58] Skipping (0.00062)
+
+[UEDRS] [00:07:58] Sampling for [25000000]
+[UEDRS] [00:08:34] Checking [LENSKIT][POP][GOODREADS][25m]
+[UEDRS] [00:08:34] Skipping (0.01621)
+
+[UEDRS] [00:08:34] Sampling for [50000000]
+[UEDRS] [00:09:11] Checking [LENSKIT][POP][GOODREADS][50m]
+[UEDRS] [00:09:11] Skipping (0.02329)
+
+[UEDRS] [00:09:11] Sampling for [75000000]
+[UEDRS] [00:09:55] Checking [LENSKIT][POP][GOODREADS][75m]
+[UEDRS] [00:09:55] Skipping (0.02949)
+
+[UEDRS] [00:09:55] Sampling for [100000000]
+[UEDRS] [00:10:33] Checking [LENSKIT][POP][GOODREADS][100m]
+[UEDRS] [00:10:33] Skipping (0.03652)
+
+[UEDRS] [00:10:33] Loading dataset [MUSIC4ALL]
+[UEDRS] [00:11:16] Sampling for [1000000]
+[UEDRS] [00:11:22] Checking [LENSKIT][POP][MUSIC4ALL][1m]
+[UEDRS] [00:11:22] Skipping (0.00204)
+
+[UEDRS] [00:11:22] Sampling for [25000000]
+[UEDRS] [00:11:30] Checking [LENSKIT][POP][MUSIC4ALL][25m]
+[UEDRS] [00:11:30] Skipping (0.01007)
+
+[UEDRS] [00:11:30] Sampling for [50000000]
+[UEDRS] [00:11:48] Checking [LENSKIT][POP][MUSIC4ALL][50m]
+[UEDRS] [00:11:48] Skipping (0.01755)
+
+[UEDRS] [00:11:48] Sampling for [75000000]
+[UEDRS] [00:11:56] Checking [LENSKIT][POP][MUSIC4ALL][50m]
+[UEDRS] [00:11:56] Skipping (0.01763)
+
+[UEDRS] [00:11:56] Sampling for [100000000]
+[UEDRS] [00:12:05] Checking [LENSKIT][POP][MUSIC4ALL][50m]
+[UEDRS] [00:12:05] Skipping (0.01763)
+
+[UEDRS] [00:12:05] Loading dataset [AMAZON]
+[UEDRS] [00:47:15] Sampling for [1000000]
+[UEDRS] [01:16:34] Checking [LENSKIT][POP][AMAZON][0m]
+[UEDRS] [01:16:34] Skipping (0.0)
+
+[UEDRS] [01:16:34] Sampling for [25000000]
+[UEDRS] [01:46:22] Checking [LENSKIT][POP][AMAZON][19m]
+[UEDRS] [01:46:22] Starting

@@ -1,0 +1,25 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:00] Done
+[UEDRS] [00:00:00] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 7813730 entries, 0 to 7813729
+Data columns (total 3 columns):
+ #   Column   Dtype
+---  ------   -----
+ 0   user_id  int64
+ 1   item_id  int64
+ 2   rating   int64
+dtypes: int64(3)
+memory usage: 178.8 MB
+[UEDRS] [00:00:00] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 7813730 entries, 0 to 7813729
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint16
+ 2   rating   int64 
+dtypes: int64(1), uint16(1), uint32(1)
+memory usage: 104.3 MB
+[UEDRS] [00:00:00] Saving to parquet

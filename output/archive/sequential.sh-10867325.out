@@ -1,0 +1,32 @@
+[UEDRS] [00:00:09] starting
+[UEDRS] [00:00:09] cpus: 32
+[UEDRS] [00:00:09] memory: 128
+[UEDRS] [00:00:09] env variables:
+[UEDRS] [00:00:09] OMP_NUM_THREADS: 16
+[UEDRS] [00:00:09] MKL_NUM_THREADS: 16
+[UEDRS] [00:00:09] OPENBLAS_NUM_THREADS: 16
+[UEDRS] [00:00:09] NUMBA_NUM_THREADS: 16
+
+
+[UEDRS] [00:00:21] MOVIELENS loaded
+[UEDRS] [00:00:12] elapsed
+
+[UEDRS] [00:00:21] starting with 2 workers
+[UEDRS] [00:35:07] finished
+[UEDRS] [00:34:45] elapsed
+
+[UEDRS] [00:35:07] starting with 4 workers
+[UEDRS] [01:09:09] finished
+[UEDRS] [00:34:01] elapsed
+
+[UEDRS] [01:10:42] NETFLIX loaded
+[UEDRS] [00:01:33] elapsed
+
+[UEDRS] [01:10:42] starting with 2 workers
+[UEDRS] [01:44:41] finished
+[UEDRS] [00:33:59] elapsed
+
+[UEDRS] [01:44:41] starting with 4 workers
+[UEDRS] [02:19:09] finished
+[UEDRS] [00:34:28] elapsed
+

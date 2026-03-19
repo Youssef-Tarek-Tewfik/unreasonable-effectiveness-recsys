@@ -1,0 +1,111 @@
+[UEDRS] [00:00:13] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:13] Tag:  RECBOLE:SimpleX
+[UEDRS] [00:00:13] Tool: RECBOLE
+[UEDRS] [00:00:13] Algorithm: SimpleX
+[UEDRS] [00:00:13] Datasets: IPINYOU, AMAZON
+[UEDRS] [00:00:13] Sizes: [25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:13] Desired size: 25000000
+[UEDRS] [00:00:13] Dataset: IPINYOU
+[UEDRS] [00:00:13] Loading
+[UEDRS] [00:00:23] Loading done
+[UEDRS] [00:00:23] Memory Usage: RSS = 3921.20 MB, VMS = 16472.63 MB
+[UEDRS] [00:00:09] Elapsed
+[UEDRS] [00:00:23] Sampling
+[UEDRS] [00:00:23] Sampling done, obtained size: 22269879
+[UEDRS] [00:00:23] Memory Usage: RSS = 3942.75 MB, VMS = 16493.37 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [00:00:23] Checking [RECBOLE][SimpleX][IPINYOU][22m]
+[UEDRS] [00:00:23] Starting
+[UEDRS] [00:13:22] Finished (0.24)
+[UEDRS] [00:13:22] Memory Usage: RSS = 29989.77 MB, VMS = 64129.74 MB
+[UEDRS] [00:12:59] Elapsed
+
+[UEDRS] [00:13:22] Memory Usage: RSS = 29989.77 MB, VMS = 64129.74 MB
+[UEDRS] [00:13:22] Releasing dataframe from memory
+[UEDRS] [00:13:52] Memory Usage: RSS = 5609.02 MB, VMS = 39502.32 MB
+[UEDRS] [00:13:52] Dataset: AMAZON
+[UEDRS] [00:13:52] Loading
+[UEDRS] [00:19:11] Loading done
+[UEDRS] [00:19:11] Memory Usage: RSS = 67891.13 MB, VMS = 132758.57 MB
+[UEDRS] [00:05:19] Elapsed
+[UEDRS] [00:19:11] Sampling
+[UEDRS] [00:58:50] Sampling done, obtained size: 25000000
+[UEDRS] [00:58:50] Memory Usage: RSS = 59014.59 MB, VMS = 128060.17 MB
+[UEDRS] [00:39:39] Elapsed
+[UEDRS] [00:58:50] Checking [RECBOLE][SimpleX][AMAZON][25m]
+[UEDRS] [00:58:50] Starting
+[UEDRS]
+[01:09:26]
+Exception handled:
+CUDA out of memory. Tried to allocate 5.58 GiB. GPU 0 has a total capacity of 15.77 GiB of which 4.05 GiB is free. Including non-PyTorch memory, this process has 11.71 GiB memory in use. Of the allocated memory 11.29 GiB is allocated by PyTorch, and 47.58 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[UEDRS] [01:09:26] Finished (-1)
+[UEDRS] [01:09:26] Memory Usage: RSS = 81089.98 MB, VMS = 151199.61 MB
+[UEDRS] [00:10:35] Elapsed
+
+[UEDRS] [01:09:26] Memory Usage: RSS = 81089.98 MB, VMS = 151199.61 MB
+[UEDRS] [01:09:26] Releasing dataframe from memory
+[UEDRS] [01:09:57] Memory Usage: RSS = 54933.70 MB, VMS = 124776.16 MB
+[UEDRS] [01:09:57] Desired size: 50000000
+[UEDRS] [01:09:57] Dataset: IPINYOU
+[UEDRS] [01:09:57] Loading
+[UEDRS] [01:10:07] Loading done
+[UEDRS] [01:10:07] Memory Usage: RSS = 49553.77 MB, VMS = 126437.98 MB
+[UEDRS] [00:00:10] Elapsed
+[UEDRS] [01:10:07] Sampling
+[UEDRS] [01:10:08] Sampling done, obtained size: 22269879
+[UEDRS] [01:10:08] Memory Usage: RSS = 49214.00 MB, VMS = 126098.16 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [01:10:08] Checking [RECBOLE][SimpleX][IPINYOU][22m]
+[UEDRS] [01:10:08] Skipping (0.24)
+[UEDRS] [01:10:08] Memory Usage: RSS = 49214.00 MB, VMS = 126098.16 MB
+[UEDRS] [01:10:08] Releasing dataframe from memory
+[UEDRS] [01:10:08] Memory Usage: RSS = 47900.99 MB, VMS = 124775.16 MB
+[UEDRS] [01:10:08] Dataset: AMAZON
+[UEDRS] [01:10:08] Loading
+[UEDRS] [03:40:22] Loading done
+[UEDRS] [03:40:22] Memory Usage: RSS = 83598.52 MB, VMS = 142008.39 MB
+[UEDRS] [02:30:13] Elapsed
+[UEDRS] [03:40:22] Sampling
+[UEDRS] [07:37:52] Sampling done, obtained size: 50000000
+[UEDRS] [07:37:52] Memory Usage: RSS = 74804.02 MB, VMS = 133396.18 MB
+[UEDRS] [03:57:30] Elapsed
+[UEDRS] [07:37:52] Checking [RECBOLE][SimpleX][AMAZON][50m]
+[UEDRS] [07:37:52] Starting
+[UEDRS]
+[11:45:10]
+Exception handled:
+CUDA out of memory. Tried to allocate 2.93 GiB. GPU 0 has a total capacity of 15.77 GiB of which 1.38 GiB is free. Including non-PyTorch memory, this process has 14.38 GiB memory in use. Of the allocated memory 13.85 GiB is allocated by PyTorch, and 162.36 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[UEDRS] [11:45:10] Finished (-1)
+[UEDRS] [11:45:10] Memory Usage: RSS = 112719.09 MB, VMS = 180716.29 MB
+[UEDRS] [04:07:17] Elapsed
+
+[UEDRS] [11:45:10] Memory Usage: RSS = 112719.09 MB, VMS = 180716.29 MB
+[UEDRS] [11:45:10] Releasing dataframe from memory
+[UEDRS] [11:46:58] Memory Usage: RSS = 71534.23 MB, VMS = 139213.98 MB
+[UEDRS] [11:46:58] Desired size: 75000000
+[UEDRS] [11:46:58] Dataset: IPINYOU
+[UEDRS] [11:46:58] Loading
+[UEDRS] [11:47:09] Loading done
+[UEDRS] [11:47:09] Memory Usage: RSS = 72040.21 MB, VMS = 140858.79 MB
+[UEDRS] [00:00:10] Elapsed
+[UEDRS] [11:47:09] Sampling
+[UEDRS] [11:47:09] Sampling done, obtained size: 22269879
+[UEDRS] [11:47:09] Memory Usage: RSS = 71700.40 MB, VMS = 140518.98 MB
+[UEDRS] [00:00:00] Elapsed
+[UEDRS] [11:47:09] Checking [RECBOLE][SimpleX][IPINYOU][22m]
+[UEDRS] [11:47:09] Skipping (0.24)
+[UEDRS] [11:47:09] Memory Usage: RSS = 71700.40 MB, VMS = 140518.98 MB
+[UEDRS] [11:47:09] Releasing dataframe from memory
+[UEDRS] [11:47:10] Memory Usage: RSS = 70406.20 MB, VMS = 139213.98 MB
+[UEDRS] [11:47:10] Dataset: AMAZON
+[UEDRS] [11:47:10] Loading
+[UEDRS] [14:29:35] Loading done
+[UEDRS] [14:29:35] Memory Usage: RSS = 98385.14 MB, VMS = 155138.19 MB
+[UEDRS] [02:42:25] Elapsed
+[UEDRS] [14:29:35] Sampling
+[UEDRS] [15:49:18] Sampling done, obtained size: 75000000
+[UEDRS] [15:49:19] Memory Usage: RSS = 89776.33 MB, VMS = 146525.98 MB
+[UEDRS] [01:19:43] Elapsed
+[UEDRS] [15:49:19] Checking [RECBOLE][SimpleX][AMAZON][75m]
+[UEDRS] [15:49:19] Starting

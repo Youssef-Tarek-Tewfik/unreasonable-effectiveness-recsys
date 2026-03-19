@@ -1,0 +1,22 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:00] Length: 7.81m
+[UEDRS] [00:00:00] Size: 100000
+[UEDRS] [00:00:00] Sampling
+[UEDRS] [00:00:27] Result: 100000
+[UEDRS] [00:00:27] Matches: True
+[UEDRS] [00:00:27] Sampling slow
+[UEDRS] [00:00:56] Result: 100000
+[UEDRS] [00:00:56] Matches: True
+[UEDRS] [00:00:56] Size: 100000000
+[UEDRS] [00:00:56] Sampling
+[UEDRS] [00:00:56] Result: 7813730
+[UEDRS] [00:00:56] Matches: False
+[UEDRS] [00:00:56] Sampling slow
+[UEDRS] [00:00:56] Result: 7813730
+[UEDRS] [00:00:56] Matches: False
+
+
+[UEDRS] [00:00:56] Loading dataset: IPINYOU
+[UEDRS] [00:00:56] Length: 22.27m
+[UEDRS] [00:00:56] Size: 100000
+[UEDRS] [00:00:56] Sampling

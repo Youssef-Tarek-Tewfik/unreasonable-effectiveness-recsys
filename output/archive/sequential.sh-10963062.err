@@ -1,0 +1,59 @@
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/relationships.py:378: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  return torch.sparse_csr_tensor(
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/metrics/ranking/_dcg.py:97: RuntimeWarning: invalid value encountered in scalar divide
+  return realized / ideal
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/metrics/ranking/_dcg.py:97: RuntimeWarning: invalid value encountered in scalar divide
+  return realized / ideal
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/pipeline/_impl.py:233: PipelineWarning: loaded pipeline config does not match hash
+  builder = PipelineBuilder.from_config(config)
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/metrics/ranking/_dcg.py:97: RuntimeWarning: invalid value encountered in scalar divide
+  return realized / ideal
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+slurmstepd: error: *** JOB 10963062 ON gpu-node002 CANCELLED AT 2025-12-10T17:43:12 DUE TO TIME LIMIT ***

@@ -1,0 +1,17 @@
+[UEDRS] [00:00:03] starting
+[UEDRS] [00:00:03] cpus: 32
+[UEDRS] [00:00:03] memory: 128
+[UEDRS] [00:00:03] env variables:
+[UEDRS] [00:00:03] OMP_NUM_THREADS: 1
+[UEDRS] [00:00:03] MKL_NUM_THREADS: 1
+[UEDRS] [00:00:03] OPENBLAS_NUM_THREADS: 1
+[UEDRS] [00:00:03] NUMBA_NUM_THREADS: 1
+
+
+[UEDRS] [00:00:10] MOVIELENS loaded
+[UEDRS] [00:00:07] elapsed
+
+[UEDRS] [00:00:10] starting with {}
+[UEDRS] [00:15:49] finished with result: 0.11928
+[UEDRS] [00:15:38] elapsed
+

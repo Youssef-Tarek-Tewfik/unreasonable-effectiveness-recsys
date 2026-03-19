@@ -1,0 +1,19 @@
+[UEDRS] [00:00:17] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:17] Tag:  RECBOLE:POP
+[UEDRS] [00:00:17] Tool: RECBOLE
+[UEDRS] [00:00:17] Algorithm: POP
+[UEDRS] [00:00:17] Datasets: AMAZON
+[UEDRS] [00:00:17] Sizes: [50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:17] Desired size: 50000000
+[UEDRS] [00:00:17] Dataset: AMAZON
+[UEDRS] [00:00:17] Loading
+[UEDRS] [00:05:16] Loading done
+[UEDRS] [00:05:16] Memory Usage: RSS = 51571.68 MB, VMS = 98402.21 MB
+[UEDRS] [00:04:58] Elapsed
+[UEDRS] [00:05:16] Sampling
+[UEDRS] [15:54:07] Sampling done, obtained size: 50000000
+[UEDRS] [15:54:07] Memory Usage: RSS = 47514.50 MB, VMS = 95684.54 MB
+[UEDRS] [15:48:50] Elapsed
+[UEDRS] [15:54:07] Checking [RECBOLE][POP][AMAZON][50m]
+[UEDRS] [15:54:07] Starting

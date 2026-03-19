@@ -1,0 +1,37 @@
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/splitting/users.py:197: DataWarning: item list collection has empty lists, they will be dropped
+  test_tbl = test.to_df()[["user_id", "item_id"]]
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/als/_explicit.py:58: UserWarning: Sparse CSR tensor support is in beta state. If you miss a functionality in the sparse tensor support, please submit a feature request to https://github.com/pytorch/pytorch/issues. (Triggered internally at ../aten/src/ATen/SparseCsrTensorImpl.cpp:53.)
+  rmat = rmat.to_sparse_csr()
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/metrics/ranking/_dcg.py:97: RuntimeWarning: invalid value encountered in scalar divide
+  return realized / ideal
+/home/g064474/.local/lib/python3.11/site-packages/lenskit/metrics/ranking/_dcg.py:97: RuntimeWarning: divide by zero encountered in scalar divide
+  return realized / ideal
+/home/g064474/.local/lib/python3.11/site-packages/pandas/core/nanops.py:1016: RuntimeWarning: invalid value encountered in subtract
+  sqr = _ensure_numeric((avg - values) ** 2)
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt/source/run.py", line 140, in <module>
+    main()
+  File "/mnt/source/run.py", line 95, in main
+    result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/utilities.py", line 90, in safe_run
+    raise exception
+  File "/mnt/source/utilities.py", line 82, in safe_run
+    return function()
+           ^^^^^^^^^^
+  File "/mnt/source/run.py", line 95, in <lambda>
+    result = safe_run(lambda: use_lenskit(dataframe, dataset, scorer))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/source/use_lenskit.py", line 32, in use_lenskit
+    data = from_interactions_df(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/adapt.py", line 164, in from_interactions_df
+    dsb.add_interactions(
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/builder.py", line 495, in add_interactions
+    self.add_relationships(
+  File "/home/g064474/.local/lib/python3.11/site-packages/lenskit/data/builder.py", line 405, in add_relationships
+    assert missing == "filter"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError

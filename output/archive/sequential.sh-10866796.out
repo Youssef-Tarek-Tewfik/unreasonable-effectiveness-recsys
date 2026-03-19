@@ -1,0 +1,24 @@
+[UEDRS] [00:00:03] starting
+[UEDRS] [00:00:03] cpus: 16
+[UEDRS] [00:00:03] env variables:
+[UEDRS] [00:00:03] OMP_NUM_THREADS: 2
+[UEDRS] [00:00:03] MKL_NUM_THREADS: 2
+[UEDRS] [00:00:03] OPENBLAS_NUM_THREADS: 2
+[UEDRS] [00:00:03] NUMBA_NUM_THREADS: 2
+
+
+[UEDRS] [00:00:11] loaded
+[UEDRS] [00:00:07] elapsed
+
+[UEDRS] [00:00:11] starting with 1 gpus with 1 workers
+[UEDRS] [00:16:37] finished
+[UEDRS] [00:16:25] elapsed
+
+[UEDRS] [00:16:37] starting with 1 gpus with 2 workers
+[UEDRS] [00:32:37] finished
+[UEDRS] [00:15:59] elapsed
+
+[UEDRS] [00:32:37] starting with 1 gpus with 4 workers
+[UEDRS] [00:48:45] finished
+[UEDRS] [00:16:07] elapsed
+

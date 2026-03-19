@@ -1,0 +1,34 @@
+[UEDRS] [00:00:08] Mode: ABSOLUTE STRATIFIED_USER
+[UEDRS] [00:00:08] Tag:  none
+[UEDRS] [00:00:08] Tool: LENSKIT
+[UEDRS] [00:00:08] Algorithm: POP
+[UEDRS] [00:00:08] Datasets: AMAZON
+[UEDRS] [00:00:08] Excluded datasets: ALIBABA, AMAZON
+[UEDRS] [00:00:08] Sizes: [1000000, 25000000, 50000000, 75000000, 100000000]
+
+[UEDRS] [00:00:08] Current dataset [AMAZON]
+[UEDRS] [00:00:08] Memory Usage: RSS = 609.99 MB, VMS = 3819.61 MB
+[UEDRS] [00:00:08] Loading full dataset
+[UEDRS] [00:09:58] Loading done
+[UEDRS] [00:09:58] Memory Usage: RSS = 56960.69 MB, VMS = 60738.95 MB
+[UEDRS] [00:09:49] Elapsed
+[UEDRS] [00:09:58] Sampling for [1000000]
+[UEDRS] [00:44:30] Sampling done
+[UEDRS] [00:44:30] Memory Usage: RSS = 32248.82 MB, VMS = 35730.21 MB
+[UEDRS] [00:34:32] Elapsed
+[UEDRS] [00:44:30] Checking [LENSKIT][POP][AMAZON][0m]
+[UEDRS] [00:44:30] Skipping (0.0)
+[UEDRS] [00:44:30] Memory Usage: RSS = 32247.85 MB, VMS = 35729.21 MB
+[UEDRS] [00:44:30] Releasing dataframe from memory
+[UEDRS] [00:44:31] Memory Usage: RSS = 16331.49 MB, VMS = 19560.21 MB
+[UEDRS] [00:44:31] Memory Usage: RSS = 16331.49 MB, VMS = 19560.21 MB
+[UEDRS] [00:44:31] Loading full dataset
+[UEDRS] [00:53:23] Loading done
+[UEDRS] [00:53:23] Memory Usage: RSS = 60389.47 MB, VMS = 64190.42 MB
+[UEDRS] [00:08:52] Elapsed
+[UEDRS] [00:53:23] Sampling for [25000000]
+[UEDRS] [01:27:49] Sampling done
+[UEDRS] [01:27:49] Memory Usage: RSS = 51798.21 MB, VMS = 55602.29 MB
+[UEDRS] [00:34:25] Elapsed
+[UEDRS] [01:27:49] Checking [LENSKIT][POP][AMAZON][19m]
+[UEDRS] [01:27:49] Starting

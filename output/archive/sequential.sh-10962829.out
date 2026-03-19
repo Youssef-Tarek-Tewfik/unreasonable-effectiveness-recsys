@@ -1,0 +1,306 @@
+[UEDRS] [00:00:00] Loading dataset: MYANIMELIST
+[UEDRS] [00:00:00] Done
+[UEDRS] [00:00:00] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 7813730 entries, 0 to 7813729
+Data columns (total 3 columns):
+ #   Column   Dtype
+---  ------   -----
+ 0   user_id  int64
+ 1   item_id  int64
+ 2   rating   int64
+dtypes: int64(3)
+memory usage: 178.8 MB
+[UEDRS] [00:00:00] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 7813730 entries, 0 to 7813729
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint16
+ 2   rating   int64 
+dtypes: int64(1), uint16(1), uint32(1)
+memory usage: 104.3 MB
+[UEDRS] [00:00:00] Saving to parquet
+[UEDRS] [00:00:01] Saved parquet to: /mnt/datasets/myanimelist/ratings.parquet
+[UEDRS] [00:00:01] Done
+
+[UEDRS] [00:00:01] Loading dataset: IPINYOU
+[UEDRS] [00:00:02] Done
+[UEDRS] [00:00:02] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 22269879 entries, 0 to 22269878
+Data columns (total 3 columns):
+ #   Column   Dtype
+---  ------   -----
+ 0   user_id  int64
+ 1   item_id  int64
+ 2   rating   int64
+dtypes: int64(3)
+memory usage: 509.7 MB
+[UEDRS] [00:00:03] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 22269879 entries, 0 to 22269878
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint8 
+ 2   rating   uint8 
+dtypes: uint32(1), uint8(2)
+memory usage: 127.4 MB
+[UEDRS] [00:00:03] Saving to parquet
+[UEDRS] [00:00:05] Saved parquet to: /mnt/datasets/ipinyou/ratings.parquet
+[UEDRS] [00:00:05] Done
+
+[UEDRS] [00:00:05] Loading dataset: TMALL
+[UEDRS] [00:00:05] Done
+[UEDRS] [00:00:05] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 24363557 entries, 0 to 24363556
+Data columns (total 3 columns):
+ #   Column   Dtype
+---  ------   -----
+ 0   user_id  int64
+ 1   item_id  int64
+ 2   rating   int64
+dtypes: int64(3)
+memory usage: 557.6 MB
+[UEDRS] [00:00:07] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 24363557 entries, 0 to 24363556
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint32
+ 2   rating   uint16
+dtypes: uint16(1), uint32(2)
+memory usage: 232.3 MB
+[UEDRS] [00:00:07] Saving to parquet
+[UEDRS] [00:00:10] Saved parquet to: /mnt/datasets/tmall/ratings.parquet
+[UEDRS] [00:00:10] Done
+
+[UEDRS] [00:00:10] Loading dataset: MOVIELENS
+[UEDRS] [00:00:10] Done
+[UEDRS] [00:00:10] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 32000204 entries, 0 to 32000203
+Data columns (total 3 columns):
+ #   Column   Dtype  
+---  ------   -----  
+ 0   user_id  int64  
+ 1   item_id  int64  
+ 2   rating   float64
+dtypes: float64(1), int64(2)
+memory usage: 732.4 MB
+[UEDRS] [00:00:14] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 32000204 entries, 0 to 32000203
+Data columns (total 3 columns):
+ #   Column   Dtype  
+---  ------   -----  
+ 0   user_id  uint32 
+ 1   item_id  uint32 
+ 2   rating   float64
+dtypes: float64(1), uint32(2)
+memory usage: 488.3 MB
+[UEDRS] [00:00:14] Saving to parquet
+[UEDRS] [00:00:16] Saved parquet to: /mnt/datasets/movielens/ratings.parquet
+[UEDRS] [00:00:16] Done
+
+[UEDRS] [00:00:16] Loading dataset: MUSIC4ALL
+[UEDRS] [00:00:19] Done
+[UEDRS] [00:00:19] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 50016042 entries, 0 to 50016041
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  int64 
+ 1   item_id  object
+ 2   rating   int64 
+dtypes: int64(2), object(1)
+memory usage: 1.1+ GB
+[UEDRS] [00:00:21] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 50016042 entries, 0 to 50016041
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  object
+ 2   rating   uint16
+dtypes: object(1), uint16(1), uint32(1)
+memory usage: 667.8+ MB
+[UEDRS] [00:00:21] Saving to parquet
+[UEDRS] [00:00:31] Saved parquet to: /mnt/datasets/music4all/ratings.parquet
+[UEDRS] [00:00:31] Done
+
+[UEDRS] [00:00:31] Loading dataset: NETFLIX
+[UEDRS] [00:00:32] Done
+[UEDRS] [00:00:32] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 100480507 entries, 0 to 100480506
+Data columns (total 3 columns):
+ #   Column   Dtype
+---  ------   -----
+ 0   user_id  int64
+ 1   item_id  int64
+ 2   rating   int64
+dtypes: int64(3)
+memory usage: 2.2 GB
+[UEDRS] [00:00:37] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 100480507 entries, 0 to 100480506
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint16
+ 2   rating   uint8 
+dtypes: uint16(1), uint32(1), uint8(1)
+memory usage: 670.8 MB
+[UEDRS] [00:00:37] Saving to parquet
+[UEDRS] [00:00:47] Saved parquet to: /mnt/datasets/netflix/ratings.parquet
+[UEDRS] [00:00:47] Done
+
+[UEDRS] [00:00:47] Loading dataset: YAHOO
+[UEDRS] [00:00:48] Done
+[UEDRS] [00:00:48] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 115579440 entries, 0 to 115579439
+Data columns (total 3 columns):
+ #   Column   Dtype
+---  ------   -----
+ 0   user_id  int64
+ 1   item_id  int64
+ 2   rating   int64
+dtypes: int64(3)
+memory usage: 2.6 GB
+[UEDRS] [00:00:55] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 115579440 entries, 0 to 115579439
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint32
+ 2   rating   uint8 
+dtypes: uint32(2), uint8(1)
+memory usage: 992.0 MB
+[UEDRS] [00:00:55] Saving to parquet
+[UEDRS] [00:01:04] Saved parquet to: /mnt/datasets/yahoo/ratings.parquet
+[UEDRS] [00:01:04] Done
+
+[UEDRS] [00:01:04] Loading dataset: ALIBABA
+[UEDRS] [00:01:06] Done
+[UEDRS] [00:01:06] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 191394393 entries, 0 to 191394392
+Data columns (total 2 columns):
+ #   Column   Dtype
+---  ------   -----
+ 0   user_id  int64
+ 1   item_id  int64
+dtypes: int64(2)
+memory usage: 2.9 GB
+[UEDRS] [00:01:16] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 191394393 entries, 0 to 191394392
+Data columns (total 2 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint32
+dtypes: uint32(2)
+memory usage: 1.4 GB
+[UEDRS] [00:01:16] Saving to parquet
+[UEDRS] [00:01:33] Saved parquet to: /mnt/datasets/alibaba/ratings.parquet
+[UEDRS] [00:01:33] Done
+
+[UEDRS] [00:01:33] Loading dataset: GOODREADS
+[UEDRS] [00:01:35] Done
+[UEDRS] [00:01:35] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 228648342 entries, 0 to 228648341
+Data columns (total 3 columns):
+ #   Column   Dtype
+---  ------   -----
+ 0   user_id  int64
+ 1   item_id  int64
+ 2   rating   int64
+dtypes: int64(3)
+memory usage: 5.1 GB
+[UEDRS] [00:01:50] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 228648342 entries, 0 to 228648341
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint32
+ 2   rating   uint8 
+dtypes: uint32(2), uint8(1)
+memory usage: 1.9 GB
+[UEDRS] [00:01:50] Saving to parquet
+[UEDRS] [00:02:13] Saved parquet to: /mnt/datasets/goodreads/ratings.parquet
+[UEDRS] [00:02:13] Done
+
+[UEDRS] [00:02:13] Loading dataset: LASTFM
+[UEDRS] [00:02:17] Done
+[UEDRS] [00:02:17] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 319951294 entries, 0 to 319951293
+Data columns (total 3 columns):
+ #   Column   Dtype
+---  ------   -----
+ 0   user_id  int64
+ 1   item_id  int64
+ 2   rating   int64
+dtypes: int64(3)
+memory usage: 7.2 GB
+[UEDRS] [00:02:41] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 319951294 entries, 0 to 319951293
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint32
+ 2   rating   uint16
+dtypes: uint16(1), uint32(2)
+memory usage: 3.0 GB
+[UEDRS] [00:02:41] Saving to parquet
+[UEDRS] [00:03:13] Saved parquet to: /mnt/datasets/lastfm/ratings.parquet
+[UEDRS] [00:03:13] Done
+
+[UEDRS] [00:03:13] Loading dataset: AMAZON
+[UEDRS] [00:03:21] Done
+[UEDRS] [00:03:21] Before downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 564540881 entries, 0 to 564540880
+Data columns (total 3 columns):
+ #   Column   Dtype  
+---  ------   -----  
+ 0   user_id  int64  
+ 1   item_id  int64  
+ 2   rating   float64
+dtypes: float64(1), int64(2)
+memory usage: 12.6 GB
+[UEDRS] [00:04:04] After downcast:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 564540881 entries, 0 to 564540880
+Data columns (total 3 columns):
+ #   Column   Dtype 
+---  ------   ----- 
+ 0   user_id  uint32
+ 1   item_id  uint32
+ 2   rating   uint8 
+dtypes: uint32(2), uint8(1)
+memory usage: 4.7 GB
+[UEDRS] [00:04:04] Saving to parquet
+[UEDRS] [00:05:26] Saved parquet to: /mnt/datasets/amazon/ratings.parquet
+[UEDRS] [00:05:26] Done
+
